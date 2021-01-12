@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/CrazyParty/source/RES/9.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "9_A": { "frames": [0] },
+    "9_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:83ad1f2da6a147b4a5fc3c94805f3232:1e4dbd41cc65919809c57b8bcbf0ede7:005cfeeecdb881bde464c140babce266$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

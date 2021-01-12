@@ -1,0 +1,25 @@
+{
+
+"images": [
+    "/games/TreasureJewels/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 313, 0, 0, 0]
+],
+
+"animations": {
+    "GAME": { "frames": [0] },
+    "INFO": { "frames": [1] },
+    "BACK": { "frames": [2] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:7486bc91b8056df5b8b0a4fb9c452136:f6eb5c8fa9802462a1050f72c77611d8:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

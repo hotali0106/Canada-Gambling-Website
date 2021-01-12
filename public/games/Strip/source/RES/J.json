@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Strip/source/RES/J.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "J_A": { "frames": [0] },
+    "J_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:8418563e79eb2b647ab97a4aff8e4a0c:7a4462a763d67983d550e26737fd2380:5832dd710832637990d7f2e6d83d5914$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

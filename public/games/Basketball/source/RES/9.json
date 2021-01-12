@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Basketball/source/RES/9.png"
+],
+
+"framerate": 3,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "9_A": { "frames": [0] },
+    "9_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:5f01051d1534b6ff9ce90edd09ca5720:dea0ec9e065a8cad588220a36a8f6c32:005cfeeecdb881bde464c140babce266$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

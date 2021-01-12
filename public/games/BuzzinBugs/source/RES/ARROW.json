@@ -1,0 +1,21 @@
+{
+
+"images": [
+    "/games/BuzzinBugs/source/RES/ARROW.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 29, 40, 0, 0, 0]
+],
+
+"animations": {
+    "ARROW": { "frames": [0] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:f50484e6855d2904980d0bfeebe011cf:5ba9c740ab4053b0a8742e697358f05a:9968d8eb4ae95f036ec38d394ffd7f8a$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

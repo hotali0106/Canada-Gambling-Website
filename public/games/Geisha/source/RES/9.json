@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Geisha/source/RES/9.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "9_A": { "frames": [0] },
+    "9_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:49b3219fd48b1327d9bb7c73263710fe:9687d2fda1fe729267923554daf77676:005cfeeecdb881bde464c140babce266$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

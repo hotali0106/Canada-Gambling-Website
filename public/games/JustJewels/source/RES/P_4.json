@@ -1,0 +1,29 @@
+{
+
+"images": [
+    "/games/JustJewels/source/RES/P_4.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_4_A": { "frames": [0] },
+    "P_4_B": { "frames": [1] },
+    "P_4_C": { "frames": [2] },
+    "P_4_D": { "frames": [3] },
+    "P_4_E": { "frames": [4] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:4a268b68ecb44fdeab78fd4f39c9c811:a577817d0bf1b4898c560a8577b6aaa3:ea6e1a747942f484354e21ce43959286$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

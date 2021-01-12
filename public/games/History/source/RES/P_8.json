@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/History/source/RES/P_8.png"
+],
+
+"framerate": 3,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_8_A": { "frames": [0] },
+    "P_8_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:3158ecbd6589a2290488182e05fd90fc:63a6c97bd867a46dab1a0424d9521892:57745784a94b2700da3ca54e9631dcf8$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/LuckyGirls/source/RES/K.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_A": { "frames": [0] },
+    "K_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:da0b734a4234cd659ac11e4bb61cd8cb:53419871ae66f33264254ff11251a292:ca759da1210de30ef834f48b6cdf6226$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

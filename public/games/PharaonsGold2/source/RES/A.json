@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/PharaonsGold2/source/RES/A.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "A_A": { "frames": [0] },
+    "A_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:15ceaf84d947f85c4b7df8d2eb01fe8f:fd21c63b395f5a06e61dc6f4edb4a366:ff8643bea08ef28e0c9d50bf57f4c147$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

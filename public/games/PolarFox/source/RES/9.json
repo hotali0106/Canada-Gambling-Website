@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/PolarFox/source/RES/9.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "9_A": { "frames": [0] },
+    "9_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:4872bd0911a0b7b7c6e44057e78d260b:90355a62d842fdc66d7803d9621d0b77:2eee161d561aa03630b318e8c054d6b7$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

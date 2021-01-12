@@ -1,0 +1,35 @@
+ 
+ 
+.grid {
+  margin: 0 -10px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  height: 120px;
+  float: left;
+  padding: 0 10px;
+  margin-bottom: 24px;
+  
+}
+.grid__content{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+ 
+.grid-item--width2 { width: 240px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 124px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 420px; }

@@ -1,0 +1,427 @@
+{
+	
+
+"messagesGame":{
+"messagesJackWnd":{"type":"bitmap","res":["JACK_WND"],"x":0,"y":0},
+"messagesJackWin":{"type":"text","res":[""],"x":960,"y":610,"fontText":"50px Verdana Bold","colorText":"#FFFF66","defaultText":"5000","alignText":"center" }
+
+},
+
+"viewGame":{
+
+"spriteSheet":{"config":"/games/JustJewelsDX/source/RES/GAME.json","file":"/games/JustJewelsDX/source/RES/GAME.png"},
+
+"top":{"type":"bitmap","res":["top"],"x":0,"y":0},
+"bottom":{"type":"bitmap","res":["bottom"],"x":0,"y":832},
+"middle0":{"type":"bitmap","res":["middle0"],"x":0,"y":88},
+"middle1":{"type":"bitmap","res":["middle1"],"x":516,"y":88},
+"middle2":{"type":"bitmap","res":["middle2"],"x":800,"y":88},
+"middle3":{"type":"bitmap","res":["middle3"],"x":1084,"y":88},
+"middle4":{"type":"bitmap","res":["middle4"],"x":1368,"y":88},
+"middle5":{"type":"bitmap","res":["middle5"],"x":1652,"y":88}
+	
+},
+
+
+	
+"gambleGame":{
+
+"spriteSheet":{"config":"/games/JustJewelsDX/source/RES/GAMBLE.json","file":"/games/JustJewelsDX/source/RES/GAMBLE.png"},
+	
+"gambleBack":{"type":"bitmap","res":["background"],"x":254,"y":70},
+
+"gambleCardsBack1":{"type":"bitmap","res":["cardE0"],"x":860,"y":440},
+"gambleCardsBack2":{"type":"bitmap","res":["cardE1"],"x":860,"y":440},
+	
+"gambleSelectRed":{"type":"button","res":["redGambleEnabled","redGambleOver","redGambleDown","redGambleDisabled"],"x":460,"y":490},
+"gambleSelectBlack":{"type":"button","res":["blackGambleEnabled","blackGambleOver","blackGambleDown","blackGambleDisabled"],"x":1162,"y":490},
+	
+"gambleCardsC":{"type":"bitmap","res":["cardCA"],"x":860,"y":440},
+"gambleCardsD":{"type":"bitmap","res":["cardDA"],"x":860,"y":440},
+"gambleCardsH":{"type":"bitmap","res":["cardHA"],"x":860,"y":440},
+"gambleCardsS":{"type":"bitmap","res":["cardSA"],"x":860,"y":440},
+	
+"gambleCardsMBack":{"type":"bitmap","res":["historyE0"],"x":920,"y":268},
+"gambleCardsMBack2":{"type":"bitmap_lib","res":["historyE0"],"x":920,"y":268},
+	
+"gambleCardsMC":{"type":"bitmap_lib","res":["historyCA"],"x":0,"y":0},
+"gambleCardsMD":{"type":"bitmap_lib","res":["historyDA"],"x":0,"y":0},
+"gambleCardsMH":{"type":"bitmap_lib","res":["historyHA"],"x":0,"y":0},
+"gambleCardsMS":{"type":"bitmap_lib","res":["historySA"],"x":0,"y":0},
+
+
+"gambleRedLabel":{"type":"text","res":[""],"x":612,"y":573,"fontText":"25px Verdana Regular","colorText":"#000000","defaultText":"0000","alignText":"center" },	
+"gambleBlackLabel":{"type":"text","res":[""],"x":1317,"y":573,"fontText":"25px Verdana Regular","colorText":"#000000","defaultText":"0000","alignText":"center" },	
+	
+"gambleBetLabel":{"type":"text","res":[""],"x":612,"y":110,"fontText":"30px Verdana Bold","colorText":"#FFFFFF","defaultText":"0000","alignText":"center" },	
+"gambleBet":{"type":"text","res":[""],"x":612,"y":170,"fontText":"28px Verdana Bold","colorText":"#FFFF00","defaultText":"0000","alignText":"center" },	
+"gambleWinLabel":{"type":"text","res":[""],"x":1317,"y":110,"fontText":"30px Verdana Bold","colorText":"#FFFFFF","defaultText":"0000","alignText":"center" }	,
+"gambleWin":{"type":"text","res":[""],"x":1317,"y":170,"fontText":"28px Verdana Bold","colorText":"#FFFF00","defaultText":"0000","alignText":"center" }	,
+"gamblePrev":{"type":"text","res":[""],"x":900,"y":305,"fontText":"30px Verdana Bold","colorText":"#FFFFFF","defaultText":"0000","alignText":"right" }	,
+"gambleFooter":{"type":"text","res":[""],"x":960,"y":775,"fontText":"30px Verdana Bold","colorText":"#FFFFFF","defaultText":"0000","alignText":"center" }	,
+	
+"gambleCardMPlace0":{"type":"place","res":[""],"x":920,"y":268 },	
+"gambleCardMPlace1":{"type":"place","res":[""],"x":1016,"y":268 },	
+"gambleCardMPlace2":{"type":"place","res":[""],"x":1112,"y":268 },	
+"gambleCardMPlace3":{"type":"place","res":[""],"x":1208,"y":268 },	
+"gambleCardMPlace4":{"type":"place","res":[""],"x":1304,"y":268 }	
+	
+	
+},
+	
+
+"rulesGame":{
+	
+
+"rulesContainerPage1":{"type":"container","res":[""],"x":0,"y":0},
+"rulesContainerPage2":{"type":"container","res":[""],"x":0,"y":0},
+"rulesContainerTop":{"type":"container","res":[""],"x":0,"y":0},
+"rulesGameBorder0":{"type":"bitmap","parentC":"rulesContainerTop","res":["outline0"],"x":254,"y":70},
+"rulesGamePage1":{"type":"bitmap","parentC":"rulesContainerPage1","res":["background0"],"x":268,"y":88},
+"payTextP_6_5_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1396,"y":368,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_6_4_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1396,"y":410,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_6_3_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1396,"y":452,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_5_5_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":648,"y":368,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_5_4_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":648,"y":410,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_5_3_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":648,"y":452,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_3_5_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1400,"y":190,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_3_4_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1400,"y":232,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_3_3_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1400,"y":274,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_2_5_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":670,"y":190,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_2_4_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":670,"y":232,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_2_3_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":670,"y":274,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_1_5_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1040,"y":155,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_1_4_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1040,"y":197,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextP_1_3_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1040,"y":239,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextSCAT_5_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1040,"y":359,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextSCAT_4_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1040,"y":401,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"payTextSCAT_3_def":{"type":"text","parentC":"rulesContainerPage1","res":[""],"x":1040,"y":443,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+
+"rulesGamePage2":{"type":"bitmap","parentC":"rulesContainerPage2","res":["background1"],"x":268,"y":88},
+"rulesPage3Text1":{"type":"text_p","parentC":"rulesContainerPage2","res":[""],"x":950,"y":126,"fontText":"55px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"},
+"rulesPage3Text0":{"type":"text_p","parentC":"rulesContainerPage2","res":[""],"x":930,"y":226,"fontText":"25px Verdana Bold","colorText":"#FFFE00","defaultText":"0000","alignText":"center"}
+	
+		
+	
+	
+
+	
+},
+	
+"countersGame":{
+	
+"counterCredit":{"type":"text","res":[""],"x":375,"y":895,"fontText":"34px Verdana Bold","colorText":"#FFFFFF","defaultText":"Credits","alignText":"center" },	
+
+"counterLines":{"type":"text","res":[""],"x":764,"y":982,"fontText":"32px Verdana Bold","colorText":"#FFFFFF","defaultText":"","alignText":"center" },	
+	
+"counterBetLine":{"type":"text","res":[""],"x":986,"y":982,"fontText":"32px Verdana Bold","colorText":"#FFFFFF","defaultText":"","alignText":"center" },	
+	
+"counterBet":{"type":"text","res":[""],"x":1176,"y":982,"fontText":"32px Verdana Bold","colorText":"#FFFFFF","defaultText":"","alignText":"center" },
+	
+"counterLastWin":{"type":"text","res":[""],"x":1535,"y":895,"fontText":"34px Verdana Bold","colorText":"#FFFFFF","defaultText":"","alignText":"center" },
+
+
+"counterExit":{"type":"text","res":[""],"x":1595,"y":4,"fontText":"34px Verdana Bold","colorText":"#FFFFFF","defaultText":"","alignText":"center" },	
+
+		
+	
+"counterCreditCnt":{"type":"text","res":[""],"x":375,"y":930,"fontText":"52px Verdana Bold","colorText":"#FFFF00","defaultText":"0.00","alignText":"center" },
+"counterLastWinCnt":{"type":"text","res":[""],"x":1536,"y":930,"fontText":"52px Verdana Bold","colorText":"#FFFF00","defaultText":"0.00","alignText":"center" },
+"counterBetCnt":{"type":"text","res":[""],"x":1180,"y":1018,"fontText":"50px Verdana Bold","colorText":"#FFFF00","defaultText":"0.00","alignText":"center" },
+"counterLinesCnt":{"type":"text","res":[""],"x":763,"y":1018,"fontText":"50px Verdana Bold","colorText":"#FFFF00","defaultText":"9","alignText":"center" },
+"counterBetLineCnt":{"type":"text","res":[""],"x":984,"y":1018,"fontText":"50px Verdana Bold","colorText":"#FFFF00","defaultText":"0.00","alignText":"center" },
+	
+
+	
+"counterInfo1":{"type":"text","res":[""],"x":970,"y":910,"fontText":"65px Verdana Bold","colorText":"#FFFF00","defaultText":"GAME OVER,  PLEACE YOUR BET","alignText":"center" }
+
+	
+},
+"linesGame":{
+
+
+"spriteSheet":{"config":"/games/JustJewelsDX/source/RES/LINES.json","file":"/games/JustJewelsDX/source/RES/LINES.png"},
+
+	
+	
+
+
+		
+"lnLine1f0":{"type":"bitmap","res":["path1Fill0"],"x":213,"y":458},
+"lnLine1p0":{"type":"bitmap","res":["path1Part0"],"x":269,"y":458},
+"lnLine1f1":{"type":"bitmap","res":["path1Fill1"],"x":517,"y":458},
+"lnLine1p1":{"type":"bitmap","res":["path1Part1"],"x":553,"y":458},	
+"lnLine1f2":{"type":"bitmap","res":["path1Fill2"],"x":801,"y":458},
+"lnLine1p2":{"type":"bitmap","res":["path1Part2"],"x":837,"y":458},	
+"lnLine1f3":{"type":"bitmap","res":["path1Fill3"],"x":1085,"y":458},
+"lnLine1p3":{"type":"bitmap","res":["path1Part3"],"x":1121,"y":458},	
+"lnLine1f4":{"type":"bitmap","res":["path1Fill4"],"x":1369,"y":458},
+"lnLine1p4":{"type":"bitmap","res":["path1Part4"],"x":1405,"y":458},	
+"lnLine1f5":{"type":"bitmap","res":["path1Fill5"],"x":1653,"y":458},
+
+	
+"lnLine2f0":{"type":"bitmap","res":["path2Fill0"],"x":213,"y":246},
+"lnLine2p0":{"type":"bitmap","res":["path2Part0"],"x":269,"y":246},
+"lnLine2f1":{"type":"bitmap","res":["path2Fill1"],"x":517,"y":246},
+"lnLine2p1":{"type":"bitmap","res":["path2Part1"],"x":553,"y":246},	
+"lnLine2f2":{"type":"bitmap","res":["path2Fill2"],"x":801,"y":246},
+"lnLine2p2":{"type":"bitmap","res":["path2Part2"],"x":837,"y":246},	
+"lnLine2f3":{"type":"bitmap","res":["path2Fill3"],"x":1085,"y":246},
+"lnLine2p3":{"type":"bitmap","res":["path2Part3"],"x":1121,"y":246},	
+"lnLine2f4":{"type":"bitmap","res":["path2Fill4"],"x":1369,"y":246},
+"lnLine2p4":{"type":"bitmap","res":["path2Part4"],"x":1405,"y":246},	
+"lnLine2f5":{"type":"bitmap","res":["path2Fill5"],"x":1653,"y":246},
+
+	
+"lnLine3f0":{"type":"bitmap","res":["path3Fill0"],"x":213,"y":664},
+"lnLine3p0":{"type":"bitmap","res":["path3Part0"],"x":269,"y":664},
+"lnLine3f1":{"type":"bitmap","res":["path3Fill1"],"x":517,"y":664},
+"lnLine3p1":{"type":"bitmap","res":["path3Part1"],"x":553,"y":664},	
+"lnLine3f2":{"type":"bitmap","res":["path3Fill2"],"x":801,"y":664},
+"lnLine3p2":{"type":"bitmap","res":["path3Part2"],"x":837,"y":664},	
+"lnLine3f3":{"type":"bitmap","res":["path3Fill3"],"x":1085,"y":664},
+"lnLine3p3":{"type":"bitmap","res":["path3Part3"],"x":1121,"y":664},	
+"lnLine3f4":{"type":"bitmap","res":["path3Fill4"],"x":1369,"y":664},
+"lnLine3p4":{"type":"bitmap","res":["path3Part4"],"x":1405,"y":664},	
+"lnLine3f5":{"type":"bitmap","res":["path3Fill5"],"x":1653,"y":664},	
+	
+"lnLine4f0":{"type":"bitmap","res":["path4Fill0"],"x":213,"y":178},
+"lnLine4p0":{"type":"bitmap","res":["path4Part0"],"x":270,"y":179},
+"lnLine4f1":{"type":"bitmap","res":["path4Fill1"],"x":489,"y":337},
+"lnLine4p1":{"type":"bitmap","res":["path4Part1"],"x":553,"y":389},	
+"lnLine4f2":{"type":"bitmap","res":["path4Fill2"],"x":736,"y":584},
+"lnLine4p2":{"type":"bitmap","res":["path4Part2"],"x":836,"y":671},	
+"lnLine4f3":{"type":"bitmap","res":["path4Fill3"],"x":1084,"y":585},
+"lnLine4p3":{"type":"bitmap","res":["path4Part3"],"x":1172,"y":391},	
+"lnLine4f4":{"type":"bitmap","res":["path4Fill4"],"x":1368,"y":338},
+"lnLine4p4":{"type":"bitmap","res":["path4Part4"],"x":1420,"y":181},	
+"lnLine4f5":{"type":"bitmap","res":["path4Fill5"],"x":1650,"y":181},	
+	
+"lnLine5f0":{"type":"bitmap","res":["path5Fill0"],"x":213,"y":734},
+"lnLine5p0":{"type":"bitmap","res":["path5Part0"],"x":269,"y":584},
+"lnLine5f1":{"type":"bitmap","res":["path5Fill1"],"x":487,"y":518},
+"lnLine5p1":{"type":"bitmap","res":["path5Part1"],"x":553,"y":336},	
+"lnLine5f2":{"type":"bitmap","res":["path5Fill2"],"x":732,"y":237},
+"lnLine5p2":{"type":"bitmap","res":["path5Part2"],"x":834,"y":113},	
+"lnLine5f3":{"type":"bitmap","res":["path5Fill3"],"x":1082,"y":237},
+"lnLine5p3":{"type":"bitmap","res":["path5Part3"],"x":1167,"y":337},	
+"lnLine5f4":{"type":"bitmap","res":["path5Fill4"],"x":1363,"y":519},
+"lnLine5p4":{"type":"bitmap","res":["path5Part4"],"x":1417,"y":585},	
+"lnLine5f5":{"type":"bitmap","res":["path5Fill5"],"x":1647,"y":735},	
+
+	
+"lnLine6f0":{"type":"bitmap","res":["path6Fill0"],"x":213,"y":387},
+"lnLine6p0":{"type":"bitmap","res":["path6Part0"],"x":269,"y":387},
+"lnLine6f1":{"type":"bitmap","res":["path6Fill1"],"x":514,"y":574},
+"lnLine6p1":{"type":"bitmap","res":["path6Part1"],"x":552,"y":609},	
+"lnLine6f2":{"type":"bitmap","res":["path6Fill2"],"x":801,"y":800},
+"lnLine6p2":{"type":"bitmap","res":["path6Part2"],"x":836,"y":800},	
+"lnLine6f3":{"type":"bitmap","res":["path6Fill3"],"x":1084,"y":800},
+"lnLine6p3":{"type":"bitmap","res":["path6Part3"],"x":1120,"y":608},	
+"lnLine6f4":{"type":"bitmap","res":["path6Fill4"],"x":1368,"y":572},
+"lnLine6p4":{"type":"bitmap","res":["path6Part4"],"x":1404,"y":384},	
+"lnLine6f5":{"type":"bitmap","res":["path6Fill5"],"x":1651,"y":384},		
+
+	
+"lnLine7f0":{"type":"bitmap","res":["path7Fill0"],"x":213,"y":532},
+"lnLine7p0":{"type":"bitmap","res":["path7Part0"],"x":269,"y":342},
+"lnLine7f1":{"type":"bitmap","res":["path7Fill1"],"x":515,"y":304},
+"lnLine7p1":{"type":"bitmap","res":["path7Part1"],"x":553,"y":116},	
+"lnLine7f2":{"type":"bitmap","res":["path7Fill2"],"x":800,"y":112},
+"lnLine7p2":{"type":"bitmap","res":["path7Part2"],"x":836,"y":112},	
+"lnLine7f3":{"type":"bitmap","res":["path7Fill3"],"x":1084,"y":112},
+"lnLine7p3":{"type":"bitmap","res":["path7Part3"],"x":1120,"y":112},	
+"lnLine7f4":{"type":"bitmap","res":["path7Fill4"],"x":1368,"y":300},
+"lnLine7p4":{"type":"bitmap","res":["path7Part4"],"x":1404,"y":338},	
+"lnLine7f5":{"type":"bitmap","res":["path7Fill5"],"x":1651,"y":528},
+	
+
+	
+"lnLine8f0":{"type":"bitmap","res":["path8Fill0"],"x":213,"y":600},
+"lnLine8p0":{"type":"bitmap","res":["path8Part0"],"x":269,"y":600},
+"lnLine8f1":{"type":"bitmap","res":["path8Fill1"],"x":517,"y":600},
+"lnLine8p1":{"type":"bitmap","res":["path8Part1"],"x":553,"y":600},	
+"lnLine8f2":{"type":"bitmap","res":["path8Fill2"],"x":801,"y":580},
+"lnLine8p2":{"type":"bitmap","res":["path8Part2"],"x":836,"y":339},	
+"lnLine8f3":{"type":"bitmap","res":["path8Fill3"],"x":1078,"y":317},
+"lnLine8p3":{"type":"bitmap","res":["path8Part3"],"x":1120,"y":316},	
+"lnLine8f4":{"type":"bitmap","res":["path8Fill4"],"x":1368,"y":316},
+"lnLine8p4":{"type":"bitmap","res":["path8Part4"],"x":1404,"y":316},	
+"lnLine8f5":{"type":"bitmap","res":["path8Fill5"],"x":1651,"y":316},	
+
+	
+"lnLine9f0":{"type":"bitmap","res":["path9Fill0"],"x":213,"y":316},
+"lnLine9p0":{"type":"bitmap","res":["path9Part0"],"x":269,"y":316},
+"lnLine9f1":{"type":"bitmap","res":["path9Fill1"],"x":517,"y":316},
+"lnLine9p1":{"type":"bitmap","res":["path9Part1"],"x":553,"y":316},	
+"lnLine9f2":{"type":"bitmap","res":["path9Fill2"],"x":800,"y":316},
+"lnLine9p2":{"type":"bitmap","res":["path9Part2"],"x":836,"y":338},	
+"lnLine9f3":{"type":"bitmap","res":["path9Fill3"],"x":1078,"y":580},
+"lnLine9p3":{"type":"bitmap","res":["path9Part3"],"x":1120,"y":600},	
+"lnLine9f4":{"type":"bitmap","res":["path9Fill4"],"x":1368,"y":600},
+"lnLine9p4":{"type":"bitmap","res":["path9Part4"],"x":1404,"y":600},	
+"lnLine9f5":{"type":"bitmap","res":["path9Fill5"],"x":1651,"y":600},		
+	
+	
+"lnLine10f0":{"type":"bitmap","res":["path10Fill0"],"x":213,"y":803},
+"lnLine10p0":{"type":"bitmap","res":["path10Part0"],"x":269,"y":681},
+"lnLine10f1":{"type":"bitmap","res":["path10Fill1"],"x":517,"y":585},
+"lnLine10p1":{"type":"bitmap","res":["path10Part1"],"x":613,"y":526},	
+"lnLine10f2":{"type":"bitmap","res":["path10Fill2"],"x":801,"y":526},
+"lnLine10p2":{"type":"bitmap","res":["path10Part2"],"x":837,"y":526},	
+"lnLine10f3":{"type":"bitmap","res":["path10Fill3"],"x":1085,"y":526},
+"lnLine10p3":{"type":"bitmap","res":["path10Part3"],"x":1121,"y":336},	
+"lnLine10f4":{"type":"bitmap","res":["path10Fill4"],"x":1363,"y":298},
+"lnLine10p4":{"type":"bitmap","res":["path10Part4"],"x":1403,"y":108},	
+"lnLine10f5":{"type":"bitmap","res":["path10Fill5"],"x":1651,"y":108},		
+	
+	
+"lnBox1_0":{"type":"bitmap","res":["leftTag1"],"x":184,"y":434},	
+"lnBox1_1":{"type":"bitmap","res":["rightTag1"],"x":1680,"y":434},
+	
+"lnBox2_0":{"type":"bitmap","res":["leftTag2"],"x":184,"y":224},	
+"lnBox2_1":{"type":"bitmap","res":["rightTag2"],"x":1680,"y":224},	
+
+	
+"lnBox3_0":{"type":"bitmap","res":["leftTag3"],"x":184,"y":644},	
+"lnBox3_1":{"type":"bitmap","res":["rightTag3"],"x":1680,"y":644},
+	
+		
+"lnBox4_0":{"type":"bitmap","res":["leftTag4"],"x":184,"y":156},	
+"lnBox4_1":{"type":"bitmap","res":["rightTag4"],"x":1680,"y":156},
+	
+		
+"lnBox5_0":{"type":"bitmap","res":["leftTag5"],"x":184,"y":712},	
+"lnBox5_1":{"type":"bitmap","res":["rightTag5"],"x":1680,"y":712},
+	
+		
+"lnBox6_0":{"type":"bitmap","res":["leftTag6"],"x":184,"y":364},	
+"lnBox6_1":{"type":"bitmap","res":["rightTag6"],"x":1680,"y":364},
+	
+		
+"lnBox7_0":{"type":"bitmap","res":["leftTag7"],"x":184,"y":504},	
+"lnBox7_1":{"type":"bitmap","res":["rightTag7"],"x":1680,"y":504},
+	
+		
+"lnBox8_0":{"type":"bitmap","res":["leftTag8"],"x":184,"y":576},	
+"lnBox8_1":{"type":"bitmap","res":["rightTag8"],"x":1680,"y":292},
+	
+		
+"lnBox9_0":{"type":"bitmap","res":["leftTag9"],"x":184,"y":292},	
+"lnBox9_1":{"type":"bitmap","res":["rightTag9"],"x":1680,"y":576},
+	
+"lnBox10_0":{"type":"bitmap","res":["leftTag10"],"x":184,"y":780},	
+"lnBox10_1":{"type":"bitmap","res":["rightTag10"],"x":1680,"y":88},	
+	
+	
+"lnBorder0":{"type":"bitmap_lib","res":["border0"],"x":0,"y":0},
+"lnBorder1":{"type":"bitmap_lib","res":["border1"],"x":0,"y":0},
+"lnBorder2":{"type":"bitmap_lib","res":["border2"],"x":0,"y":0},
+"lnBorder3":{"type":"bitmap_lib","res":["border3"],"x":0,"y":0},
+"lnBorder4":{"type":"bitmap_lib","res":["border4"],"x":0,"y":0},
+"lnBorder5":{"type":"bitmap_lib","res":["border5"],"x":0,"y":0},
+"lnBorder6":{"type":"bitmap_lib","res":["border6"],"x":0,"y":0},
+"lnBorder7":{"type":"bitmap_lib","res":["border7"],"x":0,"y":0},
+"lnBorder8":{"type":"bitmap_lib","res":["border8"],"x":0,"y":0},
+"lnBorder9":{"type":"bitmap_lib","res":["border9"],"x":0,"y":0},
+"lnBorder10":{"type":"bitmap_lib","res":["border10"],"x":0,"y":0},
+	
+	
+"logo":{"type":"bitmap","res":["logo"],"x":675,"y":0},
+
+"lnWinSym_P_6":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_6.png"],"config":"/games/JustJewelsDX/source/RES/P_6.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_7":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_7.png"],"config":"/games/JustJewelsDX/source/RES/P_7.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_5":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_5.png"],"config":"/games/JustJewelsDX/source/RES/P_5.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_4":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_4.png"],"config":"/games/JustJewelsDX/source/RES/P_4.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_3":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_3.png"],"config":"/games/JustJewelsDX/source/RES/P_3.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_2":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_2.png"],"config":"/games/JustJewelsDX/source/RES/P_2.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_1":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_1.png"],"config":"/games/JustJewelsDX/source/RES/P_1.json","x":0,"y":0,"framerate":8},
+"lnWinSym_SCAT":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/SCAT.png"],"config":"/games/JustJewelsDX/source/RES/SCAT.json","x":0,"y":0,"framerate":8},
+	
+"lnWinSym_P_6_LONG":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_6_LONG.png"],"config":"/games/JustJewelsDX/source/RES/P_6_LONG.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_7_LONG":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_7_LONG.png"],"config":"/games/JustJewelsDX/source/RES/P_7_LONG.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_5_LONG":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_5_LONG.png"],"config":"/games/JustJewelsDX/source/RES/P_5_LONG.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_4_LONG":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_4_LONG.png"],"config":"/games/JustJewelsDX/source/RES/P_4_LONG.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_3_LONG":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_3_LONG.png"],"config":"/games/JustJewelsDX/source/RES/P_3_LONG.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_2_LONG":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_2_LONG.png"],"config":"/games/JustJewelsDX/source/RES/P_2_LONG.json","x":0,"y":0,"framerate":8},
+"lnWinSym_P_1_LONG":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/P_1_LONG.png"],"config":"/games/JustJewelsDX/source/RES/P_1_LONG.json","x":0,"y":0,"framerate":8},
+"lnWinSym_SCAT_LONG":{"type":"symbol_sprite_lib","res":["/games/JustJewelsDX/source/RES/SCAT_LONG.png"],"config":"/games/JustJewelsDX/source/RES/SCAT_LONG.json","x":0,"y":0,"framerate":8}	
+
+	
+	
+},
+	
+	
+"reelsGame":{
+
+"spriteSheet":{"config":"/games/JustJewelsDX/source/RES/SYM.json","file":"/games/JustJewelsDX/source/RES/SYM.png"},	
+
+"P_1":{"type":"sprite_lib","res":["P_1"],"x":0,"y":0},
+"P_2":{"type":"sprite_lib","res":["P_2"],"x":0,"y":0},
+"P_3":{"type":"sprite_lib","res":["P_3"],"x":0,"y":0},
+"P_4":{"type":"sprite_lib","res":["P_4"],"x":0,"y":0},
+"P_5":{"type":"sprite_lib","res":["P_5"],"x":0,"y":0},
+"P_6":{"type":"sprite_lib","res":["P_6"],"x":0,"y":0},
+"P_7":{"type":"sprite_lib","res":["P_7"],"x":0,"y":0},
+"SCAT":{"type":"sprite_lib","res":["SCAT"],"x":0,"y":0}
+
+	
+},		
+	
+	
+"backGame":{	
+	
+
+	
+},
+	
+	
+"uiGame":{	
+
+"spriteSheet":{"config":"/games/JustJewelsDX/source/RES/UI.json","file":"/games/JustJewelsDX/source/RES/UI.png"},
+
+"uiBackground0":{"type":"bitmap","res":["wallet"],"x":257,"y":882},	
+"uiBackground1":{"type":"bitmap","res":["status"],"x":512,"y":882},	
+"uiBackground2":{"type":"bitmap","res":["wallet"],"x":1414,"y":882},	
+"uiBackground3":{"type":"bitmap","res":["labels"],"x":672,"y":982},	
+"uiBackground3_h":{"type":"bitmap","res":["statusHighlight"],"x":512,"y":882},	
+"uiBackground4":{"type":"bitmap","res":["lines"],"x":728,"y":1006},	
+"uiBackground5":{"type":"bitmap","res":["betPerLine"],"x":914,"y":1006},	
+"uiBackground6":{"type":"bitmap","res":["bet"],"x":1112,"y":1006},	
+	
+
+"uiButtonFullOn":{"type":"button","res":["fullScreenEnabled","fullScreenOver","fullScreenEnabled","fullScreenDisabled"],"x":1640,"y":55},
+"uiButtonFullOff":{"type":"button","res":["fullScreenEnabled","fullScreenOver","fullScreenEnabled","fullScreenDisabled"],"x":1640,"y":55},
+"uiButtonSoundOff":{"type":"button","res":["soundsEnabled","soundsOver","soundsEnabled","soundsDisabled"],"x":1610,"y":55},
+"uiButtonSoundOn":{"type":"button","res":["soundsSelectedEnabled","soundsSelectedOver","soundsSelectedEnabled","soundsSelectedDisabled"],"x":1610,"y":55},
+
+
+	
+"uiButtonSpin":{"type":"button_text","res":["startEnabled_H","startOver_H","startDown","startDisabled"],"res2":{"blinkE":["startEnabled_","A","P"],"blinkO":["startOver_","A","P"],"framerate":10},"x":1462,"y":982},
+"uiButtonSkip":{"type":"button_text","res":["stopEnabled","stopOver","stopDown","stopDisabled"],"x":1462,"y":982},
+"uiButtonInfo":{"type":"button_text","res":["infoEnabled","infoOver","infoDown","infoDisabled"],"x":465,"y":982},
+
+	
+	
+"uiButtonLinesMinus":{"type":"button_text","res":["increaseEnabled","increaseOver","increaseDown","increaseDisabled"],"x":672,"y":1006},
+"uiButtonLinesPlus":{"type":"button_text","res":["increaseEnabled","increaseOver","increaseDown","increaseDisabled"],"x":796,"y":1006},
+
+	
+"uiButtonBetMinus":{"type":"button_text","res":["increaseEnabled","increaseOver","increaseDown","increaseDisabled"],"x":858,"y":1006},
+"uiButtonBetPlus":{"type":"button_text","res":["increaseEnabled","increaseOver","increaseDown","increaseDisabled"],"x":1052,"y":1006},	
+
+	
+"uiButtonAuto":{"type":"button_text","res":["startAutoEnabled","startAutoOver","startAutoDown","startAutoDisabled"],"x":257,"y":982},
+"uiButtonGamble":{"type":"button_text","res":["gambleEnabled_H","gambleOver_H","gambleDown","gambleDisabled"],"res2":{"blinkE":["gambleEnabled_","A","P"],"blinkO":["gambleOver_","A","P"],"framerate":10},"x":1254,"y":982},
+	
+"uiButtonNext":{"type":"button_text","res":["infoEnabled","infoOver","infoDown","infoDisabled"],"x":1254,"y":982},
+	
+"uiButtonRed":{"type":"button_text","res":["redEnabled_H","redOver_H","redDown","redDisabled"],"res2":{"blinkE":["redEnabled_","A","P"],"blinkO":["redOver_","A","P"],"framerate":10},"x":257,"y":982},
+"uiButtonBlack":{"type":"button_text","res":["blackEnabled_H","blackOver_H","blackDown","blackDisabled"],"res2":{"blinkE":["blackEnabled_","A","P"],"blinkO":["blackOver_","A","P"],"framerate":10},"x":465,"y":982},	
+
+"uiButtonExit2":{"type":"button","res":["navigationEnabled","navigationOver","navigationDown","navigationDisabled"],"x":1526,"y":0}	
+	
+}
+	
+	
+}

@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/MoneyGame/source/RES/P_3.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_3_A": { "frames": [0] },
+    "P_3_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:15da419f387f9e3cdf03a8f5ba157df5:1fcc57a86a0bb5c13e9bbaa6b24d577b:033e6cd51f4970d84fa98229cf33741e$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

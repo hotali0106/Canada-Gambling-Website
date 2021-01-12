@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Cuba/source/RES/9.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "9_A": { "frames": [0] },
+    "9_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:d37b2980fce9968e0a548af9a5697464:88192eb5970f1be649cb8f02b561bbb2:2eee161d561aa03630b318e8c054d6b7$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

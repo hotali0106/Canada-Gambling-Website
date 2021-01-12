@@ -1,0 +1,35 @@
+{
+
+"images": [
+    "/games/DiamondTrio/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [1, 965, 47, 36, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [643, 483, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 313, 0, 0, 0],
+    [1285, 316, 529, 269, 0, 0, 0],
+    [1285, 587, 529, 269, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "X": { "frames": [2] },
+    "INFO": { "frames": [3] },
+    "INFO_A": { "frames": [4] },
+    "BACK": { "frames": [5] },
+    "BONUS_WND": { "frames": [6] },
+    "BONUS_WND_A": { "frames": [7] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:732332c283b7cfd758719120f43f50e7:60478fa350d47416d5b76a2c849f0381:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

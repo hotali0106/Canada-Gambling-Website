@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/LuckyGirls/source/RES/GAME_ANIM.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 119, 39, 0, 0, -2],
+    [122, 1, 3, 3, 0, 0, 0]
+],
+
+"animations": {
+    "GAME_ANIM_B": { "frames": [0] },
+    "GAME_ANIM_A": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:fbfb8cb1b1da5c0c9c9e7b7b3245b42f:f24c834c356d0d318ba99e878d3184d8:ea729355533233bc7f0b268b30b53f2b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

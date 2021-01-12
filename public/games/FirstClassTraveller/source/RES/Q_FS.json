@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/FirstClassTraveller/source/RES/Q_FS.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_FS_A": { "frames": [0] },
+    "Q_FS_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:c13c9eb64285a021feb47b3dbebfbc79:c4e354a44aba461d6c65e65a0972e127:1f169f98d56082d1d2f5d98117d711b1$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

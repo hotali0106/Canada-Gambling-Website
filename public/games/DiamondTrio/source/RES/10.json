@@ -1,0 +1,25 @@
+{
+
+"images": [
+    "/games/DiamondTrio/source/RES/10.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "10_B": { "frames": [1] },
+    "10_C": { "frames": [2] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:e9000e1985b2037962c82e721c6d7dfe:f037d7a1af210ba33869ddb87ffa51b3:e2c9be1b49d03cc38aafeff96da146a7$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

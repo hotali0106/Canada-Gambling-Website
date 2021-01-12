@@ -1,0 +1,43 @@
+{
+
+"images": [
+    "/games/TikiIsland/source/RES/SYM.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "9_A": { "frames": [1] },
+    "A_A": { "frames": [2] },
+    "J_A": { "frames": [3] },
+    "K_A": { "frames": [4] },
+    "P_1_A": { "frames": [5] },
+    "P_2_A": { "frames": [6] },
+    "P_3_A": { "frames": [7] },
+    "P_4_A": { "frames": [8] },
+    "P_5_A": { "frames": [9] },
+    "Q_A": { "frames": [10] },
+    "SCAT_A": { "frames": [11] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:65019459c4532226aab56be2132077c0:c1b59343535bbd1c4f51046f2628217e:7f439f11c904196e4d223ad99049b174$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

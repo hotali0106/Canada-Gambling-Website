@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/GryphonsGold/source/RES/10.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "10_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:7105654ac3cb0f834bc2dfc809cb0af4:98812fb86765ba5198f5537f2febbf7b:3f11b13715d8c7c6894c81e1d926f2eb$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

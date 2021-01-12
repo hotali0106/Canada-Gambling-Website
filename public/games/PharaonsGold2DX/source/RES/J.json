@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/PharaonsGold2DX/source/RES/J.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "J_A": { "frames": [0] },
+    "J_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:4eb0e3f69e302970dff2f58a75e2843e:1c8d57b1a99f1ddd54a766cd0135163b:5832dd710832637990d7f2e6d83d5914$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

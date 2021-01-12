@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/CashMachine/source/RES/P_6.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_6_A": { "frames": [0] },
+    "P_6_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:8ba4cad7649baea6563d08a1c2fb015c:a08796225a542a94ab974166bb4c3397:3133d8fc7031f9db6d0c06634c722bba$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

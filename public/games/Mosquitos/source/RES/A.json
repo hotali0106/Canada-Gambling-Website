@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Mosquitos/source/RES/A.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "A_A": { "frames": [0] },
+    "A_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:ec57a5213d8cc84439656240329ba4fb:3b3488563e26493dbb5d905b31badf13:827bba03cd6f3f6e712bfb050e648279$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

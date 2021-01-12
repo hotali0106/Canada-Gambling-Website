@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/JustJewels/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0]
+],
+
+"animations": {
+    "GAME": { "frames": [0] },
+    "INFO": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a97a18a2218cfa2a0426a9ed874f7c14:36c6803bc8f47be95fee56e101c6dbe5:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

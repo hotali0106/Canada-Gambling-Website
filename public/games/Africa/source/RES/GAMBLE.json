@@ -1,0 +1,45 @@
+{
+
+"images": [
+    "/games/Africa/source/RES/GAMBLE.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 160, 114, 0, 0, 0],
+    [163, 1, 160, 114, 0, 0, 0],
+    [325, 1, 114, 160, 0, 0, 0],
+    [1, 117, 46, 48, 0, 0, 0],
+    [49, 117, 46, 48, 0, 0, 0],
+    [97, 117, 46, 48, 0, 0, 0],
+    [145, 117, 46, 48, 0, 0, 0],
+    [193, 117, 3, 3, 0, 0, 0],
+    [193, 117, 3, 3, 0, 0, 0],
+    [441, 1, 114, 160, 0, 0, 0],
+    [557, 1, 114, 160, 0, 0, 0],
+    [673, 1, 114, 160, 0, 0, 0],
+    [789, 1, 114, 160, 0, 0, 0]
+],
+
+"animations": {
+    "SELECT_BLACK": { "frames": [0] },
+    "SELECT_RED": { "frames": [1] },
+    "CARDS_BACK1": { "frames": [2] },
+    "CARDS_M_C": { "frames": [3] },
+    "CARDS_M_D": { "frames": [4] },
+    "CARDS_M_H": { "frames": [5] },
+    "CARDS_M_S": { "frames": [6] },
+    "CARDS_BACK2": { "frames": [7] },
+    "CARDS_M_BACK": { "frames": [8] },
+    "CARDS_C": { "frames": [9] },
+    "CARDS_D": { "frames": [10] },
+    "CARDS_H": { "frames": [11] },
+    "CARDS_S": { "frames": [12] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:808416018d68d3ba217acaa73c6768b8:264f9297c375ac542405e3be7c6602ad:9f00d5a96f098234f6309e51a639ac92$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Football/source/RES/9.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "9_A": { "frames": [0] },
+    "9_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:510f324e6503de308b7e80c01be61bb2:2eb640e8f42e641c715ed38c78c806f4:005cfeeecdb881bde464c140babce266$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

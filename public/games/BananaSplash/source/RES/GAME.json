@@ -1,0 +1,31 @@
+{
+
+"images": [
+    "/games/BananaSplash/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 313, 0, 0, 0],
+    [643, 483, 556, 300, 0, 0, 0],
+    [1201, 483, 556, 300, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "BACK": { "frames": [3] },
+    "BONUS_WND": { "frames": [4] },
+    "BONUS_WND_A": { "frames": [5] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a7216128c2477de287e0e73d540fd8a5:2f7f306c5ccdb79bafda98aab5af5119:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

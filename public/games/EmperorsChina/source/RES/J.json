@@ -1,0 +1,25 @@
+{
+
+"images": [
+    "/games/EmperorsChina/source/RES/J.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "J_A": { "frames": [0] },
+    "J_B": { "frames": [1] },
+    "J_C": { "frames": [2] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:d3ade4b545ca2d48c8a6226aca83db68:c1376f5f38b665cded1b461cd7162bf7:5832dd710832637990d7f2e6d83d5914$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,33 @@
+{
+
+"images": [
+    "/games/DeepWater/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [643, 483, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 313, 0, 0, 0],
+    [1285, 316, 308, 269, 0, -26, 0],
+    [1595, 316, 308, 269, 0, -26, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "INFO_A": { "frames": [3] },
+    "BACK": { "frames": [4] },
+    "BONUS_WND": { "frames": [5] },
+    "BONUS_WND_A": { "frames": [6] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:d3c13d8fda2cb70004e0b3caec1911b9:87b287b38bd84bd9d87a63e94b324e98:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

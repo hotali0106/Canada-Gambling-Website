@@ -1,0 +1,54 @@
+@font-face {
+font-family: 'Verdana Regular';
+src: url('Verdana.eot');
+src: url('Verdana.eot?#iefix') format('embedded-opentype'),
+url('Verdana.woff') format('woff'),
+url('Verdana.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Verdana Bold';
+src: url('Verdana-Bold.eot');
+src: url('Verdana-Bold.eot?#iefix') format('embedded-opentype'),
+url('Verdana-Bold.woff') format('woff'),
+url('Verdana-Bold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Arial Regular';
+src: url('ArialMT.eot');
+src: url('ArialMT.eot?#iefix') format('embedded-opentype'),
+url('ArialMT.woff') format('woff'),
+url('ArialMT.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Arial Bold';
+src: url('Arial-BoldMT.eot');
+src: url('Arial-BoldMT.eot?#iefix') format('embedded-opentype'),
+url('Arial-BoldMT.woff') format('woff'),
+url('Arial-BoldMT.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Georgia Regular';
+src: url('Georgia.eot');
+src: url('Georgia.eot?#iefix') format('embedded-opentype'),
+url('Georgia.woff') format('woff'),
+url('Georgia.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Georgia Bold';
+src: url('Georgia-Bold.eot');
+src: url('Georgia-Bold.eot?#iefix') format('embedded-opentype'),
+url('Georgia-Bold.woff') format('woff'),
+url('Georgia-Bold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}

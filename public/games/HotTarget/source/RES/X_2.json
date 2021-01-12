@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/HotTarget/source/RES/X_2.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "X_2_A": { "frames": [0] },
+    "X_2_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:d829f639df34ecc3c1526ba69577c609:8881ec72c25f4575b40f677a65cf34f1:d1adcacd8d8af16248434dfbd7c8856f$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

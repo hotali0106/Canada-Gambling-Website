@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/GoldenPlanet/source/RES/A.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "A_A": { "frames": [0] },
+    "A_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:5f5db888aa7f102f8cc3d7a10a03215c:7c6bd245892af2d54f34ea22c41fee97:ff8643bea08ef28e0c9d50bf57f4c147$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

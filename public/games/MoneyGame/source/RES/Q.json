@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/MoneyGame/source/RES/Q.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:496cfb128ee4064865f8e8a51ad2c757:797ba0b6648b309ee034b4c9e046c511:6d77ca9c310e3e5f270ff183996e3fbf$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

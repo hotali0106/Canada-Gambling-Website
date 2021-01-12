@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/FirstClassTraveller/source/RES/K_FS.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_FS_A": { "frames": [0] },
+    "K_FS_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:40f7539a111b53155878bfbe91de2e0b:35211637065ddf863fb5e6fbb4ca0780:baca9bf19020d0df7da2e37932bb6ccf$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

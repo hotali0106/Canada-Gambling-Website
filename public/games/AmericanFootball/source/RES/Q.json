@@ -1,0 +1,45 @@
+{
+
+"images": [
+    "/games/AmericanFootball/source/RES/Q.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] },
+    "Q_C": { "frames": [2] },
+    "Q_D": { "frames": [3] },
+    "Q_E": { "frames": [4] },
+    "Q_F": { "frames": [5] },
+    "Q_G": { "frames": [6] },
+    "Q_H": { "frames": [7] },
+    "Q_I": { "frames": [8] },
+    "Q_J": { "frames": [9] },
+    "Q_K": { "frames": [10] },
+    "Q_L": { "frames": [11] },
+    "Q_M": { "frames": [12] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:dce118b0f8835e0f6743b55a111826e3:96328352f080d72c675ff4ca0b0a722f:fedce6eec9187e32f2ed73c78dbc37b0$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

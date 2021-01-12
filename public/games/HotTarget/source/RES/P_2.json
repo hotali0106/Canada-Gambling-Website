@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/HotTarget/source/RES/P_2.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_2_A": { "frames": [0] },
+    "P_2_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:7bfad9d98599bedace8b368fa8fe63d3:41ad13574c8c8b1d18940c183ee2e0ca:e44ed144a51fd15f60f6e6067e096191$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

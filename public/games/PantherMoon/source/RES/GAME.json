@@ -1,0 +1,31 @@
+{
+
+"images": [
+    "/games/PantherMoon/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [1, 965, 640, 480, 0, 0, 0],
+    [1, 1447, 640, 313, 0, 0, 0],
+    [1, 1762, 377, 232, 0, 0, 0],
+    [380, 1762, 377, 232, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "BACK": { "frames": [3] },
+    "BONUS_WND": { "frames": [4] },
+    "BONUS_WND_A": { "frames": [5] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:4cc8a4a4b2dd12f43cc0c523105c5002:8acd81687d154dc1a16c1c31522837bf:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

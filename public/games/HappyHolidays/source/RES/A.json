@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/HappyHolidays/source/RES/A.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "A_A": { "frames": [0] },
+    "A_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:58060061f205d25cfccd7e04cd9a8206:e3ee8c3bbd2389da4d25d26f280cf447:827bba03cd6f3f6e712bfb050e648279$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

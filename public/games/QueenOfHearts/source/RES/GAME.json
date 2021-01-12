@@ -1,0 +1,39 @@
+{
+
+"images": [
+    "/games/QueenOfHearts/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [643, 483, 640, 480, 0, 0, 0],
+    [1285, 483, 640, 313, 0, 0, 0],
+    [1285, 798, 479, 108, 0, 0, 0],
+    [1285, 908, 479, 108, 0, 0, 0],
+    [1, 965, 479, 108, 0, 0, 0],
+    [482, 965, 479, 108, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "INFO_A": { "frames": [3] },
+    "INFO_B": { "frames": [4] },
+    "BACK": { "frames": [5] },
+    "BONUS_15_WND": { "frames": [6] },
+    "BONUS_20_WND": { "frames": [7] },
+    "BONUS_8_WND": { "frames": [8] },
+    "BONUS_WND_A": { "frames": [9] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:440dabddc7672d643766cec4acf70457:05f71b493c14f5984d8e7dbad7292a74:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

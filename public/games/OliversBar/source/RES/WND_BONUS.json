@@ -1,0 +1,49 @@
+{
+
+"images": [
+    "/games/OliversBar/source/RES/WND_BONUS.png"
+],
+
+"framerate": 20,
+"frames": [
+    [1, 1, 20, 20, 0, -176, -176],
+    [23, 1, 80, 80, 0, -146, -146],
+    [105, 1, 138, 138, 0, -117, -117],
+    [245, 1, 172, 171, 0, -100, -101],
+    [419, 1, 173, 173, 0, -100, -100],
+    [594, 1, 240, 239, 0, -67, -67],
+    [1, 242, 301, 301, 0, -36, -36],
+    [304, 242, 342, 341, 0, -16, -14],
+    [648, 242, 362, 361, 0, -5, -6],
+    [1, 605, 366, 365, 0, -3, -4],
+    [369, 605, 358, 359, 0, -7, -7],
+    [1, 972, 348, 348, 0, -13, -12],
+    [351, 972, 336, 336, 0, -18, -18],
+    [689, 972, 326, 327, 0, -23, -22],
+    [1, 1322, 324, 324, 0, -24, -24]
+],
+
+"animations": {
+    "WND_BONUS_A": { "frames": [0] },
+    "WND_BONUS_B": { "frames": [1] },
+    "WND_BONUS_C": { "frames": [2] },
+    "WND_BONUS_D": { "frames": [3] },
+    "WND_BONUS_E": { "frames": [4] },
+    "WND_BONUS_F": { "frames": [5] },
+    "WND_BONUS_G": { "frames": [6] },
+    "WND_BONUS_H": { "frames": [7] },
+    "WND_BONUS_I": { "frames": [8] },
+    "WND_BONUS_J": { "frames": [9] },
+    "WND_BONUS_K": { "frames": [10] },
+    "WND_BONUS_L": { "frames": [11] },
+    "WND_BONUS_M": { "frames": [12] },
+    "WND_BONUS_N": { "frames": [13] },
+    "WND_BONUS_O": { "frames": [14] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:67a4fe7303d59ab63606ee1fecb2210d:1da49bb42bbd0a2493da30d2ee2035e1:196106ee42ebef40982b91f9ca6e295c$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

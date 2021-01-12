@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Football/source/RES/K.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_A": { "frames": [0] },
+    "K_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:e507f5de138f6e9d51c403791001fd4e:4e5928edad70e7ac6e14dbb0bd8caf2e:ca759da1210de30ef834f48b6cdf6226$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

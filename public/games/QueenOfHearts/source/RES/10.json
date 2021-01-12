@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/QueenOfHearts/source/RES/10.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "10_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:79bd7fcdfea05f5be1f3d4e1e7192f28:9bb157b126924b641e0cbf739e4740fc:e2c9be1b49d03cc38aafeff96da146a7$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

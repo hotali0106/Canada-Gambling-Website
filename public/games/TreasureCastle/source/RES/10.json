@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/TreasureCastle/source/RES/10.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "10_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:e38630a459c3fc26f4ad6c4fa49a0ca5:7d29265844f13d8366336f7d8be752f4:e2c9be1b49d03cc38aafeff96da146a7$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

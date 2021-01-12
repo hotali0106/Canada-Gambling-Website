@@ -1,0 +1,39 @@
+{
+
+"images": [
+    "/games/RoyalTreasures/source/RES/10.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "10_B": { "frames": [1] },
+    "10_C": { "frames": [2] },
+    "10_D": { "frames": [3] },
+    "10_E": { "frames": [4] },
+    "10_F": { "frames": [5] },
+    "10_G": { "frames": [6] },
+    "10_H": { "frames": [7] },
+    "10_I": { "frames": [8] },
+    "10_J": { "frames": [9] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:6dab1436974d68ce3d27aaf11fa5ff23:698c93cad3901917b7bbfbeaefa61fb4:3f11b13715d8c7c6894c81e1d926f2eb$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

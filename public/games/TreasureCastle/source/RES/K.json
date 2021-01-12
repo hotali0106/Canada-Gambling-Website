@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/TreasureCastle/source/RES/K.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_A": { "frames": [0] },
+    "K_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:39553149c58ce8af2bc2880d0124de99:a100e8721ca9d362e2f99fa84d738098:ca759da1210de30ef834f48b6cdf6226$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

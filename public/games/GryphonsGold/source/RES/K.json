@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/GryphonsGold/source/RES/K.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_A": { "frames": [0] },
+    "K_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a0049937bb25c09e8ee5423d6f4748ea:c1e2d2a330a2828362f8c22899c104a5:ab27d44aeb4d342a60876d57de8987c0$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

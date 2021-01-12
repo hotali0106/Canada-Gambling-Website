@@ -1,0 +1,43 @@
+{
+
+"images": [
+    "/games/MagicFlute/source/RES/K.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_A": { "frames": [0] },
+    "K_B": { "frames": [1] },
+    "K_C": { "frames": [2] },
+    "K_D": { "frames": [3] },
+    "K_E": { "frames": [4] },
+    "K_F": { "frames": [5] },
+    "K_G": { "frames": [6] },
+    "K_H": { "frames": [7] },
+    "K_I": { "frames": [8] },
+    "K_J": { "frames": [9] },
+    "K_K": { "frames": [10] },
+    "K_L": { "frames": [11] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:149a4b4c73f1c2a601f8f822ecd1dbfa:5a317a09a85ff187620879ef438ebe9c:ca759da1210de30ef834f48b6cdf6226$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,39 @@
+{
+
+"images": [
+    "/games/AmericanFootball/source/RES/SYM.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "A_A": { "frames": [0] },
+    "J_A": { "frames": [1] },
+    "K_A": { "frames": [2] },
+    "P_1_A": { "frames": [3] },
+    "P_2_A": { "frames": [4] },
+    "P_3_A": { "frames": [5] },
+    "P_4_A": { "frames": [6] },
+    "P_5_A": { "frames": [7] },
+    "Q_A": { "frames": [8] },
+    "SCAT_A": { "frames": [9] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:e0e363f54bc97d00142f0a08264ac19b:291d13b724c26a9b389968073efb3834:7f439f11c904196e4d223ad99049b174$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/LuckyPinups/source/RES/P_7.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_7_A": { "frames": [0] },
+    "P_7_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:b6c7cd54bc46ac8047de1872414d10d8:4cd9f7510b3b17e1baa0cae9a7fe8e62:cc3e57000f17b25349f9443aa879321b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,35 @@
+{
+
+"images": [
+    "/games/Asian/source/RES/SYM.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_1_A": { "frames": [0] },
+    "P_2_A": { "frames": [1] },
+    "P_3_A": { "frames": [2] },
+    "P_4_A": { "frames": [3] },
+    "P_5_A": { "frames": [4] },
+    "P_6_A": { "frames": [5] },
+    "P_7_A": { "frames": [6] },
+    "SCAT_A": { "frames": [7] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:7a8abbe620ea1f4923e93f0da6a5a0e2:c423c924f42fc524f1eb2414e598b8b6:7f439f11c904196e4d223ad99049b174$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

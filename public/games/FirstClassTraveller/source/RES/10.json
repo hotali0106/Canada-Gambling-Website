@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/FirstClassTraveller/source/RES/10.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "10_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:351c2f20cc32e985635bc29526a894a3:c7520d7c5fd00598b6f3ffbb027f73cb:e2c9be1b49d03cc38aafeff96da146a7$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

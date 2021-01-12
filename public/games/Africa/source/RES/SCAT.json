@@ -1,0 +1,61 @@
+{
+
+"images": [
+    "/games/Africa/source/RES/SCAT.png"
+],
+
+"framerate": 15,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 103, 100, 100, 0, 0, 0],
+    [1, 205, 100, 100, 0, 0, 0],
+    [1, 307, 100, 100, 0, 0, 0],
+    [1, 409, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [103, 103, 100, 100, 0, 0, 0],
+    [103, 205, 100, 100, 0, 0, 0],
+    [103, 307, 100, 100, 0, 0, 0],
+    [103, 409, 100, 100, 0, 0, 0],
+    [205, 103, 100, 100, 0, 0, 0],
+    [307, 103, 100, 100, 0, 0, 0],
+    [409, 103, 100, 100, 0, 0, 0],
+    [205, 205, 100, 100, 0, 0, 0],
+    [205, 307, 100, 100, 0, 0, 0],
+    [205, 409, 100, 100, 0, 0, 0],
+    [307, 205, 100, 100, 0, 0, 0],
+    [409, 205, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "SCAT_A": { "frames": [0] },
+    "SCAT_B": { "frames": [1] },
+    "SCAT_C": { "frames": [2] },
+    "SCAT_D": { "frames": [3] },
+    "SCAT_E": { "frames": [4] },
+    "SCAT_F": { "frames": [5] },
+    "SCAT_G": { "frames": [6] },
+    "SCAT_H": { "frames": [7] },
+    "SCAT_I": { "frames": [8] },
+    "SCAT_J": { "frames": [9] },
+    "SCAT_K": { "frames": [10] },
+    "SCAT_L": { "frames": [11] },
+    "SCAT_M": { "frames": [12] },
+    "SCAT_N": { "frames": [13] },
+    "SCAT_O": { "frames": [14] },
+    "SCAT_P": { "frames": [15] },
+    "SCAT_Q": { "frames": [16] },
+    "SCAT_R": { "frames": [17] },
+    "SCAT_S": { "frames": [18] },
+    "SCAT_T": { "frames": [19] },
+    "SCAT_U": { "frames": [20] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:473c7d91a227a47cb07db31eb847d987:c291df2f54eb87827e9874550e73601a:35efb0ec4b8481ccc4c4b7826a25e963$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

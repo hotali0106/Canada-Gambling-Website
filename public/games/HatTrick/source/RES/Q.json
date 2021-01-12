@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/HatTrick/source/RES/Q.png"
+],
+
+"framerate": 3,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:8b82a592a4ac75e82b3761ebe711c6f7:46ea4c4bb196b4a85ce98bf7fe28dbd0:fedce6eec9187e32f2ed73c78dbc37b0$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

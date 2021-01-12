@@ -1,0 +1,25 @@
+{
+
+"images": [
+    "/games/BookOfRa/source/RES/Q_FS.png"
+],
+
+"framerate": 3,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_FS_A": { "frames": [0] },
+    "Q_FS_B": { "frames": [1] },
+    "Q_FS_C": { "frames": [2] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:c4dab9777b390de7f83599089826e054:12339962bbecce44c5bd1f3758dec49f:1f169f98d56082d1d2f5d98117d711b1$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

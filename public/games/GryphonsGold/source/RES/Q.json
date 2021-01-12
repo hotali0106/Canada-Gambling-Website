@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/GryphonsGold/source/RES/Q.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:218157f610b92a3aa544834e5086094b:d7ddeec9524aa7841ae6a50b5fd13848:6d77ca9c310e3e5f270ff183996e3fbf$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

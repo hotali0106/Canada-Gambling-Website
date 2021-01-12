@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Dynasty/source/RES/J.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "J_A": { "frames": [0] },
+    "J_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:361a86ca65774463fa61ff6f8311fa3b:f5a5a9b535c9ecd95d978005a7e8612b:5ea0e3e92f2743404b24dd147cb53791$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

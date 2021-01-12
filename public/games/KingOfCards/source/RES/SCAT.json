@@ -1,0 +1,37 @@
+{
+
+"images": [
+    "/games/KingOfCards/source/RES/SCAT.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "SCAT_A": { "frames": [0] },
+    "SCAT_B": { "frames": [1] },
+    "SCAT_C": { "frames": [2] },
+    "SCAT_D": { "frames": [3] },
+    "SCAT_E": { "frames": [4] },
+    "SCAT_F": { "frames": [5] },
+    "SCAT_G": { "frames": [6] },
+    "SCAT_H": { "frames": [7] },
+    "SCAT_I": { "frames": [8] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:b6da25ff89cba472f3cf50d4ef183778:eb37801113c5fe7ce760cf1f4bd82684:111e9edab6efca64b6f0cfedc746d37c$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

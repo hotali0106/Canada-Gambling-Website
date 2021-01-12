@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/MoneyGame/source/RES/J.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "J_A": { "frames": [0] },
+    "J_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:74304b19ff0ec7401e1477901beb92b4:7b510a1715f5444ca22d05ecd2b1d7c6:5ea0e3e92f2743404b24dd147cb53791$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

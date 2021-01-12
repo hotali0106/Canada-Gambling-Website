@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Dolphins/source/RES/Q.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:e89b1bd21b1edf3285ea5e6b0cd4d861:fcf3e409d43e38a6cb9e0ad627ae5279:6d77ca9c310e3e5f270ff183996e3fbf$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,33 @@
+{
+
+"images": [
+    "/games/FourQueens/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [1, 965, 640, 480, 0, 0, 0],
+    [1, 1447, 640, 313, 0, 0, 0],
+    [1, 1762, 524, 264, 0, -60, -91],
+    [527, 1762, 144, 67, 0, 0, 0],
+    [527, 1831, 55, 41, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "BACK": { "frames": [3] },
+    "BONUS_WND": { "frames": [4] },
+    "BONUS_WND_A": { "frames": [5] },
+    "ARROW": { "frames": [6] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:24875b9716c0ee5d05d1c0e90b2a5460:d83525287d2df8de6369c22bf18c0758:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

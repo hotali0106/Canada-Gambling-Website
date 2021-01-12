@@ -1,0 +1,45 @@
+{
+
+"images": [
+    "/games/LuckyGirls/source/RES/GAMBLE.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 114, 159, 0, 0, 0],
+    [117, 1, 114, 159, 0, 0, 0],
+    [233, 1, 3, 3, 0, 0, 0],
+    [233, 1, 3, 3, 0, 0, 0],
+    [1, 162, 114, 159, 0, 0, 0],
+    [117, 162, 114, 159, 0, 0, 0],
+    [1, 323, 114, 159, 0, 0, 0],
+    [117, 323, 134, 76, 0, 0, 0],
+    [117, 401, 134, 76, 0, 0, 0],
+    [117, 479, 46, 48, 0, 0, 0],
+    [165, 479, 46, 48, 0, 0, 0],
+    [1, 484, 46, 48, 0, 0, 0],
+    [49, 484, 46, 48, 0, 0, 0]
+],
+
+"animations": {
+    "CARDS_BACK1": { "frames": [0] },
+    "CARDS_C": { "frames": [1] },
+    "CARDS_BACK2": { "frames": [2] },
+    "CARDS_M_BACK": { "frames": [3] },
+    "CARDS_D": { "frames": [4] },
+    "CARDS_H": { "frames": [5] },
+    "CARDS_S": { "frames": [6] },
+    "SELECT_BLACK": { "frames": [7] },
+    "SELECT_RED": { "frames": [8] },
+    "CARDS_M_C": { "frames": [9] },
+    "CARDS_M_D": { "frames": [10] },
+    "CARDS_M_H": { "frames": [11] },
+    "CARDS_M_S": { "frames": [12] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a27db1aa4336db0f0c09257e5ee1a9ab:f5a94504287314cce5e8f500cd3ed701:9f00d5a96f098234f6309e51a639ac92$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

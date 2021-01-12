@@ -1,0 +1,31 @@
+{
+
+"images": [
+    "/games/Desires/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 641, 479, 0, 0, 0],
+    [643, 1, 641, 479, 0, 0, 0],
+    [644, 482, 640, 313, 0, 0, 0],
+    [644, 797, 346, 203, 0, 0, 0],
+    [992, 797, 346, 203, 0, 0, 0]
+],
+
+"animations": {
+    "INFO": { "frames": [0] },
+    "FOOTER": { "frames": [1] },
+    "GAME": { "frames": [2] },
+    "BACK": { "frames": [3] },
+    "BONUS_WND": { "frames": [4] },
+    "BONUS_WND_A": { "frames": [5] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:7c35e436c27faa56fcd42ef2965c478e:71293316aee41c079d4aa3f3e0e6cbba:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

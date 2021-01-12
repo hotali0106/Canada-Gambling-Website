@@ -1,0 +1,39 @@
+{
+
+"images": [
+    "/games/Cuba/source/RES/P_3.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_3_A": { "frames": [0] },
+    "P_3_B": { "frames": [1] },
+    "P_3_C": { "frames": [2] },
+    "P_3_D": { "frames": [3] },
+    "P_3_J": { "frames": [4] },
+    "P_3_E": { "frames": [5] },
+    "P_3_F": { "frames": [6] },
+    "P_3_G": { "frames": [7] },
+    "P_3_H": { "frames": [8] },
+    "P_3_I": { "frames": [9] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:75278805772935daa4c0cc7ce65bce89:51fbc2c0d7c1a9c743284df9c6b44030:9b941da83f98ea85cbe6ac12caf36059$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

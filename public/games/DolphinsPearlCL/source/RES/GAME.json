@@ -1,0 +1,172 @@
+{"frames": {
+
+"background":
+{
+	"frame": {"x":1923,"y":91,"w":1404,"h":764},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1404,"h":764},
+	"sourceSize": {"w":1404,"h":764}
+},
+"background0":
+{
+	"frame": {"x":1,"y":275,"w":1384,"h":754},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1384,"h":754},
+	"sourceSize": {"w":1384,"h":754}
+},
+"background1":
+{
+	"frame": {"x":1387,"y":857,"w":1384,"h":754},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1384,"h":754},
+	"sourceSize": {"w":1384,"h":754}
+},
+"background2":
+{
+	"frame": {"x":1387,"y":857,"w":1384,"h":754},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1384,"h":754},
+	"sourceSize": {"w":1384,"h":754}
+},
+"bottom":
+{
+	"frame": {"x":1,"y":1,"w":1920,"h":248},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1920,"h":248},
+	"sourceSize": {"w":1920,"h":248}
+},
+"logo":
+{
+	"frame": {"x":3599,"y":269,"w":168,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":168,"h":100},
+	"sourceSize": {"w":168,"h":100}
+},
+"message":
+{
+	"frame": {"x":2773,"y":1117,"w":1012,"h":434},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1012,"h":434},
+	"sourceSize": {"w":1012,"h":434}
+},
+"middle0":
+{
+	"frame": {"x":3329,"y":91,"w":268,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":268,"h":744},
+	"sourceSize": {"w":268,"h":744}
+},
+"middle1":
+{
+	"frame": {"x":4023,"y":1,"w":36,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":744},
+	"sourceSize": {"w":36,"h":744}
+},
+"middle2":
+{
+	"frame": {"x":3777,"y":91,"w":36,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":744},
+	"sourceSize": {"w":36,"h":744}
+},
+"middle3":
+{
+	"frame": {"x":3599,"y":371,"w":36,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":744},
+	"sourceSize": {"w":36,"h":744}
+},
+"middle4":
+{
+	"frame": {"x":3637,"y":371,"w":36,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":744},
+	"sourceSize": {"w":36,"h":744}
+},
+"middle5":
+{
+	"frame": {"x":3815,"y":747,"w":268,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":268,"h":744},
+	"sourceSize": {"w":268,"h":744}
+},
+"outline0":
+{
+	"frame": {"x":1,"y":251,"w":1404,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1404,"h":10},
+	"sourceSize": {"w":1404,"h":10}
+},
+"outline1":
+{
+	"frame": {"x":1,"y":263,"w":1404,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1404,"h":10},
+	"sourceSize": {"w":1404,"h":10}
+},
+"outline2":
+{
+	"frame": {"x":4061,"y":1,"w":10,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":744},
+	"sourceSize": {"w":10,"h":744}
+},
+"outline3":
+{
+	"frame": {"x":4073,"y":1,"w":10,"h":744},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":744},
+	"sourceSize": {"w":10,"h":744}
+},
+"picture0":
+{
+	"frame": {"x":3845,"y":1,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176}
+},
+"picture1":
+{
+	"frame": {"x":3599,"y":91,"w":176,"h":176},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":176,"h":176},
+	"sourceSize": {"w":176,"h":176}
+},
+"top":
+{
+	"frame": {"x":1923,"y":1,"w":1920,"h":88},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1920,"h":88},
+	"sourceSize": {"w":1920,"h":88}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "GAME.png",
+	"format": "RGBA8888",
+	"size": {"w":4096,"h":4096},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:8f29484e4c7813fd131bbd290d3ac7f8:3013ed01ec75dd5983438d689c3779c9:ca7acc645b1ea13a2ff7d9cda3e0202b$"
+}
+}

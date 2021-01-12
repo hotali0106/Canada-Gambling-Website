@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/BananaSplash/source/RES/10.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "10_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:f7350a1d7c3930be6e734dd4982d51b2:35c31de8cb7f8da661148af2bf76f40a:3f11b13715d8c7c6894c81e1d926f2eb$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

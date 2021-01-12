@@ -1,0 +1,37 @@
+{
+
+"images": [
+    "/games/Tasty/source/RES/SYM.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_1_A": { "frames": [0] },
+    "P_2_A": { "frames": [1] },
+    "P_3_A": { "frames": [2] },
+    "P_4_A": { "frames": [3] },
+    "P_5_A": { "frames": [4] },
+    "P_6_A": { "frames": [5] },
+    "P_7_A": { "frames": [6] },
+    "P_8_A": { "frames": [7] },
+    "SCAT_A": { "frames": [8] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:9e3e57d982b944619dc1227f81b22e66:d617b1ecb93328857435f71b225b7567:7f439f11c904196e4d223ad99049b174$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

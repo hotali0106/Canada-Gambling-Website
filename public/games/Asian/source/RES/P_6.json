@@ -1,0 +1,21 @@
+{
+
+"images": [
+    "/games/Asian/source/RES/P_6.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_6_A": { "frames": [0] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:c31816fdc90e1a23e8246cc50015f1ac:15c942dea5f1daa171e50a19296756b4:794195ce455fe6eb67f52254bcbaf51c$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/WorldCup/source/RES/Q.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:9050c33cd9937d20bb7b998171ee4a94:063f0464415963e056b073c75171c3fa:fedce6eec9187e32f2ed73c78dbc37b0$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

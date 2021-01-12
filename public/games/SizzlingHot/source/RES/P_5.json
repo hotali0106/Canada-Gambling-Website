@@ -1,0 +1,29 @@
+{
+
+"images": [
+    "/games/SizzlingHot/source/RES/P_5.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_5_A": { "frames": [0] },
+    "P_5_B": { "frames": [1] },
+    "P_5_C": { "frames": [2] },
+    "P_5_D": { "frames": [3] },
+    "P_5_E": { "frames": [4] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:1426e9af31d37f16fb98d3ffd01810c2:36e9184a9851fe3966e357775f2bd84d:bd84e902a7ad050d12ff4ef83c603cca$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

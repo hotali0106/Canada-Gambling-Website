@@ -1,0 +1,73 @@
+{
+
+"images": [
+    "/games/BookOfRa/source/RES/BOOK.png"
+],
+
+"framerate": 15,
+"frames": [
+    [1, 1, 111, 74, 0, -89, 0],
+    [114, 1, 111, 74, 0, -89, 0],
+    [1, 77, 112, 75, 0, -88, 0],
+    [115, 77, 112, 77, 0, -88, 0],
+    [1, 156, 112, 79, 0, -87, 0],
+    [115, 156, 111, 81, 0, -86, 0],
+    [1, 239, 107, 85, 0, -85, 0],
+    [110, 239, 108, 88, 0, -84, 0],
+    [1, 329, 109, 90, 0, -83, 0],
+    [112, 329, 110, 90, 0, -82, 0],
+    [1, 421, 114, 90, 0, -78, 0],
+    [117, 421, 129, 90, 0, -63, 0],
+    [1, 513, 156, 88, 0, -36, 0],
+    [1, 603, 171, 85, 0, -21, 0],
+    [1, 690, 187, 81, 0, -5, 0],
+    [1, 773, 192, 78, 0, 0, 0],
+    [1, 853, 192, 75, 0, 0, 0],
+    [1, 930, 192, 73, 0, 0, 0],
+    [1, 1005, 192, 71, 0, 0, 0],
+    [1, 1078, 192, 70, 0, 0, 0],
+    [1, 1150, 191, 70, 0, -1, 0],
+    [1, 1222, 191, 70, 0, -1, 0],
+    [1, 1294, 191, 70, 0, -1, 0],
+    [1, 1366, 191, 70, 0, -1, 0],
+    [1, 1438, 191, 70, 0, -1, 0],
+    [1, 1510, 191, 70, 0, -1, 0],
+    [1, 1582, 191, 70, 0, -1, 0]
+],
+
+"animations": {
+    "BOOK_A": { "frames": [0] },
+    "BOOK_B": { "frames": [1] },
+    "BOOK_C": { "frames": [2] },
+    "BOOK_D": { "frames": [3] },
+    "BOOK_E": { "frames": [4] },
+    "BOOK_F": { "frames": [5] },
+    "BOOK_G": { "frames": [6] },
+    "BOOK_H": { "frames": [7] },
+    "BOOK_I": { "frames": [8] },
+    "BOOK_J": { "frames": [9] },
+    "BOOK_K": { "frames": [10] },
+    "BOOK_L": { "frames": [11] },
+    "BOOK_M": { "frames": [12] },
+    "BOOK_N": { "frames": [13] },
+    "BOOK_O": { "frames": [14] },
+    "BOOK_P": { "frames": [15] },
+    "BOOK_Q": { "frames": [16] },
+    "BOOK_R": { "frames": [17] },
+    "BOOK_S": { "frames": [18] },
+    "BOOK_T": { "frames": [19] },
+    "BOOK_U": { "frames": [20] },
+    "BOOK_V": { "frames": [21] },
+    "BOOK_W": { "frames": [22] },
+    "BOOK_X": { "frames": [23] },
+    "BOOK_Y": { "frames": [24] },
+    "BOOK_Z": { "frames": [25] },
+    "BOOK_Z_A": { "frames": [26] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:e725eb141b4b419095a48f2a04fbd31d:63b02755a4f152d83af5048a9c5dc78b:9a0ad034c1fc4eb19fb346a86a8fb51c$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

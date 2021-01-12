@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Attila/source/RES/9.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "9_A": { "frames": [0] },
+    "9_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:27b0de1de62b0734ae4a0da3e652de3d:f78b99ab39e037dbeeaf372b9beaf19f:2eee161d561aa03630b318e8c054d6b7$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

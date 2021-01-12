@@ -1,0 +1,33 @@
+{
+
+"images": [
+    "/games/Cuba/source/RES/P_4.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_4_A": { "frames": [0] },
+    "P_4_B": { "frames": [1] },
+    "P_4_C": { "frames": [2] },
+    "P_4_D": { "frames": [3] },
+    "P_4_E": { "frames": [4] },
+    "P_4_F": { "frames": [5] },
+    "P_4_G": { "frames": [6] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:5fc96ac449d8c99100ed37bd7675471f:e5092d1fde9621ceea40bf519eb5eb18:99dea81172b2d9f27a5f742c07918a85$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

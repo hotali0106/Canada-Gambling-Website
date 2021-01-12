@@ -1,0 +1,51 @@
+{
+
+"images": [
+    "/games/SafariHeat/source/RES/J.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0],
+    [1327, 1, 100, 100, 0, 0, 0],
+    [1429, 1, 100, 100, 0, 0, 0],
+    [1531, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "J_A": { "frames": [0] },
+    "J_B": { "frames": [1] },
+    "J_C": { "frames": [2] },
+    "J_D": { "frames": [3] },
+    "J_E": { "frames": [4] },
+    "J_F": { "frames": [5] },
+    "J_G": { "frames": [6] },
+    "J_H": { "frames": [7] },
+    "J_I": { "frames": [8] },
+    "J_J": { "frames": [9] },
+    "J_K": { "frames": [10] },
+    "J_L": { "frames": [11] },
+    "J_M": { "frames": [12] },
+    "J_N": { "frames": [13] },
+    "J_O": { "frames": [14] },
+    "J_P": { "frames": [15] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:34b893851a2d524470ffc450e8d1dbdc:bcf772a3c734f1ae76e8a8b8b807c371:5ea0e3e92f2743404b24dd147cb53791$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

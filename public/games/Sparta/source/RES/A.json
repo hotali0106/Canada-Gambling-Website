@@ -1,0 +1,49 @@
+{
+
+"images": [
+    "/games/Sparta/source/RES/A.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0],
+    [1327, 1, 100, 100, 0, 0, 0],
+    [1429, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "A_A": { "frames": [0] },
+    "A_B": { "frames": [1] },
+    "A_C": { "frames": [2] },
+    "A_D": { "frames": [3] },
+    "A_E": { "frames": [4] },
+    "A_F": { "frames": [5] },
+    "A_G": { "frames": [6] },
+    "A_H": { "frames": [7] },
+    "A_I": { "frames": [8] },
+    "A_J": { "frames": [9] },
+    "A_K": { "frames": [10] },
+    "A_L": { "frames": [11] },
+    "A_M": { "frames": [12] },
+    "A_N": { "frames": [13] },
+    "A_O": { "frames": [14] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:6cd413c66e644b28aae9af4c6e1ad00e:a2467c26e9d19148947b4c4d623cb8a7:ff8643bea08ef28e0c9d50bf57f4c147$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

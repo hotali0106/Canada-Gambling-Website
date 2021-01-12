@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/HotTarget/source/RES/SCAT.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "SCAT_A": { "frames": [0] },
+    "SCAT_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:11f47d48536c5c3e82f6c30d51ff57c2:eaa80058ecfd21fd8c2d608c05853188:35efb0ec4b8481ccc4c4b7826a25e963$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

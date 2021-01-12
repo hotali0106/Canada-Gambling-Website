@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/OliversBar/source/RES/P_11.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_11_A": { "frames": [0] },
+    "P_11_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:0b6469929e582f1642a66cb16db69ba2:3f01d592f369beb5e1967aff98976295:1d949105a1405ff97d0930dd29fe28af$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

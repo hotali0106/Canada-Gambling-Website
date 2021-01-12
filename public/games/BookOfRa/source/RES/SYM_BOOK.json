@@ -1,0 +1,37 @@
+{
+
+"images": [
+    "/games/BookOfRa/source/RES/SYM_BOOK.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 53, 53, 0, 0, 0],
+    [56, 1, 53, 53, 0, 0, 0],
+    [111, 1, 53, 53, 0, 0, 0],
+    [166, 1, 53, 53, 0, 0, 0],
+    [221, 1, 53, 53, 0, 0, 0],
+    [276, 1, 53, 53, 0, 0, 0],
+    [331, 1, 53, 53, 0, 0, 0],
+    [386, 1, 53, 53, 0, 0, 0],
+    [441, 1, 53, 53, 0, 0, 0]
+],
+
+"animations": {
+    "10_A": { "frames": [0] },
+    "A_A": { "frames": [1] },
+    "J_A": { "frames": [2] },
+    "K_A": { "frames": [3] },
+    "P_1_A": { "frames": [4] },
+    "P_2_A": { "frames": [5] },
+    "P_3_A": { "frames": [6] },
+    "P_4_A": { "frames": [7] },
+    "Q_A": { "frames": [8] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:6cf3e532fdc852aa193490c9d8adc511:14bd87c5969d512319b2f6afdaa579ad:2f6847d9832af40040c69fcb200751db$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,41 @@
+{
+
+"images": [
+    "/games/Russian/source/RES/P_5.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_5_A": { "frames": [0] },
+    "P_5_B": { "frames": [1] },
+    "P_5_C": { "frames": [2] },
+    "P_5_D": { "frames": [3] },
+    "P_5_E": { "frames": [4] },
+    "P_5_F": { "frames": [5] },
+    "P_5_G": { "frames": [6] },
+    "P_5_H": { "frames": [7] },
+    "P_5_I": { "frames": [8] },
+    "P_5_J": { "frames": [9] },
+    "P_5_K": { "frames": [10] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:4afc4855615a5b2381c9764e7642751e:2dc728bd4f612087aa9cd52961686304:bd84e902a7ad050d12ff4ef83c603cca$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

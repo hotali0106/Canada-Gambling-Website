@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/BuzzinBugs/source/RES/A.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "A_A": { "frames": [0] },
+    "A_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:6d25b8110240439e695459d677b8a661:a6bca6ee78e634766eae5bea483c4e10:827bba03cd6f3f6e712bfb050e648279$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

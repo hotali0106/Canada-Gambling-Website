@@ -1,0 +1,41 @@
+{
+
+"images": [
+    "/games/PantherMoon/source/RES/K.png"
+],
+
+"framerate": 15,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_A": { "frames": [0] },
+    "K_B": { "frames": [1] },
+    "K_C": { "frames": [2] },
+    "K_D": { "frames": [3] },
+    "K_E": { "frames": [4] },
+    "K_F": { "frames": [5] },
+    "K_G": { "frames": [6] },
+    "K_H": { "frames": [7] },
+    "K_I": { "frames": [8] },
+    "K_J": { "frames": [9] },
+    "K_K": { "frames": [10] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:ff83eeca9c55f78bd2e3e6dfe97e046c:5f4db3a62260feb8b48089ec48bd1087:ca759da1210de30ef834f48b6cdf6226$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

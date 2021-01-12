@@ -1,0 +1,35 @@
+{
+
+"images": [
+    "/games/Cuba/source/RES/SCAT.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "SCAT_A": { "frames": [0] },
+    "SCAT_B": { "frames": [1] },
+    "SCAT_C": { "frames": [2] },
+    "SCAT_D": { "frames": [3] },
+    "SCAT_E": { "frames": [4] },
+    "SCAT_F": { "frames": [5] },
+    "SCAT_G": { "frames": [6] },
+    "SCAT_H": { "frames": [7] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:6a64b9f58014e80fe249c1f95e0bbfab:7d662612c888c815f1551fc1f1d17440:111e9edab6efca64b6f0cfedc746d37c$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

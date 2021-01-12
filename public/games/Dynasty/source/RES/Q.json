@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Dynasty/source/RES/Q.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:32d56d23b77f40027903c2d44a477d92:dcde45bdc9ee027031277aa99035525b:6d77ca9c310e3e5f270ff183996e3fbf$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

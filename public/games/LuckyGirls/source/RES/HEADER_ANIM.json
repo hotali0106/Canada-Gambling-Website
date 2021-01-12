@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/LuckyGirls/source/RES/HEADER_ANIM.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 209, 69, 0, -3, -2],
+    [212, 1, 3, 3, 0, 0, 0]
+],
+
+"animations": {
+    "HEADER_ANIM_B": { "frames": [0] },
+    "HEADER_ANIM_A": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:5c36d8427c31aa270b0f05cbb9e03442:d3b51945b3af8683e2c6cb38e39599d3:5b59dfb665e1e9c657fd66889a702910$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

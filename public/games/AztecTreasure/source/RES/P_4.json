@@ -1,0 +1,49 @@
+{
+
+"images": [
+    "/games/AztecTreasure/source/RES/P_4.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0],
+    [1327, 1, 100, 100, 0, 0, 0],
+    [1429, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_4_B": { "frames": [0] },
+    "P_4_C": { "frames": [1] },
+    "P_4_D": { "frames": [2] },
+    "P_4_E": { "frames": [3] },
+    "P_4_F": { "frames": [4] },
+    "P_4_G": { "frames": [5] },
+    "P_4_H": { "frames": [6] },
+    "P_4_I": { "frames": [7] },
+    "P_4_J": { "frames": [8] },
+    "P_4_K": { "frames": [9] },
+    "P_4_L": { "frames": [10] },
+    "P_4_M": { "frames": [11] },
+    "P_4_N": { "frames": [12] },
+    "P_4_O": { "frames": [13] },
+    "P_4_P": { "frames": [14] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:c7b53bea476f044354d5ebf4b52e1a4f:9483fada35284cd559ba198e36640e78:ea6e1a747942f484354e21ce43959286$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

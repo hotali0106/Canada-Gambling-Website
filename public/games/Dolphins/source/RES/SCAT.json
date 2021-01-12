@@ -1,0 +1,29 @@
+{
+
+"images": [
+    "/games/Dolphins/source/RES/SCAT.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "SCAT_A": { "frames": [0] },
+    "SCAT_B": { "frames": [1] },
+    "SCAT_C": { "frames": [2] },
+    "SCAT_D": { "frames": [3] },
+    "SCAT_E": { "frames": [4] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:10e13862fb9b72c7a0c59a92f38d84c7:daad621c5363bc3166ec221d90fdee0c:111e9edab6efca64b6f0cfedc746d37c$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

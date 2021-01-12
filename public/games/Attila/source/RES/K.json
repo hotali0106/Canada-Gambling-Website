@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Attila/source/RES/K.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_A": { "frames": [0] },
+    "K_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:66b31ea64564937b23ff87ddd1fe61f9:7c9714232250c6cd8f4bc577ede403d7:ab27d44aeb4d342a60876d57de8987c0$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

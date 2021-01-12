@@ -1,0 +1,43 @@
+{
+
+"images": [
+    "/games/BananasGoBahamas/source/RES/P_5.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_5_A": { "frames": [0] },
+    "P_5_B": { "frames": [1] },
+    "P_5_C": { "frames": [2] },
+    "P_5_D": { "frames": [3] },
+    "P_5_E": { "frames": [4] },
+    "P_5_F": { "frames": [5] },
+    "P_5_G": { "frames": [6] },
+    "P_5_H": { "frames": [7] },
+    "P_5_I": { "frames": [8] },
+    "P_5_J": { "frames": [9] },
+    "P_5_K": { "frames": [10] },
+    "P_5_L": { "frames": [11] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:7327d82c2887168786ba3d5ab60dc67f:54bf985256b9f4c1eb34aecb67bd4ff8:9b941da83f98ea85cbe6ac12caf36059$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

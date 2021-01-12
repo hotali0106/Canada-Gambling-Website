@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/Football/source/RES/Q.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:c896b90bf60b213cb6b68b0422ae47f7:2bf33c20d8cee2d1b69ef8914c2bfbd7:fedce6eec9187e32f2ed73c78dbc37b0$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

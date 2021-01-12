@@ -1,0 +1,35 @@
+{
+
+"images": [
+    "/games/BeetleMania/source/RES/P_3.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_3_A": { "frames": [0] },
+    "P_3_B": { "frames": [1] },
+    "P_3_C": { "frames": [2] },
+    "P_3_D": { "frames": [3] },
+    "P_3_E": { "frames": [4] },
+    "P_3_F": { "frames": [5] },
+    "P_3_G": { "frames": [6] },
+    "P_3_H": { "frames": [7] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:d3e27a89a51d88c9036f68473bf33aab:0c50dd5327de765c4f415ed81b67016c:0eaf7d1f32464656ecc6a2893bfca6aa$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

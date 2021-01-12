@@ -1,0 +1,37 @@
+{
+
+"images": [
+    "/games/Africa/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [643, 483, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 315, 0, 0, -70],
+    [1285, 318, 330, 240, 0, -17, -14],
+    [1617, 318, 330, 240, 0, -17, -14],
+    [1285, 560, 330, 240, 0, -17, -14],
+    [1617, 560, 330, 240, 0, -17, -14]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "INFO_A": { "frames": [3] },
+    "BACK": { "frames": [4] },
+    "BONUS_12_WND": { "frames": [5] },
+    "BONUS_16_WND": { "frames": [6] },
+    "BONUS_20_WND": { "frames": [7] },
+    "BONUS_WND_A": { "frames": [8] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:c00f76e35f5f352542ff634188bc8623:e020d6cb6bed1e0c048f9b42acfd0eb7:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

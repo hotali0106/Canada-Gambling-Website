@@ -1,0 +1,41 @@
+{
+
+"images": [
+    "/games/Mosquitos/source/RES/P_6.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_6_A": { "frames": [0] },
+    "P_6_B": { "frames": [1] },
+    "P_6_C": { "frames": [2] },
+    "P_6_D": { "frames": [3] },
+    "P_6_E": { "frames": [4] },
+    "P_6_F": { "frames": [5] },
+    "P_6_G": { "frames": [6] },
+    "P_6_H": { "frames": [7] },
+    "P_6_I": { "frames": [8] },
+    "P_6_J": { "frames": [9] },
+    "P_6_K": { "frames": [10] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:5998fa55b118bfd7820e6ace21e9d8f8:8dee83c5a80eb55b4dca7663e6215e19:794195ce455fe6eb67f52254bcbaf51c$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

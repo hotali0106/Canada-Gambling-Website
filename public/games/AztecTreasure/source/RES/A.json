@@ -1,0 +1,29 @@
+{
+
+"images": [
+    "/games/AztecTreasure/source/RES/A.png"
+],
+
+"framerate": 5,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "A_A": { "frames": [0] },
+    "A_B": { "frames": [1] },
+    "A_C": { "frames": [2] },
+    "A_D": { "frames": [3] },
+    "A_E": { "frames": [4] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:67c8467a7808e726b7c5df08832c1832:5f2fc7cce5427b1394752b979cc7e132:827bba03cd6f3f6e712bfb050e648279$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

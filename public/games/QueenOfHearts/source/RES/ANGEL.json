@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/QueenOfHearts/source/RES/ANGEL.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 123, 128, 0, 0, 0],
+    [1, 131, 123, 126, 0, 0, -2]
+],
+
+"animations": {
+    "ANGEL_A": { "frames": [0] },
+    "ANGEL_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:bff007b90b016e861178bdff1dae13b0:c4755588504811b08c517bd9c5ed6115:f5f88aa3cbb0971cf19bc13c408d364b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,47 @@
+{
+
+"images": [
+    "/games/Africa/source/RES/FS.png"
+],
+
+"framerate": 15,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0],
+    [1327, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "FS_A": { "frames": [0] },
+    "FS_B": { "frames": [1] },
+    "FS_C": { "frames": [2] },
+    "FS_D": { "frames": [3] },
+    "FS_E": { "frames": [4] },
+    "FS_F": { "frames": [5] },
+    "FS_G": { "frames": [6] },
+    "FS_H": { "frames": [7] },
+    "FS_I": { "frames": [8] },
+    "FS_J": { "frames": [9] },
+    "FS_K": { "frames": [10] },
+    "FS_L": { "frames": [11] },
+    "FS_M": { "frames": [12] },
+    "FS_N": { "frames": [13] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:af835733709476ec06024aabed5337a3:08c72bbecf7d869bddd9cf512107282b:26406368f52d188c9e25e5efb69f5ca3$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

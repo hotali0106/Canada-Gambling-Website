@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/StarAttraction/source/RES/P_7.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_7_A": { "frames": [0] },
+    "P_7_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:88312e991941b9f92164162c2b37fcc8:7362f6b0259aae17cfdc383cec176df9:cc3e57000f17b25349f9443aa879321b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

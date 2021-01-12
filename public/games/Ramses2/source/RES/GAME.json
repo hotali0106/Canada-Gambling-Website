@@ -1,0 +1,31 @@
+{
+
+"images": [
+    "/games/Ramses2/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 312, 0, 0, 0],
+    [643, 483, 500, 258, 0, 0, 0],
+    [1145, 483, 500, 258, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "BACK": { "frames": [3] },
+    "BONUS_WND": { "frames": [4] },
+    "BONUS_WND_A": { "frames": [5] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:d46bd41dbd9a890e9f33df999dd3f07f:34b42e931179699cc51ba24d25b3b73a:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

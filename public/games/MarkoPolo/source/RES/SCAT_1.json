@@ -1,0 +1,53 @@
+{
+
+"images": [
+    "/games/MarkoPolo/source/RES/SCAT_1.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0],
+    [1327, 1, 100, 100, 0, 0, 0],
+    [1429, 1, 100, 100, 0, 0, 0],
+    [1531, 1, 100, 100, 0, 0, 0],
+    [1633, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "SCAT_1_A": { "frames": [0] },
+    "SCAT_1_B": { "frames": [1] },
+    "SCAT_1_C": { "frames": [2] },
+    "SCAT_1_D": { "frames": [3] },
+    "SCAT_1_E": { "frames": [4] },
+    "SCAT_1_F": { "frames": [5] },
+    "SCAT_1_G": { "frames": [6] },
+    "SCAT_1_H": { "frames": [7] },
+    "SCAT_1_I": { "frames": [8] },
+    "SCAT_1_J": { "frames": [9] },
+    "SCAT_1_K": { "frames": [10] },
+    "SCAT_1_L": { "frames": [11] },
+    "SCAT_1_M": { "frames": [12] },
+    "SCAT_1_N": { "frames": [13] },
+    "SCAT_1_O": { "frames": [14] },
+    "SCAT_1_P": { "frames": [15] },
+    "SCAT_1_Q": { "frames": [16] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a15332271b556350fe721f268faa1461:49bbe7f9202e8df2a79b077debde51b5:35efb0ec4b8481ccc4c4b7826a25e963$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

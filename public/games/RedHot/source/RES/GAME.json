@@ -1,0 +1,31 @@
+{
+
+"images": [
+    "/games/RedHot/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 641, 480, 0, 0, 0],
+    [644, 1, 641, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [643, 483, 640, 313, 0, 0, 0],
+    [643, 798, 346, 203, 0, 0, 0],
+    [991, 798, 346, 203, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "BACK": { "frames": [3] },
+    "BONUS_WND": { "frames": [4] },
+    "BONUS_WND_A": { "frames": [5] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:3776b2d4d507559b96ebdc58e13da902:1f1e99dcb89a09236aad0a5c032cdcea:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

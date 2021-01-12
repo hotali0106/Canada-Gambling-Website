@@ -1,0 +1,39 @@
+{
+
+"images": [
+    "/games/PharaonsGold2/source/RES/P_6.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_6_A": { "frames": [0] },
+    "P_6_B": { "frames": [1] },
+    "P_6_C": { "frames": [2] },
+    "P_6_D": { "frames": [3] },
+    "P_6_E": { "frames": [4] },
+    "P_6_F": { "frames": [5] },
+    "P_6_G": { "frames": [6] },
+    "P_6_H": { "frames": [7] },
+    "P_6_I": { "frames": [8] },
+    "P_6_J": { "frames": [9] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:768a2f0cdc82469f139d52341d7ee132:264a73a83a16b2aa1f09d253c68f5e8f:3133d8fc7031f9db6d0c06634c722bba$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

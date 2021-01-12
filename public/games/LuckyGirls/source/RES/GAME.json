@@ -1,0 +1,37 @@
+{
+
+"images": [
+    "/games/LuckyGirls/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [1285, 1, 554, 330, 0, -45, -35],
+    [1285, 333, 554, 330, 0, -45, -35],
+    [1, 483, 640, 480, 0, 0, 0],
+    [643, 483, 640, 480, 0, 0, 0],
+    [1285, 665, 554, 330, 0, -45, -35],
+    [1, 965, 640, 315, 0, 0, -72],
+    [643, 965, 554, 330, 0, -45, -35]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "BONUS_12_WND": { "frames": [2] },
+    "BONUS_18_WND": { "frames": [3] },
+    "INFO": { "frames": [4] },
+    "INFO_A": { "frames": [5] },
+    "BONUS_6_WND": { "frames": [6] },
+    "BACK": { "frames": [7] },
+    "BONUS_WND_A": { "frames": [8] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a75069504918074da1464dd27c156474:4a2825a265e7ae2ab218bc6c770db82c:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

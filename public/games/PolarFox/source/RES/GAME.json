@@ -1,0 +1,31 @@
+{
+
+"images": [
+    "/games/PolarFox/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [1, 965, 640, 480, 0, 0, 0],
+    [1, 1447, 640, 313, 0, 0, 0],
+    [1, 1762, 388, 139, 0, 0, 0],
+    [1, 1903, 388, 139, 0, 0, 0]
+],
+
+"animations": {
+    "GAME — копия": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "BACK": { "frames": [3] },
+    "BONUS_WND": { "frames": [4] },
+    "BONUS_WND_A": { "frames": [5] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:95a2f1054cd8c471498c1b73bb77cacb:02f0d2ec5c09b3777934b961aa89b7f2:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

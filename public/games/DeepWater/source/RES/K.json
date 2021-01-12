@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/DeepWater/source/RES/K.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_A": { "frames": [0] },
+    "K_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:5897d281e98e108e1953a8aa46759c1b:5db96d44ba8cb743d0c1748b901fefd4:ab27d44aeb4d342a60876d57de8987c0$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

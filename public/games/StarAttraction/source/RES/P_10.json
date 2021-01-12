@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/StarAttraction/source/RES/P_10.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_10_A": { "frames": [0] },
+    "P_10_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:952193b25b299a95832e11a84eac0eb2:97b9c1d4db97323ba479dc302c0acd10:65dd2865866d0ceb22b455472f6f5f17$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

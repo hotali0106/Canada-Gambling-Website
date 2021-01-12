@@ -1,0 +1,43 @@
+{
+
+"images": [
+    "/games/PharaonsGold2/source/RES/P_2.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_2_A": { "frames": [0] },
+    "P_2_B": { "frames": [1] },
+    "P_2_C": { "frames": [2] },
+    "P_2_D": { "frames": [3] },
+    "P_2_E": { "frames": [4] },
+    "P_2_F": { "frames": [5] },
+    "P_2_G": { "frames": [6] },
+    "P_2_H": { "frames": [7] },
+    "P_2_I": { "frames": [8] },
+    "P_2_J": { "frames": [9] },
+    "P_2_K": { "frames": [10] },
+    "P_2_L": { "frames": [11] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:8e4425532ca65366c57b4e14954aede7:8b5b77bc3fe326994f7bc11da50dec9d:99dea81172b2d9f27a5f742c07918a85$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

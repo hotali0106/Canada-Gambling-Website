@@ -1,0 +1,33 @@
+{
+
+"images": [
+    "/games/Columbus/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [643, 483, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 313, 0, 0, 0],
+    [1285, 316, 524, 238, 0, 0, 0],
+    [1285, 556, 524, 238, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "INFO_A": { "frames": [3] },
+    "BACK": { "frames": [4] },
+    "BONUS_WND": { "frames": [5] },
+    "BONUS_WND_A": { "frames": [6] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:a1b4811666c2075b0dee7da52fcaefb8:99e2b0a0dc6aade631c0ad0d377b370b:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

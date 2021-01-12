@@ -1,0 +1,37 @@
+{
+
+"images": [
+    "/games/LuckyLadysCharm/source/RES/P_6.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_6_A": { "frames": [0] },
+    "P_6_B": { "frames": [1] },
+    "P_6_C": { "frames": [2] },
+    "P_6_D": { "frames": [3] },
+    "P_6_E": { "frames": [4] },
+    "P_6_F": { "frames": [5] },
+    "P_6_G": { "frames": [6] },
+    "P_6_H": { "frames": [7] },
+    "P_6_I": { "frames": [8] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:7c749cc19a917d38a9baa0321ba5ba7f:b8069a5f1f48296b2bc369734c8d66be:3133d8fc7031f9db6d0c06634c722bba$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

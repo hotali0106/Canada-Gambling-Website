@@ -1,0 +1,67 @@
+{
+
+"images": [
+    "/games/HatTrick/source/RES/SCAT_1.png"
+],
+
+"framerate": 20,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 103, 100, 100, 0, 0, 0],
+    [1, 205, 100, 100, 0, 0, 0],
+    [1, 307, 100, 100, 0, 0, 0],
+    [1, 409, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [103, 103, 100, 100, 0, 0, 0],
+    [103, 205, 100, 100, 0, 0, 0],
+    [103, 307, 100, 100, 0, 0, 0],
+    [103, 409, 100, 100, 0, 0, 0],
+    [205, 103, 100, 100, 0, 0, 0],
+    [307, 103, 100, 100, 0, 0, 0],
+    [409, 103, 100, 100, 0, 0, 0],
+    [205, 205, 100, 100, 0, 0, 0],
+    [205, 307, 100, 100, 0, 0, 0],
+    [205, 409, 100, 100, 0, 0, 0],
+    [307, 205, 100, 100, 0, 0, 0],
+    [409, 205, 100, 100, 0, 0, 0],
+    [307, 307, 100, 100, 0, 0, 0],
+    [307, 409, 100, 100, 0, 0, 0],
+    [409, 307, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "SCAT_1_A": { "frames": [0] },
+    "SCAT_1_B": { "frames": [1] },
+    "SCAT_1_C": { "frames": [2] },
+    "SCAT_1_D": { "frames": [3] },
+    "SCAT_1_E": { "frames": [4] },
+    "SCAT_1_F": { "frames": [5] },
+    "SCAT_1_G": { "frames": [6] },
+    "SCAT_1_H": { "frames": [7] },
+    "SCAT_1_I": { "frames": [8] },
+    "SCAT_1_J": { "frames": [9] },
+    "SCAT_1_K": { "frames": [10] },
+    "SCAT_1_L": { "frames": [11] },
+    "SCAT_1_M": { "frames": [12] },
+    "SCAT_1_N": { "frames": [13] },
+    "SCAT_1_O": { "frames": [14] },
+    "SCAT_1_P": { "frames": [15] },
+    "SCAT_1_Q": { "frames": [16] },
+    "SCAT_1_R": { "frames": [17] },
+    "SCAT_1_S": { "frames": [18] },
+    "SCAT_1_T": { "frames": [19] },
+    "SCAT_1_U": { "frames": [20] },
+    "SCAT_1_V": { "frames": [21] },
+    "SCAT_1_W": { "frames": [22] },
+    "SCAT_1_X": { "frames": [23] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:dd1aa1db691ac3ebe131a011dcb72e22:04e1978bbe278056cfbb26eb7bb4a16d:0205fc124a51fcacb0c5cf33cf5a2f5d$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

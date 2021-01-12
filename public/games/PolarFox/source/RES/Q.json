@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/PolarFox/source/RES/Q.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "Q_A": { "frames": [0] },
+    "Q_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:e45f9951fbe3653178e6df1d95f7ca38:1d043bd4745a43d0a2c4d4875649496d:6d77ca9c310e3e5f270ff183996e3fbf$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

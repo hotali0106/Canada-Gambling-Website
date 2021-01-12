@@ -1,0 +1,79 @@
+@font-face {
+	font-family: 'Arial';
+	src: url('../fonts/font_arial-webfont.eot');
+	src: url('../fonts/font_arial-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font_arial-webfont.woff') format('woff'), url('../fonts/font_arial-webfont.ttf') format('truetype'), url('../fonts/font_arial-webfont.svg#arialmt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GothamProNarrowBold";
+	src: url("../fonts/GothamProNarrowBold.eot");
+	src: url("../fonts/GothamProNarrowBold.eot?#iefix")format("embedded-opentype"), url("../fonts/GothamProNarrowBold.woff") format("woff"), url("../fonts/GothamProNarrowBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "liq";
+	src: url("../fonts/liqc____.eot");
+	src: url("../fonts/liqc____.eot?#iefix")format("embedded-opentype"), url("../fonts/liqc____.woff") format("woff"), url("../fonts/liqc____.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Helvetica";
+	src: url("../fonts/Helvetica.eot");
+	src: url("../fonts/Helvetica.eot?#iefix")format("embedded-opentype"), url("../fonts/Helvetica.woff") format("woff"), url("../fonts/Helvetica.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Helvetica Bold";
+	src: url("../fonts/Helvetica Bold.eot");
+	src: url("../fonts/Helvetica Bold.eot?#iefix")format("embedded-opentype"), url("../fonts/Helvetica Bold.woff") format("woff"), url("../fonts/Helvetica Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'ArialBold';
+	src: url('../fonts/font_arial_bold-webfont.eot');
+	src: url('../fonts/font_arial_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font_arial_bold-webfont.woff2') format('woff2'), url('../fonts/font_arial_bold-webfont.woff') format('woff'), url('../fonts/font_arial_bold-webfont.ttf') format('truetype'), url('../fonts/font_arial_bold-webfont.svg#arialboldmt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GeorgiaBold';
+	src: url('../fonts/font_georgia_bold-webfont.eot');
+	src: url('../fonts/font_georgia_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font_georgia_bold-webfont.woff2') format('woff2'), url('../fonts/font_georgia_bold-webfont.woff') format('woff'), url('../fonts/font_georgia_bold-webfont.ttf') format('truetype'), url('../fonts/font_georgia_bold-webfont.svg#georgiabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GeorgiaBoldItalic';
+	src: url('../fonts/font_georgia_bolditalic-webfont.eot');
+	src: url('../fonts/font_georgia_bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font_georgia_bolditalic-webfont.woff2') format('woff2'), url('../fonts/font_georgia_bolditalic-webfont.woff') format('woff'), url('../fonts/font_georgia_bolditalic-webfont.ttf') format('truetype'), url('../fonts/font_georgia_bolditalic-webfont.svg#georgiabolditalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'VerdanaBold';
+	src: url('../fonts/font_verdana_bold-webfont.eot');
+	src: url('../fonts/font_verdana_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font_verdana_bold-webfont.woff') format('woff'), url('../fonts/font_verdana_bold-webfont.ttf') format('truetype'), url('../fonts/font_verdana_bold-webfont.svg#verdanabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'VerdanaBoldItalic';
+	src: url('../fonts/font_verdana_bolditalic-webfont.eot');
+	src: url('../fonts/font_verdana_bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/font_verdana_bolditalic-webfont.woff') format('woff'), url('../fonts/font_verdana_bolditalic-webfont.ttf') format('truetype'), url('../fonts/font_verdana_bolditalic-webfont.svg#verdanabolditalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}

@@ -1,0 +1,49 @@
+{
+
+"images": [
+    "/games/KingOfCash/source/RES/SCAT.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0],
+    [1327, 1, 100, 100, 0, 0, 0],
+    [1429, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "SCAT_A": { "frames": [0] },
+    "SCAT_B": { "frames": [1] },
+    "SCAT_C": { "frames": [2] },
+    "SCAT_D": { "frames": [3] },
+    "SCAT_E": { "frames": [4] },
+    "SCAT_F": { "frames": [5] },
+    "SCAT_G": { "frames": [6] },
+    "SCAT_H": { "frames": [7] },
+    "SCAT_I": { "frames": [8] },
+    "SCAT_J": { "frames": [9] },
+    "SCAT_K": { "frames": [10] },
+    "SCAT_L": { "frames": [11] },
+    "SCAT_M": { "frames": [12] },
+    "SCAT_N": { "frames": [13] },
+    "SCAT_O": { "frames": [14] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:3b15e04bd1d3413741d0959b9664fef2:4d1484fa5d268f70243233c10741bae9:35efb0ec4b8481ccc4c4b7826a25e963$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

@@ -1,0 +1,27 @@
+{
+
+"images": [
+    "/games/SizzlingHot/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 641, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [1, 965, 640, 480, 0, 0, 0],
+    [1, 1447, 640, 313, 0, 0, 0]
+],
+
+"animations": {
+    "GAME": { "frames": [0] },
+    "INFO": { "frames": [1] },
+    "INFO_A": { "frames": [2] },
+    "BACK": { "frames": [3] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:fa013218874ffaddcaa4c97e670d698c:f95aedfc21651af2b2d53e0f4eaf86a0:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

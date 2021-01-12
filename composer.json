@@ -1,0 +1,76 @@
+{
+    "name": "loshmis/vanguard",
+    "description": "Advanced PHP Login and User Management",
+    "keywords": ["advanced", "secure", "login", "user management", "authentication", "authorization", "register"],
+    "type": "project",
+    "repositories": [],
+    "require": {
+        "php": "^7.2",
+        "fideloper/proxy": "^4.0",
+        "laravel/framework": "^7.0",
+        "laravel/tinker": "^2.0",
+		"anhskohbo/no-captcha": "3.*",
+		"anlutro/l4-settings": "^0.11.0",
+        "intervention/image": "^2.3",
+        "jenssegers/agent": "^2.5",
+		"jeremykenedy/laravel-roles": "3.*",
+		"laracasts/presenter": "^0.2.1",
+		"laravelcollective/html": "^6.0",
+		"league/fractal": "^0.16.0",
+		"paragonie/random_compat": "~1.4",
+		"predis/predis": "^1.1",
+		"proengsoft/laravel-jsvalidation": "3.*",
+		"yajra/laravel-datatables-oracle": "~9.0",
+		"tymon/jwt-auth": "1.*",
+		"hexters/coinpayment": "^2.0",
+		"mobiledetect/mobiledetectlib": "^2.8"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "VanguardLTE\\": "app/"
+        },
+        "files": [
+            "app/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}

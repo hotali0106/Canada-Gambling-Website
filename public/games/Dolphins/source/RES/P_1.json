@@ -1,0 +1,35 @@
+{
+
+"images": [
+    "/games/Dolphins/source/RES/P_1.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_1_A": { "frames": [0] },
+    "P_1_B": { "frames": [1] },
+    "P_1_C": { "frames": [2] },
+    "P_1_D": { "frames": [3] },
+    "P_1_E": { "frames": [4] },
+    "P_1_F": { "frames": [5] },
+    "P_1_G": { "frames": [6] },
+    "P_1_H": { "frames": [7] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:1973e873908221c9f297509f9aeb6183:a16e508e5a61a09c008c8866af6bc14f:933276dd57e25e28f066c67095000709$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

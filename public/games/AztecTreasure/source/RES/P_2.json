@@ -1,0 +1,43 @@
+{
+
+"images": [
+    "/games/AztecTreasure/source/RES/P_2.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_2_A": { "frames": [0] },
+    "P_2_B": { "frames": [1] },
+    "P_2_C": { "frames": [2] },
+    "P_2_K": { "frames": [3] },
+    "P_2_D": { "frames": [4] },
+    "P_2_E": { "frames": [5] },
+    "P_2_F": { "frames": [6] },
+    "P_2_G": { "frames": [7] },
+    "P_2_H": { "frames": [8] },
+    "P_2_I": { "frames": [9] },
+    "P_2_J": { "frames": [10] },
+    "P_2_L": { "frames": [11] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:558410fdd8060b32060d10497b68d49c:31605d1a153adc6e32b2d4e94c20397d:e44ed144a51fd15f60f6e6067e096191$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

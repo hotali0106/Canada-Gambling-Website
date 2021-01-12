@@ -1,0 +1,13 @@
+{
+
+"port":8559,
+
+"host":"vanguardclubelte",
+"prefix":"http://",
+
+"host_ws":"vanguardclubelte",
+"prefix_ws":"ws://",
+
+"ssl":false
+
+}

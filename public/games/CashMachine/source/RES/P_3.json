@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/CashMachine/source/RES/P_3.png"
+],
+
+"framerate": 2,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_3_A": { "frames": [0] },
+    "P_3_B": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:3fc44a7142701b91a51b0b31fd8d8d44:0ba2d9fac9a87ef2059a1fcacbc1edbb:033e6cd51f4970d84fa98229cf33741e$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

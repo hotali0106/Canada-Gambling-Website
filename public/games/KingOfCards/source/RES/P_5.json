@@ -1,0 +1,25 @@
+{
+
+"images": [
+    "/games/KingOfCards/source/RES/P_5.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_5_A": { "frames": [0] },
+    "P_5_C": { "frames": [1] },
+    "P_5_B": { "frames": [2] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:87da7bd9a6bba98349db189fff6ce500:a9e74d63b5ab1c3c73f30b7c2ab57f09:9b941da83f98ea85cbe6ac12caf36059$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

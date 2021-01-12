@@ -1,0 +1,51 @@
+{
+
+"images": [
+    "/games/KingOfCash/source/RES/P_7.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0],
+    [1327, 1, 100, 100, 0, 0, 0],
+    [1429, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_7_A": { "frames": [0] },
+    "P_7_P": { "frames": [1] },
+    "P_7_B": { "frames": [2] },
+    "P_7_C": { "frames": [3] },
+    "P_7_D": { "frames": [4] },
+    "P_7_E": { "frames": [5] },
+    "P_7_F": { "frames": [6] },
+    "P_7_G": { "frames": [7] },
+    "P_7_H": { "frames": [8] },
+    "P_7_I": { "frames": [9] },
+    "P_7_J": { "frames": [10] },
+    "P_7_K": { "frames": [11] },
+    "P_7_L": { "frames": [12] },
+    "P_7_M": { "frames": [13] },
+    "P_7_N": { "frames": [14] },
+    "P_7_O": { "frames": [15] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:2b70b9733fe344da7258332d51dc0258:a7c9cc66eca27f77441d69823f06e3ae:cc3e57000f17b25349f9443aa879321b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

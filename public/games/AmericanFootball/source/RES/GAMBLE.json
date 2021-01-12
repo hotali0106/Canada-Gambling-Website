@@ -1,0 +1,45 @@
+{
+
+"images": [
+    "/games/AmericanFootball/source/RES/GAMBLE.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 120, 157, 0, 0, 0],
+    [1, 160, 110, 147, 0, 0, 0],
+    [1, 309, 134, 76, 0, 0, 0],
+    [113, 160, 110, 147, 0, 0, 0],
+    [123, 1, 110, 147, 0, 0, 0],
+    [137, 309, 110, 147, 0, 0, 0],
+    [1, 387, 134, 76, 0, 0, 0],
+    [137, 458, 40, 40, 0, 0, 0],
+    [179, 458, 40, 40, 0, 0, 0],
+    [221, 458, 3, 3, 0, 0, 0],
+    [221, 458, 3, 3, 0, 0, 0],
+    [1, 465, 40, 40, 0, 0, 0],
+    [43, 465, 40, 40, 0, 0, 0]
+],
+
+"animations": {
+    "CARDS_BACK1": { "frames": [0] },
+    "CARDS_C": { "frames": [1] },
+    "SELECT_BLACK": { "frames": [2] },
+    "CARDS_D": { "frames": [3] },
+    "CARDS_H": { "frames": [4] },
+    "CARDS_S": { "frames": [5] },
+    "SELECT_RED": { "frames": [6] },
+    "CARDS_M_C": { "frames": [7] },
+    "CARDS_M_D": { "frames": [8] },
+    "CARDS_BACK2": { "frames": [9] },
+    "CARDS_M_BACK": { "frames": [10] },
+    "CARDS_M_H": { "frames": [11] },
+    "CARDS_M_S": { "frames": [12] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:3fc8a58defed2182abfbffbf0fe19942:f90effedba55e77aa15be8a65e4c2545:9f00d5a96f098234f6309e51a639ac92$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

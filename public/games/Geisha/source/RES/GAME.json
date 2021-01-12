@@ -1,0 +1,31 @@
+{
+
+"images": [
+    "/games/Geisha/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 481, 0, 0, 0],
+    [1, 484, 640, 481, 0, 0, 0],
+    [1, 967, 640, 480, 0, 0, 0],
+    [1, 1449, 640, 313, 0, 0, 0],
+    [1, 1764, 248, 109, 0, 0, 0],
+    [251, 1764, 248, 109, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "BACK": { "frames": [3] },
+    "BONUS_WND": { "frames": [4] },
+    "BONUS_WND_A": { "frames": [5] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:8b130f971090794c23b37faefeadd6f4:73dccd0297ce4b2a5d842905464eabef:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

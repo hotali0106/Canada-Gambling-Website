@@ -1,0 +1,49 @@
+{
+
+"images": [
+    "/games/FirstClassTraveller/source/RES/P_1_0_X.png"
+],
+
+"framerate": 20,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0],
+    [1021, 1, 100, 100, 0, 0, 0],
+    [1123, 1, 100, 100, 0, 0, 0],
+    [1225, 1, 100, 100, 0, 0, 0],
+    [1327, 1, 100, 100, 0, 0, 0],
+    [1429, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_1_0_X_A": { "frames": [0] },
+    "P_1_0_X_B": { "frames": [1] },
+    "P_1_0_X_C": { "frames": [2] },
+    "P_1_0_X_D": { "frames": [3] },
+    "P_1_0_X_E": { "frames": [4] },
+    "P_1_0_X_F": { "frames": [5] },
+    "P_1_0_X_G": { "frames": [6] },
+    "P_1_0_X_H": { "frames": [7] },
+    "P_1_0_X_I": { "frames": [8] },
+    "P_1_0_X_J": { "frames": [9] },
+    "P_1_0_X_K": { "frames": [10] },
+    "P_1_0_X_L": { "frames": [11] },
+    "P_1_0_X_M": { "frames": [12] },
+    "P_1_0_X_N": { "frames": [13] },
+    "P_1_0_X_O": { "frames": [14] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:9ecc75fa6d9915d8625e1d552aefcfb8:7624f354303ba46057a4f0d8c424223d:b39aa3930aeb574ef7acd88886982dfa$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

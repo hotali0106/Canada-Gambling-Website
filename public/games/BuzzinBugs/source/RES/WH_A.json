@@ -1,0 +1,61 @@
+{
+
+"images": [
+    "/games/BuzzinBugs/source/RES/WH_A.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 109, 109, 0, 0, 0],
+    [112, 1, 109, 109, 0, 0, 0],
+    [1, 112, 109, 109, 0, 0, 0],
+    [112, 112, 109, 109, 0, 0, 0],
+    [1, 223, 109, 109, 0, 0, 0],
+    [112, 223, 109, 109, 0, 0, 0],
+    [1, 334, 109, 109, 0, 0, 0],
+    [112, 334, 109, 109, 0, 0, 0],
+    [1, 445, 109, 109, 0, 0, 0],
+    [112, 445, 109, 109, 0, 0, 0],
+    [1, 556, 109, 109, 0, 0, 0],
+    [112, 556, 109, 109, 0, 0, 0],
+    [1, 667, 109, 109, 0, 0, 0],
+    [112, 667, 109, 109, 0, 0, 0],
+    [1, 778, 109, 109, 0, 0, 0],
+    [112, 778, 109, 109, 0, 0, 0],
+    [1, 889, 109, 109, 0, 0, 0],
+    [112, 889, 109, 109, 0, 0, 0],
+    [1, 1000, 109, 109, 0, 0, 0],
+    [112, 1000, 109, 109, 0, 0, 0],
+    [1, 1111, 109, 109, 0, 0, 0]
+],
+
+"animations": {
+    "WH_A_A": { "frames": [0] },
+    "WH_A_B": { "frames": [1] },
+    "WH_A_C": { "frames": [2] },
+    "WH_A_D": { "frames": [3] },
+    "WH_A_E": { "frames": [4] },
+    "WH_A_F": { "frames": [5] },
+    "WH_A_G": { "frames": [6] },
+    "WH_A_H": { "frames": [7] },
+    "WH_A_I": { "frames": [8] },
+    "WH_A_J": { "frames": [9] },
+    "WH_A_K": { "frames": [10] },
+    "WH_A_L": { "frames": [11] },
+    "WH_A_M": { "frames": [12] },
+    "WH_A_N": { "frames": [13] },
+    "WH_A_O": { "frames": [14] },
+    "WH_A_P": { "frames": [15] },
+    "WH_A_Q": { "frames": [16] },
+    "WH_A_R": { "frames": [17] },
+    "WH_A_S": { "frames": [18] },
+    "WH_A_T": { "frames": [19] },
+    "WH_A_U": { "frames": [20] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:d7afabb853ba653af6cd2da78384896c:c76eaf8d95dbf7645ab4c05574509953:7e8ed93b8eed53c48d63c9258d4e1ee5$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

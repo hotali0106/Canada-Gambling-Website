@@ -1,0 +1,43 @@
+{
+
+"images": [
+    "/games/PharaonsGold2DX/source/RES/GAMBLE.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 3, 3, 0, 0, 0],
+    [6, 1, 35, 51, 0, 0, 0],
+    [43, 1, 35, 51, 0, 0, 0],
+    [80, 1, 35, 51, 0, 0, 0],
+    [117, 1, 35, 51, 0, 0, 0],
+    [154, 1, 145, 100, 0, 0, 0],
+    [301, 1, 146, 100, 0, 0, 0],
+    [1, 54, 98, 143, 0, 0, 0],
+    [101, 103, 98, 143, 0, 0, 0],
+    [201, 103, 98, 143, 0, 0, 0],
+    [301, 103, 98, 143, 0, 0, 0],
+    [401, 103, 98, 143, 0, 0, 0]
+],
+
+"animations": {
+    "CARDS_BACK2": { "frames": [0] },
+    "CARDS_M_C": { "frames": [1] },
+    "CARDS_M_D": { "frames": [2] },
+    "CARDS_M_H": { "frames": [3] },
+    "CARDS_M_S": { "frames": [4] },
+    "SELECT_BLACK": { "frames": [5] },
+    "SELECT_RED": { "frames": [6] },
+    "CARDS_BACK1": { "frames": [7] },
+    "CARDS_C": { "frames": [8] },
+    "CARDS_D": { "frames": [9] },
+    "CARDS_H": { "frames": [10] },
+    "CARDS_S": { "frames": [11] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:bb423b9157d0a1e61012ba90633d9928:6d76921e38bd1c897fc9781dd7ccf1d1:9f00d5a96f098234f6309e51a639ac92$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

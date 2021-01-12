@@ -1,0 +1,29 @@
+{
+
+"images": [
+    "/games/FirstClassTraveller/source/RES/P_1_16_X_FS.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_1_16_X_FS_A": { "frames": [0] },
+    "P_1_16_X_FS_B": { "frames": [1] },
+    "P_1_16_X_FS_C": { "frames": [2] },
+    "P_1_16_X_FS_D": { "frames": [3] },
+    "P_1_16_X_FS_E": { "frames": [4] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:c4ba614b85dd9594ace88e1ebad5dd7b:166dd66133af376a7007a596149eb9dd:cbfae5b200dc9f2d254d8dc0b0034366$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

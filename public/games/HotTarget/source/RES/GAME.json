@@ -1,0 +1,33 @@
+{
+
+"images": [
+    "/games/HotTarget/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [643, 1, 640, 480, 0, 0, 0],
+    [643, 483, 640, 480, 0, 0, 0],
+    [1285, 1, 640, 313, 0, 0, 0],
+    [1285, 316, 324, 240, 0, 0, 0],
+    [1285, 558, 324, 240, 0, 0, 0]
+],
+
+"animations": {
+    "FOOTER": { "frames": [0] },
+    "GAME": { "frames": [1] },
+    "INFO": { "frames": [2] },
+    "INFO_A": { "frames": [3] },
+    "BACK": { "frames": [4] },
+    "BONUS_WND": { "frames": [5] },
+    "BONUS_WND_A": { "frames": [6] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:f11cad4d43ccac489a3f68d8b92494fa:14ef253e77d26cd930e9c42ad936fd50:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

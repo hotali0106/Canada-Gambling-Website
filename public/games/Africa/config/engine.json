@@ -1,0 +1,334 @@
+{
+	
+
+"messagesGame":{
+"spriteSheet":{"config":"","file":""},
+"messagesJackWnd":{"type":"bitmap","res":["JACK_WND"],"x":57,"y":125},
+
+
+"messagesJackWin":{"type":"text","res":[""],"x":373,"y":350,"fontText":"22px Helvetica","colorText":"#FFFF66","defaultText":"5000","alignText":"center" }
+
+	
+},
+
+"viewGame":{
+
+"spriteSheet":{"config":"/games/Africa/source/RES/GAME.json","file":"/games/Africa/source/RES/GAME.png"},
+"gameScreen":{"type":"bitmap","res":["GAME"],"x":55,"y":36},
+"bonusFooter":{"type":"bitmap","res":["FOOTER"],"x":55,"y":36}
+	
+},	
+
+	
+"bonusGame":{
+"bonusWnd":{"type":"bitmap","res":["BONUS_12_WND","BONUS_16_WND","BONUS_20_WND"],"x":194,"y":135},
+"bonusWndEnd":{"type":"bitmap","res":["BONUS_WND_A"],"x":194,"y":135},
+
+"bonusWin":{"type":"text","res":[""],"x":380,"y":55,"fontText":"18px Helvetica","colorText":"#590808","defaultText":"WIN \n 00000","alignText":"center" },
+"bonusWndTextEnd":{"type":"text","res":[""],"x":380,"y":230,"fontText":"25px Helvetica","colorText":"#590808","defaultText":"FEATURE WIN","alignText":"center" },
+"bonusWndText":{"type":"text","res":[""],"x":372,"y":220,"fontText":"0px Helvetica","colorText":"#FFFFFF","defaultText":"15 FREE GAMES WON \n ALL PRIZES x3","alignText":"center" }
+	
+},
+
+
+	
+"gambleGame":{
+
+"spriteSheet":{"config":"/games/Africa/source/RES/GAMBLE.json","file":"/games/Africa/source/RES/GAMBLE.png"},
+	
+"gambleBack":{"type":"bitmap","res":["BACK"],"x":55,"y":36},
+
+"gambleCardsBack1":{"type":"bitmap","res":["CARDS_BACK1"],"x":318,"y":237},
+"gambleCardsBack2":{"type":"bitmap","res":["CARDS_BACK2"],"x":318,"y":237},
+	
+"gambleSelectRed":{"type":"bitmap","res":["SELECT_RED"],"x":118,"y":259},
+"gambleSelectBlack":{"type":"bitmap","res":["SELECT_BLACK"],"x":469,"y":259},
+	
+"gambleCardsC":{"type":"bitmap","res":["CARDS_C"],"x":318,"y":237},
+"gambleCardsD":{"type":"bitmap","res":["CARDS_D"],"x":318,"y":237},
+"gambleCardsH":{"type":"bitmap","res":["CARDS_H"],"x":318,"y":237},
+"gambleCardsS":{"type":"bitmap","res":["CARDS_S"],"x":318,"y":237},
+	
+"gambleCardsMBack":{"type":"bitmap","res":["CARDS_M_BACK"],"x":326,"y":180},
+	
+"gambleCardsMC":{"type":"bitmap_lib","res":["CARDS_M_C"],"x":0,"y":0},
+"gambleCardsMD":{"type":"bitmap_lib","res":["CARDS_M_D"],"x":0,"y":0},
+"gambleCardsMH":{"type":"bitmap_lib","res":["CARDS_M_H"],"x":0,"y":0},
+"gambleCardsMS":{"type":"bitmap_lib","res":["CARDS_M_S"],"x":0,"y":0},
+
+
+"gambleBet":{"type":"text","res":[""],"x":215,"y":154,"fontText":"20px Helvetica","colorText":"#FFFFFF","defaultText":"0000","alignText":"center" },	
+"gambleWin":{"type":"text","res":[""],"x":535,"y":154,"fontText":"20px Helvetica","colorText":"#FFFFFF","defaultText":"0000","alignText":"center" }	,
+	
+"gambleCardMPlace0":{"type":"place","res":[""],"x":326,"y":180 },	
+"gambleCardMPlace1":{"type":"place","res":[""],"x":380,"y":180 },	
+"gambleCardMPlace2":{"type":"place","res":[""],"x":434,"y":180 },	
+"gambleCardMPlace3":{"type":"place","res":[""],"x":487,"y":180 },	
+"gambleCardMPlace4":{"type":"place","res":[""],"x":541,"y":180 },	
+"gambleCardMPlace5":{"type":"place","res":[""],"x":594,"y":180 },	
+"gambleCardMPlace6":{"type":"place","res":[""],"x":650,"y":180 }	
+	
+	
+},
+	
+
+"rulesGame":{
+	
+"rulesGamePage1":{"type":"bitmap","res":["INFO"],"x":55,"y":36},
+
+"payTextSCAT_5_def":{"type":"text","res":[""],"x":280,"y":76,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextSCAT_4_def":{"type":"text","res":[""],"x":280,"y":96,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextSCAT_3_def":{"type":"text","res":[""],"x":280,"y":116,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextSCAT_2_def":{"type":"text","res":[""],"x":280,"y":136,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+
+"payTextP_1_5_def":{"type":"text","res":[""],"x":490,"y":77,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_1_4_def":{"type":"text","res":[""],"x":490,"y":97,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_1_3_def":{"type":"text","res":[""],"x":490,"y":117,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_1_2_def":{"type":"text","res":[""],"x":490,"y":137,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+
+"payTextP_3_5_def":{"type":"text","res":[""],"x":241,"y":282,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_3_4_def":{"type":"text","res":[""],"x":241,"y":302,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_3_3_def":{"type":"text","res":[""],"x":241,"y":322,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+
+"payTextP_5_5_def":{"type":"text","res":[""],"x":546,"y":275,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_5_4_def":{"type":"text","res":[""],"x":546,"y":295,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_5_3_def":{"type":"text","res":[""],"x":546,"y":315,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_5_2_def":{"type":"text","res":[""],"x":546,"y":335,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+
+"payTextP_6_5_def":{"type":"text","res":[""],"x":568,"y":411,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_6_4_def":{"type":"text","res":[""],"x":568,"y":431,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_6_3_def":{"type":"text","res":[""],"x":568,"y":451,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextP_6_2_def":{"type":"text","res":[""],"x":568,"y":471,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+
+"payTextA_5_def":{"type":"text","res":[""],"x":182,"y":415,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextA_4_def":{"type":"text","res":[""],"x":182,"y":435,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextA_3_def":{"type":"text","res":[""],"x":182,"y":455,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+
+"payTextJ_5_def":{"type":"text","res":[""],"x":370,"y":413,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextJ_4_def":{"type":"text","res":[""],"x":370,"y":433,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+"payTextJ_3_def":{"type":"text","res":[""],"x":370,"y":453,"fontText":"14px Helvetica","colorText":"#000000","defaultText":"","alignText":"center"},
+
+"rulesGamePage2":{"type":"bitmap","res":["INFO_A"],"x":55,"y":36},		
+"rulesGamePage3":{"type":"bitmap","res":["INFO_B"],"x":55,"y":36}
+
+	
+	
+	
+},
+	
+"countersGame":{	
+	
+"counterJackpot1":{"type":"text","res":[""],"x":288,"y":13,"fontText":"12px Helvetica","colorText":"#000000","defaultText":"Jackpot:1000","alignText":"center" },		
+"counterJackpot2":{"type":"text","res":[""],"x":374,"y":13,"fontText":"12px Helvetica","colorText":"#000000","defaultText":"Jackpot:2000","alignText":"center" },		
+"counterJackpot3":{"type":"text","res":[""],"x":460,"y":13,"fontText":"12px Helvetica","colorText":"#000000","defaultText":"Jackpot:3000","alignText":"center" },		
+	
+	
+"counterCredit":{"type":"text_g","res":[""],"x":138,"y":500,"fontText":"14px Helvetica","colorText":"#FFCC33","defaultText":"CREDIT","alignText":"right" },	
+
+"counterLines":{"type":"text_g","res":[""],"x":620,"y":442,"fontText":"14px Helvetica","colorText":"#FFCC33","defaultText":"BET/LINE","alignText":"right" },	
+"counterBetLine":{"type":"text_g","res":[""],"x":620,"y":462,"fontText":"14px Helvetica","colorText":"#FFCC33","defaultText":"LINES BET","alignText":"right" },	
+"counterBet":{"type":"text_g","res":[""],"x":610,"y":500,"fontText":"14px Helvetica","colorText":"#FFCC33","defaultText":"BET","alignText":"right" },
+	
+"counterWinText":{"type":"text_g","res":[""],"x":473,"y":500,"fontText":"15px Helvetica","colorText":"#FFCC33","defaultText":"","alignText":"right" },
+"counterWinCnt":{"type":"text_g","res":[""],"x":478,"y":500,"fontText":"15px Helvetica","colorText":"#FFCC33","defaultText":"","alignText":"left" },
+	
+"counterCurText":{"type":"text_g","res":[""],"x":445,"y":442,"fontText":"14px Helvetica","colorText":"#FFCC33","defaultText":"1 CREDIT =","alignText":"left" },	
+"counterCurCnt":{"type":"text","res":[""],"x":492,"y":459,"fontText":"18px Helvetica","colorText":"#ff0000","defaultText":"1 USD","alignText":"center" },	
+	
+"counterPays":{"type":"text_g","res":[""],"x":75,"y":50,"fontText":"14px Helvetica","colorText":"#FFCC33","defaultText":"","alignText":"left" },
+	
+"counterAuto":{"type":"text_g","res":[""],"x":675,"y":50,"fontText":"14px Helvetica","colorText":"#FFCC33","defaultText":"AUTO","alignText":"right" },	
+	
+"counterCreditCnt":{"type":"text_c","res":[""],"x":250,"y":489,"fontText":"25px liq","colorText":"#FFFF66","defaultText":"0.00","alignText":"right" },
+"counterBetCnt":{"type":"text_c","res":[""],"x":675,"y":489,"fontText":"25px liq","colorText":"#FFFF66","defaultText":"0.00","alignText":"right" },
+"counterLinesCnt":{"type":"text_c","res":[""],"x":675,"y":456,"fontText":"25px liq","colorText":"#347FA9","defaultText":"9","alignText":"right" },
+"counterBetLineCnt":{"type":"text_c","res":[""],"x":675,"y":433,"fontText":"25px liq","colorText":"#FFFF66","defaultText":"0.00","alignText":"right" },
+	
+	
+	
+"counterInfo1":{"type":"text","res":[""],"x":248,"y":444,"fontText":"15px Helvetica","colorText":"#FFFF66","defaultText":"GAME OVER, \n PLEACE YOUR BET","alignText":"center" },
+"counterInfo2":{"type":"text","res":[""],"x":248,"y":450,"fontText":"20px Helvetica","colorText":"#FFFF66","defaultText":"","alignText":"center" },
+"counterInfo3":{"type":"text","res":[""],"x":248,"y":453,"fontText":"15px Helvetica","colorText":"#FFFF66","defaultText":"","alignText":"center" }
+	
+},
+"linesGame":{
+
+"spriteSheet":{"config":"/games/Africa/source/RES/LINES.json","file":"/games/Africa/source/RES/LINES.png"},
+
+"lnBox1_0":{"type":"bitmap","res":["1_B"],"x":55,"y":253},	
+"lnBox1_1":{"type":"bitmap","res":["1_C"],"x":668,"y":253},
+	
+"lnBox2_0":{"type":"bitmap","res":["2_B"],"x":55,"y":149},	
+"lnBox2_1":{"type":"bitmap","res":["2_C"],"x":668,"y":149},	
+
+	
+"lnBox3_0":{"type":"bitmap","res":["3_B"],"x":55,"y":356},	
+"lnBox3_1":{"type":"bitmap","res":["3_C"],"x":668,"y":356},
+	
+		
+"lnBox4_0":{"type":"bitmap","res":["4_B"],"x":55,"y":115},	
+"lnBox4_1":{"type":"bitmap","res":["4_C"],"x":668,"y":115},
+	
+		
+"lnBox5_0":{"type":"bitmap","res":["5_B"],"x":55,"y":390},	
+"lnBox5_1":{"type":"bitmap","res":["5_C"],"x":668,"y":390},
+	
+		
+"lnBox6_0":{"type":"bitmap","res":["6_B"],"x":55,"y":287},	
+"lnBox6_1":{"type":"bitmap","res":["6_C"],"x":668,"y":287},
+	
+		
+"lnBox7_0":{"type":"bitmap","res":["7_B"],"x":55,"y":219},	
+"lnBox7_1":{"type":"bitmap","res":["7_C"],"x":668,"y":219},
+	
+		
+"lnBox8_0":{"type":"bitmap","res":["8_B"],"x":55,"y":184},	
+"lnBox8_1":{"type":"bitmap","res":["8_C"],"x":668,"y":322},
+	
+		
+"lnBox9_0":{"type":"bitmap","res":["9_B"],"x":55,"y":322},	
+"lnBox9_1":{"type":"bitmap","res":["9_C"],"x":668,"y":184},
+	
+
+	
+	
+"lnLine1":{"type":"bitmap","res":["1_LINE"],"x":75,"y":261},
+"lnLine2":{"type":"bitmap","res":["2_LINE"],"x":76,"y":156},
+"lnLine3":{"type":"bitmap","res":["3_LINE"],"x":75,"y":364},
+"lnLine4":{"type":"bitmap","res":["4_LINE"],"x":75,"y":122},
+"lnLine5":{"type":"bitmap","res":["5_LINE"],"x":75,"y":154},
+"lnLine6":{"type":"bitmap","res":["6_LINE"],"x":75,"y":139},
+"lnLine7":{"type":"bitmap","res":["7_LINE"],"x":75,"y":227},
+"lnLine8":{"type":"bitmap","res":["8_LINE"],"x":75,"y":192},
+"lnLine9":{"type":"bitmap","res":["9_LINE"],"x":75,"y":192},
+	
+"lnBorder1":{"type":"bitmap_lib","res":["1_A"],"x":0,"y":0},
+"lnBorder2":{"type":"bitmap_lib","res":["2_A"],"x":0,"y":0},
+"lnBorder3":{"type":"bitmap_lib","res":["3_A"],"x":0,"y":0},
+"lnBorder4":{"type":"bitmap_lib","res":["4_A"],"x":0,"y":0},
+"lnBorder5":{"type":"bitmap_lib","res":["5_A"],"x":0,"y":0},
+"lnBorder6":{"type":"bitmap_lib","res":["6_A"],"x":0,"y":0},
+"lnBorder7":{"type":"bitmap_lib","res":["7_A"],"x":0,"y":0},
+"lnBorder8":{"type":"bitmap_lib","res":["8_A"],"x":0,"y":0},
+"lnBorder9":{"type":"bitmap_lib","res":["9_A"],"x":0,"y":0},
+	
+"lnBoxText1_0":{"type":"text","res":[""],"x":51,"y":250,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText1_1":{"type":"text","res":[""],"x":665,"y":250,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },		
+		
+	
+"lnBoxText2_0":{"type":"text","res":[""],"x":51,"y":146,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText2_1":{"type":"text","res":[""],"x":665,"y":146,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },	
+	
+	
+"lnBoxText3_0":{"type":"text","res":[""],"x":51,"y":353,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText3_1":{"type":"text","res":[""],"x":665,"y":353,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },	
+		
+	
+"lnBoxText4_0":{"type":"text","res":[""],"x":51,"y":112,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText4_1":{"type":"text","res":[""],"x":665,"y":112,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },	
+		
+	
+"lnBoxText5_0":{"type":"text","res":[""],"x":51,"y":387,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText5_1":{"type":"text","res":[""],"x":665,"y":387,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },	
+		
+	
+"lnBoxText6_0":{"type":"text","res":[""],"x":51,"y":284,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText6_1":{"type":"text","res":[""],"x":665,"y":284,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },	
+		
+	
+"lnBoxText7_0":{"type":"text","res":[""],"x":51,"y":216,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText7_1":{"type":"text","res":[""],"x":665,"y":216,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },	
+		
+	
+"lnBoxText8_0":{"type":"text","res":[""],"x":51,"y":181,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText8_1":{"type":"text","res":[""],"x":665,"y":319,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },	
+		
+	
+"lnBoxText9_0":{"type":"text","res":[""],"x":51,"y":318,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20},	
+"lnBoxText9_1":{"type":"text","res":[""],"x":665,"y":182,"fontText":"12px Arial Bold","fontText":"12px Arial Bold","colorText":"#000000","defaultText":"100.00","alignText":"center","offset":20 },
+		
+"lnWinSym_9":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/9.png"],"config":"/games/Africa/source/RES/9.json","x":0,"y":0},
+"lnWinSym_10":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/10.png"],"config":"/games/Africa/source/RES/10.json","x":0,"y":0},
+"lnWinSym_J":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/J.png"],"config":"/games/Africa/source/RES/J.json","x":0,"y":0},
+"lnWinSym_Q":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/Q.png"],"config":"/games/Africa/source/RES/Q.json","x":0,"y":0},
+"lnWinSym_K":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/K.png"],"config":"/games/Africa/source/RES/K.json","x":0,"y":0},
+"lnWinSym_A":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/A.png"],"config":"/games/Africa/source/RES/A.json","x":0,"y":0},
+"lnWinSym_P_6":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/P_6.png"],"config":"/games/Africa/source/RES/P_6.json","x":0,"y":0},
+"lnWinSym_P_5":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/P_5.png"],"config":"/games/Africa/source/RES/P_5.json","x":0,"y":0},
+"lnWinSym_P_4":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/P_4.png"],"config":"/games/Africa/source/RES/P_4.json","x":0,"y":0},
+"lnWinSym_P_3":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/P_3.png"],"config":"/games/Africa/source/RES/P_3.json","x":0,"y":0},
+"lnWinSym_P_2":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/P_2.png"],"config":"/games/Africa/source/RES/P_2.json","x":0,"y":0},
+"lnWinSym_P_1":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/P_1.png"],"config":"/games/Africa/source/RES/P_1.json","x":0,"y":0},
+"lnWinSym_SCAT":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/SCAT.png"],"config":"/games/Africa/source/RES/SCAT.json","x":0,"y":0},
+"lnWinSym_FS":{"type":"symbol_sprite_lib","res":["/games/Africa/source/RES/FS.png"],"config":"/games/Africa/source/RES/FS.json","advanced_set":[[0,0],[1,14]],"x":0,"y":0}
+	
+},	
+	
+	
+"reelsGame":{
+
+"spriteSheet":{"config":"/games/Africa/source/RES/SYM.json","file":"/games/Africa/source/RES/SYM.png"},	
+	
+"9":{"type":"sprite_lib","res":["9_A"],"x":0,"y":0},
+"10":{"type":"sprite_lib","res":["10_A"],"x":0,"y":0},
+"J":{"type":"sprite_lib","res":["J_A"],"x":0,"y":0},
+"Q":{"type":"sprite_lib","res":["Q_A"],"x":0,"y":0},
+"K":{"type":"sprite_lib","res":["K_A"],"x":0,"y":0},
+"A":{"type":"sprite_lib","res":["A_A"],"x":0,"y":0},
+"P_1":{"type":"sprite_lib","res":["P_1_A"],"x":0,"y":0},
+"P_2":{"type":"sprite_lib","res":["P_2_A"],"x":0,"y":0},
+"P_3":{"type":"sprite_lib","res":["P_3_A"],"x":0,"y":0},
+"P_4":{"type":"sprite_lib","res":["P_4_A"],"x":0,"y":0},
+"P_5":{"type":"sprite_lib","res":["P_5_A"],"x":0,"y":0},
+"P_6":{"type":"sprite_lib","res":["P_6_A"],"x":0,"y":0},
+"SCAT":{"type":"sprite_lib","res":["SCAT_A"],"x":0,"y":0}
+
+	
+},		
+	
+	
+"backGame":{	
+	
+"uiBackground":{"type":"bitmap","res":["MENU"],"x":0,"y":0}
+	
+},
+	
+"uiGame":{	
+
+"spriteSheet":{"config":"/games/Africa/source/RES/UI.json","file":"/games/Africa/source/RES/UI.png"},
+
+"uiButtonExit2":{"type":"button","res":["CLOSE","CLOSE","CLOSE","CLOSE"],"x":712,"y":20},
+"uiButtonFullOn":{"type":"button","res":["FULL_ON","FULL_ON","FULL_ON","FULL_ON"],"x":712,"y":45},
+"uiButtonFullOff":{"type":"button","res":["FULL_OFF","FULL_OFF","FULL_OFF","FULL_OFF"],"x":712,"y":45},
+"uiButtonSoundOn":{"type":"button","res":["SOUND_ON","SOUND_ON","SOUND_ON","SOUND_ON"],"x":712,"y":70},
+"uiButtonSoundOff":{"type":"button","res":["SOUND_OFF","SOUND_OFF","SOUND_OFF","SOUND_OFF"],"x":712,"y":70},
+	
+	
+"uiButtonInfo":{"type":"button","res":["btn_info_A","btn_info_B","btn_info_C","btn_info_D"],"x":5,"y":528},
+
+"uiButtonCollect":{"type":"button","res":["btn_collect_A","btn_collect_B","btn_collect_C","btn_collect_D"],"x":58,"y":528},
+	
+"uiButtonExit":{"type":"button","res":["btn_select_A","btn_select_B","btn_select_C","btn_select_D"],"x":111,"y":528},
+	
+"uiButtonLine1":{"type":"button","res":["btn_line_1_A","btn_line_1_B","btn_line_1_C","btn_line_1_D"],"x":172,"y":528},
+	
+"uiButtonLine3":{"type":"button","res":["btn_line_3_A","btn_line_3_B","btn_line_3_C","btn_line_3_D"],"x":224,"y":528},
+	
+"uiButtonLine5":{"type":"button","res":["btn_line_5_A","btn_line_5_B","btn_line_5_C","btn_line_5_D"],"x":276,"y":528},
+	
+"uiButtonLine7":{"type":"button","res":["btn_line_7_A","btn_line_7_B","btn_line_7_C","btn_line_7_D"],"x":330,"y":528},
+	
+"uiButtonLine9":{"type":"button","res":["btn_line_9_A","btn_line_9_B","btn_line_9_C","btn_line_9_D"],"x":382,"y":528},
+	
+"uiButtonBet":{"type":"button","res":["btn_bet_A","btn_bet_B","btn_bet_C","btn_bet_D"],"x":442,"y":528},
+	
+"uiButtonBetMax":{"type":"button","res":["btn_maxbet_A","btn_maxbet_B","btn_maxbet_C","btn_maxbet_D"],"x":496,"y":528},
+	
+"uiButtonAuto":{"type":"button","res":["btn_auto_A","btn_auto_B","btn_auto_C","btn_auto_D"],"x":556,"y":528},
+	
+"uiButtonSpin":{"type":"button","res":["btn_spin_A","btn_spin_B","btn_spin_C","btn_spin_D"],"x":647,"y":528}
+
+}
+	
+	
+}

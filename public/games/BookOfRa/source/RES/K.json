@@ -1,0 +1,23 @@
+{
+
+"images": [
+    "/games/BookOfRa/source/RES/K.png"
+],
+
+"framerate": 3,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "K_B": { "frames": [0] },
+    "K_C": { "frames": [1] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:5ac0ae38fb8acf4cfc9c09563b2bbf87:ea27061e90b51f41c88fb7deba2310cf:ca759da1210de30ef834f48b6cdf6226$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

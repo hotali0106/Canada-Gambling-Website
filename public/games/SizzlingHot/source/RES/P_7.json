@@ -1,0 +1,39 @@
+{
+
+"images": [
+    "/games/SizzlingHot/source/RES/P_7.png"
+],
+
+"framerate": 10,
+"frames": [
+    [1, 1, 100, 100, 0, 0, 0],
+    [103, 1, 100, 100, 0, 0, 0],
+    [205, 1, 100, 100, 0, 0, 0],
+    [307, 1, 100, 100, 0, 0, 0],
+    [409, 1, 100, 100, 0, 0, 0],
+    [511, 1, 100, 100, 0, 0, 0],
+    [613, 1, 100, 100, 0, 0, 0],
+    [715, 1, 100, 100, 0, 0, 0],
+    [817, 1, 100, 100, 0, 0, 0],
+    [919, 1, 100, 100, 0, 0, 0]
+],
+
+"animations": {
+    "P_7_A": { "frames": [0] },
+    "P_7_B": { "frames": [1] },
+    "P_7_C": { "frames": [2] },
+    "P_7_D": { "frames": [3] },
+    "P_7_E": { "frames": [4] },
+    "P_7_F": { "frames": [5] },
+    "P_7_G": { "frames": [6] },
+    "P_7_H": { "frames": [7] },
+    "P_7_I": { "frames": [8] },
+    "P_7_J": { "frames": [9] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:52e30104320d74a52ddeabc51d4cff73:c0d93453f582c0b8d4512eea97356eeb:cc3e57000f17b25349f9443aa879321b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

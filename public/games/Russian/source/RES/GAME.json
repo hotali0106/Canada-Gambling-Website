@@ -1,0 +1,27 @@
+{
+
+"images": [
+    "/games/Russian/source/RES/GAME.png"
+],
+
+"framerate": 0,
+"frames": [
+    [1, 1, 640, 480, 0, 0, 0],
+    [1, 483, 640, 480, 0, 0, 0],
+    [1, 965, 640, 480, 0, 0, 0],
+    [1, 1447, 640, 313, 0, 0, 0]
+],
+
+"animations": {
+    "GAME": { "frames": [0] },
+    "INFO": { "frames": [1] },
+    "INFO_A": { "frames": [2] },
+    "BACK": { "frames": [3] }
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:316cd622c6a01ca61cc8ea1a571750a3:a1a4758168eed8beb32aab9d8fd546a5:ca7acc645b1ea13a2ff7d9cda3e0202b$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}
