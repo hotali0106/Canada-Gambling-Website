@@ -15,6 +15,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             {
                 return redirect()->route('frontend.page.error_license');
             }*/
+            /*
             if( \Illuminate\Support\Facades\Auth::check() && !\Illuminate\Support\Facades\Auth::user()->hasRole('user') ) 
             {
                 return redirect()->route('backend.dashboard');
@@ -23,6 +24,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             {
                 return redirect()->route('frontend.auth.login');
             }
+            */
             $categories = [];
             $game_ids = [];
             $cat1 = false;

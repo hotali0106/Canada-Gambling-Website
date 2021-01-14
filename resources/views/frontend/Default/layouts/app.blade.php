@@ -10,24 +10,23 @@
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="icon" href="/frontend/Default/img/favicon.png" >
+	<link rel="icon" href="{{asset('frontend/Default/img/favicon.png')}}" >
 
-	<link rel="stylesheet" href="/frontend/Default/css/slick.css">
-	<link rel="stylesheet" href="/frontend/Default/css/grid.css">
-	<link rel="stylesheet" href="/frontend/Default/css/styles.min.css">
+	<link rel="stylesheet" href="{{asset('frontend/Default/css/slick.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/Default/css/grid.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/Default/css/styles.min.css')}}">
 	
-	<script src="/frontend/Default/js/jquery-3.4.1.min.js"></script>
+	<script src="{{asset('frontend/Default/js/jquery-3.4.1.min.js')}}"></script>
 
 </head>
 
 <body>
-
-		@yield('content')
+	@yield('content')
 
 	<!-- SCRIPTS -->
-	<script src="/frontend/Default/js/slick.min.js"></script>
-	<script src="/frontend/Default/js/masonry-docs.min.js"></script>
-	<script src="/frontend/Default/js/custom.js"></script>
+	<script src="{{asset('frontend/Default/js/slick.min.js')}}"></script>
+	<script src="{{asset('frontend/Default/js/masonry-docs.min.js')}}"></script>
+	<script src="{{asset('frontend/Default/js/custom.js')}}"></script>
 
 </body>
 </html>
