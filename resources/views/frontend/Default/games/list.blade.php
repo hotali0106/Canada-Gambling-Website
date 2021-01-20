@@ -21,6 +21,10 @@
 @endsection
 @section('page_bottom')
 <script type="text/javascript">
+    
+    var deposit_amount;
+    var deposit_currency;
+    
     $(document).ready(function(){
         $("#search_game").on("keyup", function() {
             var value = $(this).val().toLowerCase();
@@ -31,10 +35,22 @@
     });
     fn_deposit=(auth)=>{
         if(!auth){
-            alert();
+            $("#signin-modal").modal({
+                fadeDuration: 300
+            });
         }else{
-            
+            $("#deposit-modal").modal({
+                fadeDuration: 300
+            })
         }
+    }
+    fn_price=(value)=>{
+        deposit_amount = value;
+        deposit_currency = $("#deposit_currency option:selected").text();
+        $("input[name='amount']").val(value+" "+$("#deposit_currency option:selected").text());
+    }
+    fn_deposit_request=()=>{
+        window.open('/deposit/payment?amount='+deposit_amount+'&currency='+deposit_currency+'', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes')
     }
 </script>
 @stop

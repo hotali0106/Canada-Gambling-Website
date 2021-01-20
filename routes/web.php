@@ -40,11 +40,17 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
     ## Deposit
 
     Route::prefix('deposit')->group(function () { 
-        Route::post('page', [
-            'as' => 'frontend.deposit.page',
-            'uses' => 'PaymentController@piastrix'
+        Route::get('payment', [
+            'as' => 'frontend.deposit.payment',
+            'uses' => 'PaymentController@gigadat'
         ]);
     });
+
+    Route::prefix('payment')->group(function () { 
+        Route::match(['get', 'post'], 'gigadat/success', 'PaymentController@gigadatsuccess');
+        Route::match(['get', 'post'], 'gigadat/fail', 'PaymentController@gigadatfail');
+    });
+    
 
     /*
     if (settings('forgot_password')) {

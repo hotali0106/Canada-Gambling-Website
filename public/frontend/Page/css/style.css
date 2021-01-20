@@ -291,6 +291,10 @@ main.active {
 	background-color: #282727;
 }
 
+#category-section .top-category-list .active {
+	background-color: #282727;
+}
+
 .search-box {
 	position: relative;
 	display: flex;
