@@ -86,7 +86,13 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 'shop_id' => auth()->user()->shop_id, 
                 'time' => date('G')
             ])->first();
-            return view('backend.user.list', compact('users', 'statuses', 'roles', 'role_id', 'happyhour'));
+            // return view('backend.user.list', compact('users', 'statuses', 'roles', 'role_id', 'happyhour'));
+            return view('backend.user.list', compact('users', 'statuses', 'roles', 'happyhour'));
+        }
+        public function country(\Illuminate\Http\Request $request)
+        {
+            $countrys =  \VanguardLTE\Country::get();
+            return view('backend.country.list', compact('countrys'));
         }
         public function tree(\Illuminate\Http\Request $request)
         {

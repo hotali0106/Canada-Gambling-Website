@@ -19,6 +19,7 @@ class GameTransformer extends TransformerAbstract
             'category' => $game->categories->pluck('category_id')->toArray(),
             'device' => $game->device,
             'denomination' => $game->denomination,
+            
             //'gamebank' => round($game->gamebank),
 			//'percent' => $game->percent,
             //'garant_win' => $game->garant_win,

@@ -6,8 +6,8 @@ namespace VanguardLTE\Http\Requests\Auth
         public function rules()
         {
             $rules = [
-                'username' => 'required|regex:/^[A-Za-z0-9]+$/|unique:users,username', 
-                'password' => 'required|confirmed|min:6'
+                'username' => 'required', 
+                'password' => 'required'
             ];
             if( settings('tos') ) 
             {
@@ -15,7 +15,7 @@ namespace VanguardLTE\Http\Requests\Auth
             }
             if( settings('use_email') ) 
             {
-                $rules['email'] = 'required|unique:users,email';
+                $rules['email'] = 'required';
             }
             return $rules;
         }
@@ -24,5 +24,4 @@ namespace VanguardLTE\Http\Requests\Auth
             return ['tos.accepted' => trans('app.you_have_to_accept_tos')];
         }
     }
-
 }
