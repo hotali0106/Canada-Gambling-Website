@@ -12,7 +12,7 @@
             <li><a href="./bonus.html">Bonus</a></li>
             <li><a href="#">Promotions</a></li>
             <li><a href="#">About Us</a></li>
-            <li class="d-md-block d-lg-none"><a href="#">Deposit</a></li>
+            <li class="d-md-block d-lg-none"><a href="javascript:fn_deposit('{{Auth::check()}}')">Deposit</a></li>
             @if(Auth::check())
             <li class="d-md-block d-lg-none"><a href="{{url('wallet')}}">MY Account</a></li>
             <li><a href="{{route('frontend.auth.logout')}}">Sign Out</a></li>
@@ -31,7 +31,7 @@
         </div>
         <div class="account-header-menu d-none d-sm-none d-md-none d-lg-flex">
             <div class="account-header-menu-item">
-                <a href="#deposit-modal">
+                <a href="javascript:fn_deposit('{{Auth::check()}}')">
                     <img src="{{asset('frontend/Page/image/deposit-icon.png')}}" />
                     <span>deposit</span>
                 </a>
