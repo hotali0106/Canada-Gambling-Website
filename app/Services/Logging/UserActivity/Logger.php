@@ -45,7 +45,7 @@ class Logger
         return $this->activities->log([
             'description' => $description,
             'user_id' => $this->getUserId(),
-            'shop_id' => auth()->user()->shop_id,
+            // 'shop_id' => auth()->user()->shop_id,
             'ip_address' => $this->request->server('REMOTE_ADDR'),
             'user_agent' => $this->getUserAgent()
         ]);

@@ -3,43 +3,49 @@
 
 Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
 	
+    ## Auth verify
+
 	Route::get('login', [
 		'as' => 'frontend.auth.login',
 		'uses' => 'Auth\AuthController@getLogin'
 	]);
+    Route::post('login', [
+        'as' => 'frontend.auth.login.post',
+        'uses' => 'Auth\AuthController@postLogin'
+    ]); 
+    Route::get('logout', [
+        'as' => 'frontend.auth.logout',
+        'uses' => 'Auth\AuthController@getLogout'
+    ]);
 
     Route::get('launcher/{game}/{token}/{mode}','Auth\AuthController@apiLogin' );
-	
-	Route::post('login', [
-		'as' => 'frontend.auth.login.post',
-		'uses' => 'Auth\AuthController@postLogin'
-	]);	
-	Route::get('logout', [
-		'as' => 'frontend.auth.logout',
-		'uses' => 'Auth\AuthController@getLogout'
-	]);
 
-    // Allow registration routes only if registration is enabled.
+    ## Allow registration routes only if registration is enabled.
     
 	if (settings('reg_enabled')) {
-
 		Route::get('register', [
 			'as' => 'frontend.register',
 			'uses' => 'Auth\AuthController@getRegister'
 		]);
-
 		Route::post('register', [
 			'as' => 'frontend.register.post',
 			'uses' => 'Auth\AuthController@postRegister'
 		]);
-
         Route::get('register/confirmation/{token}', [
             'as' => 'frontend.register.confirm-email',
             'uses' => 'Auth\AuthController@confirmEmail'
         ]);
-
 	}
 	
+    ## Deposit
+
+    Route::prefix('deposit')->group(function () { 
+        Route::post('page', [
+            'as' => 'frontend.deposit.page',
+            'uses' => 'PaymentController@piastrix'
+        ]);
+    });
+
     /*
     if (settings('forgot_password')) {
 
@@ -62,7 +68,8 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
     }
     */
 	
-	
+    ## license config
+
 	Route::get('new-license', [
         'as' => 'frontend.new_license',
         'uses' => 'PagesController@new_license'
@@ -71,17 +78,14 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
         'as' => 'frontend.new_license.post',
         'uses' => 'PagesController@new_license_post'
     ]);
-	
 	Route::get('license-error', [
         'as' => 'frontend.page.error_license',
         'uses' => 'PagesController@error_license'
     ]);
-
     Route::get('jpstv/{id?}', [
         'as' => 'frontend.jpstv',
         'uses' => 'PagesController@jpstv'
     ]);
-
     Route::get('jpstv.json', [
         'as' => 'frontend.jpstv_json',
         'uses' => 'PagesController@jpstv_json'
@@ -240,15 +244,6 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
         'as' => 'frontend.game_stat',
         'uses' => 'GamesController@game_stat',
     ]);
-	/*
-	Route::prefix('payment')->group(function () { 
-		Route::post('/piastrix/result', [
-			'as' => 'payment.piastrix.result',
-			'uses' => 'PaymentController@piastrix'
-		]);
-	});
-	*/
-	
 });
 
 /**

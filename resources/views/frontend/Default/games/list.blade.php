@@ -22,24 +22,6 @@
 @section('page_bottom')
 <script type="text/javascript">
     $(document).ready(function(){
-        $(".filter-button").click(function(){
-            var value = $(this).attr('data-filter');
-            
-            if(value == "all")
-            {
-                $('.filter').show('1000');
-            }
-            else
-            {
-                $(".filter").not('.'+value).hide('2000');
-                $('.filter').filter('.'+value).show('2000');
-            }
-
-            $(".filter-button").removeClass("active");
-            $(this).addClass("active");
-
-        });
-
         $("#search_game").on("keyup", function() {
             var value = $(this).val().toLowerCase();
             $(".section-content .game-item").filter(function() {
@@ -47,5 +29,12 @@
             });
         });
     });
+    fn_deposit=(auth)=>{
+        if(!auth){
+            alert();
+        }else{
+            
+        }
+    }
 </script>
 @stop
