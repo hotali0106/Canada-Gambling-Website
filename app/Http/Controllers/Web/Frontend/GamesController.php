@@ -5,7 +5,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
     {
         public function index(\Illuminate\Http\Request $request, $category1 = '', $category2 = '')
         {
-/*            $checked = new \VanguardLTE\Lib\LicenseDK();
+/*          $checked = new \VanguardLTE\Lib\LicenseDK();
             $license_notifications_array = $checked->aplVerifyLicenseDK(null, 0);
             if( $license_notifications_array['notification_case'] != 'notification_license_ok' ) 
             {
@@ -231,7 +231,11 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             {
                 $currentSliderNum = 'all';
             }
-            return view('frontend.' . $frontend . '.games.list', compact('games', 'category1', 'cat1', 'categories', 'currentSliderNum', 'title', 'body', 'keywords', 'description', 'jpgs', 'shop', 'devices'));
+
+            $countrys =  \VanguardLTE\Country::get();
+            $currencys =  \VanguardLTE\Currency::get();
+
+            return view('frontend.' . $frontend . '.games.list', compact('games', 'category1', 'cat1', 'categories', 'currentSliderNum', 'title', 'body', 'keywords', 'description', 'jpgs', 'shop', 'devices', 'countrys', 'currencys'));
         }
         public function setpage(\Illuminate\Http\Request $request)
         {

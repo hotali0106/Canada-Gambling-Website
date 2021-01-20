@@ -36,6 +36,12 @@ namespace VanguardLTE
             'count_return', 
             'parent_id', 
             'shop_id', 
+            'currency', 
+            'phone', 
+            'country', 
+            'address', 
+            'city', 
+            'postalCode', 
             'session'
         ];
         protected $hidden = [

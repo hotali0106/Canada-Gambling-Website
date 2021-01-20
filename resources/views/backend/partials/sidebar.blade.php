@@ -73,6 +73,24 @@
             </li>
             @endpermission
 
+            @permission('country.manage')
+            <li class="{{ Request::is('backend/country*') ? 'active' : ''  }}">
+                <a href="{{ route('backend.country') }}">
+                    <i class="fa fa-globe"></i>
+                    <span>@lang('app.country')</span>
+                </a>
+            </li>
+            @endpermission
+            
+            @permission('currency.manage')
+            <li class="{{ Request::is('backend/currency*') ? 'active' : ''  }}">
+                <a href="{{ route('backend.currency') }}">
+                    <i class="fa fa-exchange"></i>
+                    <span>@lang('app.currency')</span>
+                </a>
+            </li>
+            @endpermission
+
             @permission('users.tree')
             <li class="{{ Request::is('backend/tree*') ? 'active' : ''  }}">
                 <a href="{{ route('backend.user.tree') }}">
