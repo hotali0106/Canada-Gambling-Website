@@ -201,7 +201,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                         break;
                 }
             }
-            $games = $games->get();
+            $games = $games->take(20)->get();
             $jpgs = \VanguardLTE\JPG::where('shop_id', $shop_id)->get();
             $categories = false;
             $currentSliderNum = -1;

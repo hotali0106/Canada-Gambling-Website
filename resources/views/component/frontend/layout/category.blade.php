@@ -1,12 +1,12 @@
 <section id="category-section">
     <div class="top-category-list">
         @if( settings('use_all_categories') )
-        <a href="#" data-filter="all" class="filter-button">@lang('app.all')</a>
+        <a href="{{ route('frontend.game.list.category', 'all') }}" class="@if($currentSliderNum != -1 && $currentSliderNum == 'all') active @endif">@lang('app.all')</a>
         @endif
         @if ($categories)
             @foreach($categories as $category)
                 @if($category->position < 7)
-                    <a href="#" class="filter-button" data-filter="{{$category->position}}">{{ $category->title }}</a>
+                    <a href="{{ route('frontend.game.list.category', $category->href) }}" class="@if($currentSliderNum != -1 && $category->href == $currentSliderNum) active @endif">{{ $category->title }}</a>
                 @endif
             @endforeach
         @endif
@@ -34,7 +34,7 @@
                 @if($categories)
                     @foreach($categories as $category)
                         @if($category->position >6)
-                        <li><a href="#"  class="filter-button" data-filter="{{$category->position}}">{{ $category->title }}</a></li>
+                        <li><a href="{{ route('frontend.game.list.category', $category->href) }}" class="@if($currentSliderNum != -1 && $category->href == $currentSliderNum) active @endif">{{ $category->title }}</a></li>
                         @endif
                     @endforeach
                 @endif
