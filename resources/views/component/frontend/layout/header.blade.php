@@ -31,7 +31,7 @@
         </div>
         <div class="account-header-menu d-none d-sm-none d-md-none d-lg-flex">
             <div class="account-header-menu-item">
-                <a href="#">
+                <a href="#deposit-modal">
                     <img src="{{asset('frontend/Page/image/deposit-icon.png')}}" />
                     <span>deposit</span>
                 </a>

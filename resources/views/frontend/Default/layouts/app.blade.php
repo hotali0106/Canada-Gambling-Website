@@ -27,6 +27,7 @@
         @include('component.frontend.layout.category')
         @yield('content')
         @include('component.frontend.layout.auth')
+        @include('component.frontend.layout.deposit')
     </main>
     <footer></footer>
     
