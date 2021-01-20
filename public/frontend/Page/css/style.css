@@ -177,6 +177,7 @@ label {
 	width: 100%;
 	padding: 0;
 	background-color: #000000;
+    overflow: scroll;
 	z-index: 9999999;
 	transform: translateX(-232px);
 	transition: all 0.3s;
@@ -286,7 +287,7 @@ main.active {
 	white-space: nowrap;
 	transition: background-color 0.3s;
 }
-#category-section .top-category-list a:hover, #category-section .top-category-list a.active {
+#category-section .top-category-list a:hover {
 	background-color: #282727;
 }
 
@@ -320,7 +321,7 @@ main.active {
 	border: 1px solid white;
 	border-radius: 20px;
 }
-.dropdown-menu {	
+.category-toggle-button .dropdown-menu {	
 	width: 90vw;
 	padding: 30px 30px 15px 30px;
 	top: 3rem;
@@ -330,21 +331,21 @@ main.active {
 	z-index: 99999;
 }
 
-.dropdown-menu ul {
+.category-toggle-button .dropdown-menu ul {
 	display: grid;
 	grid-template-columns: repeat(4, 25%);
 }
-.dropdown-menu ul li {
+.category-toggle-button .dropdown-menu ul li {
 	padding: 10px;
 	text-align: center;
 	border-radius: 4px;
 	transition: all 0.3s;
 }
 
-.dropdown-menu ul li:hover {
+.category-toggle-button .dropdown-menu ul li:hover {
 	background-color: #282727;
 }
-.dropdown-menu ul li a {
+.category-toggle-button .dropdown-menu ul li a {
 	color: white;
 	text-decoration: none;
 }
@@ -523,9 +524,15 @@ main.active {
 	overflow: unset;
 }
 
+.deposit-modal-content {
+	overflow: hidden;
+	max-width: 600px;
+	padding: 50px 30px;
+}
+
 .sign-in-modal-content {
 	overflow: hidden;
-	width: 480px;
+	max-width: 480px;
 	padding: 50px 30px;
 }
 
@@ -541,7 +548,7 @@ main.active {
 	padding: 30px 0;
 }
 .modal-left-side {
-    background: #1B0F25 url(/frontend/Page/image/sign-up-background.jpg) no-repeat center/cover;
+	background: #1B0F25 url(./sign-up-background.jpg) no-repeat center/cover;
 }
 
 .sign-up-header {
@@ -804,7 +811,7 @@ main.active {
 	.section-content {
 		grid-template-columns: repeat(4, calc(20% - 10px)) 20%;
 	}
-	.dropdown-menu ul {
+	.category-toggle-button .dropdown-menu ul {
 		grid-template-columns: repeat(4, 25%);
 	}
 }
@@ -813,16 +820,55 @@ main.active {
 	.section-content {
 		grid-template-columns: repeat(3, calc(25% - 10px)) 25%;
 	}
-	.dropdown-menu ul {
+	.category-toggle-button .dropdown-menu ul {
 		grid-template-columns: repeat(3, 30%);
 	}
 }
 
 @media only screen and (max-width: 990px) {
+
+	.sign-up-modal-content {
+		max-width: 480px;
+		width: 100%;
+		flex-flow: column;
+	}
+
+	.sign-up-modal-content .modal-left-side {
+		padding: 0;
+	}
+
+	.sign-up-banner {
+		margin: 0;
+	}
+
+	.wizard > .steps {
+		position: relative;
+		width: 100%;
+		top: 0;
+	}
+	.wizard > .steps > ul {
+		flex-flow: row;
+	}
+	.wizard > .steps .current a, .wizard > .steps .current a:hover, .wizard > .steps .current a:active {
+		color: #1a062b;
+	}
+	.wizard > .steps .disabled a {
+		display: none;
+	}
+	.wizard > .content > .title, .tabcontrol > .content > .title {
+		position: absolute;
+		display: none;
+		left: 30px;
+		top: -10px;
+	}
+	.wizard > .content > .title.current, .tabcontrol > .content > .title.current {
+		display: block;
+	}
+
 	.section-content {
 		grid-template-columns: repeat(2, calc(33% - 10px)) 33%;
 	}
-	.dropdown-menu ul {
+	.category-toggle-button .dropdown-menu ul {
 		grid-template-columns: repeat(3, 30%);
 	}
 }
@@ -859,7 +905,7 @@ main.active {
 		width: 100%;
 	}
 
-	#category-section .category-toggle-button .dropdown-menu {
+	#category-section .category-toggle-button .category-toggle-button .dropdown-menu {
 		width: 100%;
 		top: 100%;
 		left: 0;
@@ -868,7 +914,7 @@ main.active {
 	.section-content {
 		grid-template-columns: repeat(1, calc(50% - 10px)) 50%;
 	}
-	.dropdown-menu ul {
+	.category-toggle-button .dropdown-menu ul {
 		grid-template-columns: repeat(2, 50%);
 	}
 }
@@ -877,7 +923,7 @@ main.active {
 	.section-content {
 		grid-template-columns: 100%;
 	}
-	.dropdown-menu ul {
+	.category-toggle-button .dropdown-menu ul {
 		grid-template-columns: 100%;
 	}
 }
