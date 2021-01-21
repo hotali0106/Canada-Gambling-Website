@@ -108,6 +108,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             curl_close($curl);
             
             $pay_token = json_decode($response, true)['token'];
+            /*
             $curl = curl_init();
             curl_setopt_array($curl, array(
                 CURLOPT_URL => "https://interac.express-connect.com/webflow?token=".$pay_token."&transaction=".$transactionId."",
@@ -142,10 +143,11 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                 ),
             ));
 
-            $response = curl_exec($curl);
+            $response = curl_exec($curl);*/
+            return redirect()->intended("https://interac.express-connect.com/webflow?token=".$pay_token."&transaction=".$transactionId."");
 
-            curl_close($curl);
-            echo $response;
+            // curl_close($curl);
+            // echo $response;
         }
         public function gigadatsuccess(\Illuminate\Http\Request $request)
         {
