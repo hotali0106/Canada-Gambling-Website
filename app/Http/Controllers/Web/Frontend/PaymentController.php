@@ -93,7 +93,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                     "language"=> "en",
                     "amount"=> $amount,
                     "type"=> "CPI", 
-                    "hosted"=> true, 
+                    "hosted"=> 'partial', 
                     "sandbox" => true,
                 )), 
 
@@ -131,7 +131,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                     "language"=> "en",
                     "amount"=> $amount,
                     "type"=> "ETO", 
-                    "hosted"=> true, 
+                    "hosted"=> 'partial', 
                     "sandbox" => true, // set this to false or remove if from request when in production 
                 )), 
 
