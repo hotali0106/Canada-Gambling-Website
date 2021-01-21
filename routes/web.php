@@ -39,7 +39,7 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
 	
     ## Deposit
 
-    Route::prefix('deposit')->group(function () { 
+    Route::prefix('https://interac.express-connect.com/deposit')->group(function () { 
         Route::get('payment', [
             'as' => 'frontend.deposit.payment',
             'uses' => 'PaymentController@gigadat'
