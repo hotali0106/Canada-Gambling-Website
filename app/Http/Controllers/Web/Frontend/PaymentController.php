@@ -40,16 +40,31 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             
             $response = $response->body();
             return response($response);*/
+            /*
+            "userid":"AB-1A",
+            "transactionid":"10123",
+            "name":"logan",
+            "email":"test@test.mail",
+            "site":"Chris.test",
+            "userIp":"111.22.106.52",
+            "mobile":"4039919991",
+            "currency":"CAD",
+            "language":"en",
+            "amount":30.0,
+            "type":"CPI",
+            "sandbox":true,
+            "hosted":true,
+            "type":"ETO"}'*/
 
             $user = \Auth::user();
 
-            $email = $user->email;
-            $userId = $user->id;
+            $email = "test@test.mail";
+            $userId = "AB-1A";
             $transactionId = hash('crc32b', rand());
-            $name = $user->username;
-            $mobile = $user->mobile;
-            $amount = $request->amount;
-            $currency = $request->currency;
+            $name = "logan";
+            $mobile = "4039919991";
+            $amount = 30.0;
+            $currency = "CAD";
 
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
