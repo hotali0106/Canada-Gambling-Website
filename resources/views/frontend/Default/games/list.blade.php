@@ -50,7 +50,6 @@
         $("input[name='amount']").val(value+" "+$("#deposit_currency option:selected").text());
     }
     fn_deposit_request=()=>{   
-        window.open('https://interac.express-connect.com', '_blank', 'location=yes,height=1024,width=768,scrollbars=yes,status=yes')
         $.ajax({
             url:'/deposit/payment',
             type:'GET',
