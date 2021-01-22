@@ -13,7 +13,7 @@
             @foreach ($games as $key=>$game)
             @php $filter_key = ($game->categories)[0]->category_id @endphp
             <div class="game-item filter {{$filter_key}}" for-filter="{{$game->title}}">
-                <img src="{{asset('frontend/Default/ico/')}}/{{$game->name.'.jpg'}}" />
+                <img data-original="{{asset('frontend/Default/ico/')}}/{{$game->name.'.jpg'}}" />
                 <div class="game-overlay">
                     <a href="#">Play For Real</a>
                     <a href="#">Play For Fun</a>

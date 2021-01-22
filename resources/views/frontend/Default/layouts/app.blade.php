@@ -29,7 +29,7 @@
         @include('component.frontend.layout.auth')
         @include('component.frontend.layout.deposit')
     </main>
-    <footer></footer>
+    @include('component.frontend.layout.footer')
     
     <!-- Remember to include jQuery :) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
