@@ -51,7 +51,7 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
         Route::match(['get', 'post'], 'gigadat/fail', 'PaymentController@gigadatfail');
     });
     
-
+    Route::match(['get', 'post'], '/bonus', 'BonusController@index');
     /*
     if (settings('forgot_password')) {
 

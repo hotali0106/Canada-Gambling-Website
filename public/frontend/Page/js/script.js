@@ -1,5 +1,50 @@
+
+'use Strict'
+
 jQuery(function($){
 
+	var deposit_amount;
+    var deposit_currency;
+    
+    $("#search_game").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $(".section-content .game-item").filter(function() {
+                $(this).toggle($(this).attr("for-filter").toLowerCase().indexOf(value) > -1)
+            });
+        });
+    fn_deposit=(auth)=>{
+        if(!auth){
+            $("#signin-modal").modal({
+                fadeDuration: 300
+            });
+        }else{
+            $("#deposit-modal").modal({
+                fadeDuration: 300
+            })
+        }
+    }
+    fn_price=(value)=>{
+        deposit_amount = value;
+        deposit_currency = $("#deposit_currency option:selected").text();
+        $("input[name='amount']").val(value+" "+$("#deposit_currency option:selected").text());
+    }
+    fn_deposit_request=()=>{  
+        window.open("/deposit/payment", "_blank", "toolbar,scrollbars,resizable,top=500,left=500,width=400,height=400"); 
+        /*
+        $.ajax({
+            url:'/deposit/payment',
+            type:'GET',
+            data:{
+                amount:deposit_amount,
+                currency:deposit_currency
+            },
+            dataType:"JSON",
+            success:()=>{
+            },
+            error:()=>{
+            }
+        });*/
+    }
 	$("img").lazyload({
 		effect : "fadeIn"
 	});
