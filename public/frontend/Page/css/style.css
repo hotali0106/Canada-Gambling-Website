@@ -43,6 +43,11 @@ label {
 	display: flex;
 }
 
+#bonus-section .section-image {
+    border: 4px solid white;
+    border-radius: 8px;
+}
+
 #menu-toggle
 {
 	position: relative;
@@ -529,6 +534,7 @@ main.active {
 	width: auto;
 	height: auto;
 	padding: 0;
+    border: 5px solid white;
 	border-radius: 0;
 	overflow: unset;
 }
@@ -1160,6 +1166,7 @@ footer .footer-menu .footer-menu-content {
 main.profile {
 	overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    min-height: 100vh;
 }
 .profile .side-menu ul li {
 	background-color: rgba(0, 0, 0, 0.1);

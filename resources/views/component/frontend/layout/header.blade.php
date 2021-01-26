@@ -6,7 +6,7 @@
                 <div id="menu_text_bar"></div>
             </label>
         </div>
-        
+
         <ul id="header-menu">
             <li class="d-md-block d-lg-none"><a href="#">Games</a></li>
             <li><a href="{{url('bonus')}}">Bonus</a></li>
@@ -25,7 +25,7 @@
     </div>
     <div class="header-content">
         <div class="logo">
-            <a href="#" class="d-flex">
+            <a href="/" class="d-flex">
                 <img src="{{asset('frontend/Page/image/logo.png')}}" />
             </a>
         </div>
@@ -62,6 +62,6 @@
                     <span>games</span>
                 </a>
             </div>
-        </div>          
+        </div>
     </div>
 </header>
