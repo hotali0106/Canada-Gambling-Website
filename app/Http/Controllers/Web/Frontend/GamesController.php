@@ -201,10 +201,25 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                         break;
                 }
             }
+
             $games = $games->take(20)->get();
+
+            $newgames = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                        ->leftJoin('categories','categories.id','=','game_categories.category_id')
+                                        ->where('categories.Title','New')
+                                        ->take(20)
+                                        ->get();
+
+            $hotgames = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                        ->leftJoin('categories','categories.id','=','game_categories.category_id')
+                                        ->where('categories.Title','Hot')
+                                        ->take(20)
+                                        ->get();
+            
             $jpgs = \VanguardLTE\JPG::where('shop_id', $shop_id)->get();
             $categories = false;
             $currentSliderNum = -1;
+            $currentListTitle = "";
             if( $games ) 
             {
                 $cat_ids = \VanguardLTE\GameCategory::whereIn('game_id', \VanguardLTE\Game::where([
@@ -221,6 +236,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                             if( $cat->href == $category1 ) 
                             {
                                 $currentSliderNum = $cat->href;
+                                $currentListTitle = $cat->title;
                                 break;
                             }
                         }
@@ -230,12 +246,40 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             if( settings('use_all_categories') && $category1 == 'all' ) 
             {
                 $currentSliderNum = 'all';
+                $currentListTitle = 'All';
             }
-
+            
             $countrys =  \VanguardLTE\Country::get();
             $currencys =  \VanguardLTE\Currency::get();
 
-            return view('frontend.' . $frontend . '.games.list', compact('games', 'category1', 'cat1', 'categories', 'currentSliderNum', 'title', 'body', 'keywords', 'description', 'jpgs', 'shop', 'devices', 'countrys', 'currencys'));
+            return view('frontend.' . $frontend . '.games.list', compact('games', 'hotgames', 'newgames','category1', 'cat1', 'categories', 'currentSliderNum', 'currentListTitle','title', 'body', 'keywords', 'description', 'jpgs', 'shop', 'devices', 'countrys', 'currencys'));
+        }
+        public function loadmore(\Illuminate\Http\Request $request){
+            $gametype = $request->type;
+            if($gametype == "HOT"){
+                $page = $request->pagehot;
+                $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                            ->leftJoin('categories','categories.id','=','game_categories.category_id')
+                                            ->where('categories.Title','Hot')
+                                            ->skip($page*20)
+                                            ->take(($page+1)*20)
+                                            ->get();
+                
+            }
+            else if($gametype == "NEW"){
+                $page = $request->pagenew;
+                $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                            ->leftJoin('categories','categories.id','=','game_categories.category_id')
+                                            ->where('categories.Title','New')
+                                            ->skip($page*20)
+                                            ->take(($page+1)*20)
+                                            ->get();
+                
+            }
+            return response(json_encode([
+                'type' => $gametype,
+                'result' => $games 
+            ]));
         }
         public function setpage(\Illuminate\Http\Request $request)
         {

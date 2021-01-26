@@ -267,6 +267,7 @@ label {
 main {
 	background: linear-gradient(#260047, #010000, #260047, #010000);
 	transition: all 0.3s;
+	min-height: 100vh;
 }
 main.active {
 	transform: translateX(200px);
