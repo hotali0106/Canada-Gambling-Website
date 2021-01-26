@@ -23,11 +23,14 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
         }
         public function index(\VanguardLTE\Repositories\Role\RoleRepository $rolesRepo)
         {
+            $tab = 'info';
             $user = $this->theUser;
             $edit = true;
             $roles = $rolesRepo->lists();
             $statuses = \VanguardLTE\Support\Enum\UserStatus::lists();
-            return view('frontend.user.profile', compact('user', 'edit', 'roles', 'statuses'));
+            $country = \VanguardLTE\Country::find($user->country)->country;
+
+            return view('frontend.Default.user.info', compact('user', 'edit', 'roles', 'statuses','tab','country'));
         }
         public function updateDetails(\VanguardLTE\Http\Requests\User\UpdateProfileDetailsRequest $request)
         {
@@ -142,10 +145,19 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $sessionRepository->invalidateSession($session->id);
             return redirect()->route('frontend.profile.sessions')->withSuccess(trans('app.session_invalidated'));
         }
+        public function history(\Illuminate\Http\Request $request)
+        {
+            $tab = "history";
+            $historys = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')
+            // ->paginate(25);
+            ->get();
+            return view('frontend.Default.user.history', compact('historys','tab'));
+        }
         public function balance(\Illuminate\Http\Request $request)
         {
-            $history = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')->paginate(25);
-            return view('frontend.user.balance', compact('history'));
+            $tab = "balance";
+            $balance = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')->paginate(25);
+            return view('frontend.Default.user.balance', compact('balance','tab'));
         }
         public function balanceAdd(\Illuminate\Http\Request $request)
         {

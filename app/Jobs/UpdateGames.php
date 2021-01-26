@@ -65,7 +65,6 @@ class UpdateGames implements ShouldQueue
 					//Info($model->id . ' isDirty ');
 					$model->save();
 				}
-                
             }
         }
     }

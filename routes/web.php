@@ -52,6 +52,7 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
     });
     
     Route::match(['get', 'post'], '/bonus', 'BonusController@index');
+
     /*
     if (settings('forgot_password')) {
 
@@ -115,10 +116,13 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
 	/**
      * User Profile
      */
-
-    Route::get('profile', [
-        'as' => 'frontend.profile',
+    Route::get('profile/info', [
+        'as' => 'frontend.profile.info',
         'uses' => 'ProfileController@index'
+    ]);
+    Route::get('profile/history', [
+        'as' => 'frontend.profile.history',
+        'uses' => 'ProfileController@history'
     ]);
     Route::get('profile/activity', [
         'as' => 'frontend.profile.activity',
@@ -250,6 +254,12 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
         'as' => 'frontend.game_stat',
         'uses' => 'GamesController@game_stat',
     ]);
+    Route::group(['prefix' => 'ajax'], function () {
+        Route::get('/loadmore/game', [
+            'as' => 'frontend.loadmore.game',
+            'uses' => 'GamesController@loadmore',
+        ]);
+    });
 });
 
 /**
