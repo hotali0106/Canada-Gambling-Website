@@ -11,20 +11,20 @@
     <meta name="description" content="Canada777 online casino makes gambling simpler. Easy and fast payouts and account verification, promotions and VIP loyalty program.">
 
     <title>@yield('page-title') - {{ settings('app_name') }}</title>
-    
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/Page/css/jquery.steps.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend/Page/css/style.css')}}" />
 
     @yield('page_top')
-    
+
 </head>
 <body>
 	<header>
 		<div class="header-content">
             <div class="logo">
-                <a href="#" class="d-flex">
+                <a href="/" class="d-flex">
                     <img src="{{asset('frontend/Page/image/logo.png')}}" />
                 </a>
             </div>
@@ -51,7 +51,7 @@
                         <span>{{Auth::user()->username}}</span>
                     </a>
                 </div>
-            </div>          
+            </div>
         </div>
     </header>
     @include('component.frontend.layout.deposit')
@@ -68,6 +68,7 @@
 
 	<!-- jQuery Steps -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js"></script>
 
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>

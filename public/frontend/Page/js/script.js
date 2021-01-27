@@ -1,5 +1,5 @@
 
-'use Strict'
+'use Strict';
 
 jQuery(function($){
 
