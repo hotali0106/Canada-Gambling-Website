@@ -26,7 +26,7 @@
         </div>
     </div>
     <div style="text-align: center; margin: 20px;">
-        <button id="btn_loadmore_game" onclick="fn_loadmore('GAME')" class="btn btn-outline-secondary btn-lg">Load More</button>
+        <button id="btn_loadmore_game" onclick="fn_loadmore('GAME','{{$currentListTitle}}')" class="btn btn-outline-secondary btn-lg">Load More</button>
     </div>
     @if($currentSliderNum != "hot")
     <div class="section-title">
@@ -81,7 +81,7 @@
     var page_hot = 0;
     var page_new = 0;
     var page_game = 0;
-    fn_loadmore=(type)=>{
+    fn_loadmore=(type, category)=>{
         if(type == "HOT"){
             page_hot++;
         }
@@ -99,11 +99,18 @@
                 pagenew:page_new,
                 pagegame:page_game,
                 type:type,
+                category:category
             },
             dataType:"JSON",
             success:(data)=>{
                 var games = data.result;
                 var section_game = "";
+                
+                if(games.length == 0){
+                    alert("data empty");
+                    return;
+                }
+                
                 for(var i=0;i<games.length;i++) {
                     section_game+=  '<div class="game-item">\
                                             <img src="/frontend/Default/ico/'+games[i].name+'.jpg" data-original="/frontend/Default/ico/'+games[i].name+'.jpg" data-image-blur-on-load-update-occured="true" style="filter: opacity(1);"/>\
