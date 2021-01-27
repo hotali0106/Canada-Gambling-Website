@@ -10,11 +10,15 @@
 <body>
     @include('component.frontend.layout.header')
     <main>
-        <section id="hero-section">
+        <section id="hero-section border-bottom" style="border-bottom-color: white; border-bottom-width: 6px; border-bottom-style: solid;">
             <img class="hero-image" src="{{asset('frontend/Page/image/bonus-banner.jpg')}}" />
         </section>
-        <section class="main-block bonus-content">      
-            <img class="section-image" src="{{asset('frontend/Page/image/bonus-content-image.jpg')}}" />
+        <section id="bonus-section">
+            <div class="position-relative bonus-content py-5 px-5">
+                <img class="section-image" src="{{asset('frontend/Page/image/bonus-content-image.jpg')}}" />
+                <a href="#" class="position-absolute d-block text-light" style="bottom: 10px; right: 100px;">Terms Apply</a>
+            </div>
+            <p class="text-center text-light py-2 px-2 border-top border-default mb-0">1st Deposit - Match Bonus up to C$ 400 • 2nd / 3rd Deposit - Match Bonus up to C$ 300 • New customers only • Min deposit C$ 10 • 70x wagering</p>
         </section>
     </main>
     @include('component.frontend.layout.auth')
@@ -30,6 +34,7 @@
 
     <!-- jQuery Steps -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js"></script>
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>

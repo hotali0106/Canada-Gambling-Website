@@ -6,7 +6,7 @@
                 <div id="menu_text_bar"></div>
             </label>
         </div>
-        
+
         <ul id="header-menu">
             <li class="d-md-block d-lg-none"><a href="#">Games</a></li>
             <li><a href="{{url('bonus')}}">Bonus</a></li>
@@ -14,7 +14,7 @@
             <li><a href="#">About Us</a></li>
             <li class="d-md-block d-lg-none"><a href="javascript:fn_deposit('{{Auth::check()}}')">Deposit</a></li>
             @if(Auth::check())
-            <li class="d-md-block d-lg-none"><a href="{{url('wallet')}}">MY Account</a></li>
+            <li class="d-md-block d-lg-none"><a href="{{route('frontend.profile.info')}}">MY Account</a></li>
             <li><a href="{{route('frontend.auth.logout')}}">Sign Out</a></li>
             @else
             <li class="d-md-block d-lg-none"><a href="#signup-modal">Sign Up</a></li>
@@ -25,7 +25,7 @@
     </div>
     <div class="header-content">
         <div class="logo">
-            <a href="#" class="d-flex">
+            <a href="/" class="d-flex">
                 <img src="{{asset('frontend/Page/image/logo.png')}}" />
             </a>
         </div>
@@ -51,7 +51,7 @@
             </div>
             @else
             <div class="account-header-menu-item">
-                <a href="{{url('wallet')}}" data-ol-has-click-handler>
+                <a href="{{route('frontend.profile.info')}}" data-ol-has-click-handler>
                     <img src="{{asset('frontend/Page/image/signin-icon.png')}}" />
                     <span>my account</span>
                 </a>
@@ -62,6 +62,6 @@
                     <span>games</span>
                 </a>
             </div>
-        </div>          
+        </div>
     </div>
 </header>

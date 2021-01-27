@@ -1,11 +1,11 @@
 
-'use Strict'
+'use Strict';
 
 jQuery(function($){
 
 	var deposit_amount;
     var deposit_currency;
-    
+
     $("#search_game").on("keyup", function() {
             var value = $(this).val().toLowerCase();
             $(".section-content .game-item").filter(function() {
@@ -22,14 +22,14 @@ jQuery(function($){
                 fadeDuration: 300
             })
         }
-    }
+    };
     fn_price=(value)=>{
         deposit_amount = value;
         deposit_currency = $("#deposit_currency option:selected").text();
         $("input[name='amount']").val(value+" "+$("#deposit_currency option:selected").text());
-    }
-    fn_deposit_request=()=>{  
-        window.open("/deposit/payment", "_blank", "toolbar,scrollbars,resizable,top=500,left=500,width=400,height=400"); 
+    };
+    fn_deposit_request = () => {
+        window.open("/deposit/payment", "_blank", "toolbar,scrollbars,resizable,top=500,left=500,width=400,height=400");
         /*
         $.ajax({
             url:'/deposit/payment',
@@ -44,38 +44,38 @@ jQuery(function($){
             error:()=>{
             }
         });*/
-    }
+    };
 	$("img").lazyload({
 		effect : "fadeIn"
 	});
 
 	$("#menu-toggle").on("click", function(){
 		if ( $("#menu_checkbox").prop("checked") )
-			$("#menu_checkbox").prop("checked", false)
+			$("#menu_checkbox").prop("checked", false);
 		else
-			$("#menu_checkbox").prop("checked", true)
+			$("#menu_checkbox").prop("checked", true);
 
 		$("header").toggleClass("active");
 		$("main").toggleClass("active");
 		$("body").toggleClass("position-fixed");
-	})
+	});
 
 	$("#menu_label").on("click", function(e){
 		e.stopPropagation();
-	})
+	});
 
 	$("a[href='#signin-modal']").on("click", function(e){
 		$("#signin-modal").modal({
 			fadeDuration: 300
-		})
-	})
+		});
+	});
 
 	/* Sign-up Modal functions*/
 	$("a[href='#signup-modal']").on("click", function(e){
 		$("#signup-modal").modal({
 			fadeDuration: 300
-		})
-	})
+		});
+	});
 
 	var form = $("#sign-up-form").show();
 
@@ -145,15 +145,15 @@ jQuery(function($){
 		container: container,
 		todayHighlight: true,
 		autoclose: true,
-	})
+	});
 
 	$(".dropdown-toggle").on("click", function (e) {
 		$(".category-toggle-button").toggleClass("show");
 		$(".dropdown-menu").toggleClass("show");
-	})
+	});
 
 	$(".dropdown-menu").on("click", function (e) {
-		e.stopPropagation()
-	})
+		e.stopPropagation();
+	});
 
 });
