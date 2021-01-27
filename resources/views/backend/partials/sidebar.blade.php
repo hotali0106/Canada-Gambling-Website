@@ -63,6 +63,7 @@
                 </a>
             </li>
             @endpermission
+            
 
             @permission('users.manage')
             <li class="{{ Request::is('backend/user*') ? 'active' : ''  }}">
