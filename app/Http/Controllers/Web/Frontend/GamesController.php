@@ -262,7 +262,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                                             ->leftJoin('categories','categories.id','=','game_categories.category_id')
                                             ->where('categories.Title','Hot')
                                             ->skip($page*20)
-                                            ->take(($page+1)*20)
+                                            ->take(20)
                                             ->get();
                 
             }
@@ -272,7 +272,16 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                                             ->leftJoin('categories','categories.id','=','game_categories.category_id')
                                             ->where('categories.Title','New')
                                             ->skip($page*20)
-                                            ->take(($page+1)*20)
+                                            ->take(20)
+                                            ->get();
+                
+            }
+            else if($gametype == "GAME"){
+                $page = $request->pagegame;
+                $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                            ->leftJoin('categories','categories.id','=','game_categories.category_id')
+                                            ->skip($page*20)
+                                            ->take(20)
                                             ->get();
                 
             }
