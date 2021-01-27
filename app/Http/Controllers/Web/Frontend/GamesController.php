@@ -256,6 +256,8 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
         }
         public function loadmore(\Illuminate\Http\Request $request){
             $gametype = $request->type;
+            $category = $request->category;
+
             if($gametype == "HOT"){
                 $page = $request->pagehot;
                 $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
@@ -279,11 +281,12 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             else if($gametype == "GAME"){
                 $page = $request->pagegame;
                 $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
-                                            ->leftJoin('categories','categories.id','=','game_categories.category_id')
-                                            ->skip($page*20)
-                                            ->take(20)
-                                            ->get();
-                
+                                            ->leftJoin('categories','categories.id','=','game_categories.category_id');
+                if($category == "All"){
+                    $games = $games->skip($page*20)->take(20)->get();
+                }else{
+                    $games = $games->where('categories.Title',$category)->skip($page*20)->take(20)->get();
+                }
             }
             return response(json_encode([
                 'type' => $gametype,
