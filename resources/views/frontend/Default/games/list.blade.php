@@ -7,6 +7,27 @@
 @section('content')
 <section id="game-list">
     <!-- GAMES - BEGIN -->
+    <div class="section-title">
+        <h3>{{$currentListTitle}} Games</h3>
+    </div>
+    <div class="game-category-section">
+        <div class="section-content" id="section-game">
+        @if ($games && count($games))
+            @foreach ($games as $key=>$game)
+            <div class="game-item">
+                <img data-original="{{asset('frontend/Default/ico/')}}/{{$game->name.'.jpg'}}" />
+                <div class="game-overlay">
+                    <a href="{{ route('frontend.game.go', $game->name) }}">Play For Real</a>
+                    <a href="#">Play For Fun</a>
+                </div>
+            </div>
+            @endforeach
+        @endif
+        </div>
+    </div>
+    <div style="text-align: center; margin: 20px;">
+        <button id="btn_loadmore_game" onclick="fn_loadmore('GAME')" class="btn btn-outline-secondary btn-lg">Load More</button>
+    </div>
     @if($currentSliderNum != "hot")
     <div class="section-title">
         <h3>Hot Games</h3>
@@ -26,8 +47,8 @@
         @endif
         </div>
     </div>
-    <div>
-        <button id="btn_loadmore_hot" onclick="fn_loadmore('HOT')">Load More</button>
+    <div style="text-align: center; margin: 20px;">
+        <button id="btn_loadmore_hot" onclick="fn_loadmore('HOT')" class="btn btn-outline-secondary btn-lg">Load More</button>
     </div>
     @endif
     @if($currentSliderNum != "new")
@@ -35,7 +56,7 @@
         <h3>New Games</h3>
     </div>
     <div class="game-category-section">
-        <div class="section-content" d="section-new">
+        <div class="section-content" id="section-new">
         @if ($newgames && count($newgames))
             @foreach ($newgames as $key=>$newgame)
             <div class="game-item">
@@ -49,38 +70,17 @@
         @endif
         </div>
     </div>
-    <div>
-        <button id="btn_loadmore_new" onclick="fn_loadmore('NEW')">Load More</button>
+    <div style="text-align: center; margin: 20px;">
+        <button id="btn_loadmore_new" onclick="fn_loadmore('NEW')" class="btn btn-outline-secondary btn-lg">Load More</button>
     </div>
     @endif
-    <div class="section-title">
-        <h3>{{$currentListTitle}} Games</h3>
-    </div>
-    <div class="game-category-section">
-        <div class="section-content">
-        @if ($games && count($games))
-            @foreach ($games as $key=>$game)
-            <div class="game-item">
-                <img data-original="{{asset('frontend/Default/ico/')}}/{{$game->name.'.jpg'}}" />
-                <div class="game-overlay">
-                    <a href="{{ route('frontend.game.go', $game->name) }}">Play For Real</a>
-                    <a href="#">Play For Fun</a>
-                </div>
-            </div>
-            @endforeach
-        @endif
-        </div>
-    </div>
-    <div>
-        <button>Load More</button>
-    </div>
 </section>
 @endsection
 @section('page_bottom')
 <script>
     var page_hot = 0;
     var page_new = 0;
-    var page_all = 0;
+    var page_game = 0;
     fn_loadmore=(type)=>{
         if(type == "HOT"){
             page_hot++;
@@ -88,8 +88,8 @@
         else if(type == "NEW"){
             page_new++;
         }
-        else if(type == "ALL"){
-            page_all++;
+        else if(type == "GAME"){
+            page_game++;
         }
         $.ajax({
             url:"{{ route('frontend.loadmore.game') }}",
@@ -97,7 +97,7 @@
             data:{
                 pagehot:page_hot,
                 pagenew:page_new,
-                pageall:page_all,
+                pagegame:page_game,
                 type:type,
             },
             dataType:"JSON",
@@ -120,8 +120,8 @@
                     case "NEW":
                         $("#section-new").append(section_game);  
                         break;
-                    case "ALL":
-                        $("#section-all").append(section_game);  
+                    case "GAME":
+                        $("#section-game").append(section_game);  
                         break;
                     default:
                         break;
