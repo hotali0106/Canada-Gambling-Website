@@ -7,6 +7,27 @@
 @section('content')
 <section id="game-list">
     <!-- GAMES - BEGIN -->
+    <div class="section-title">
+        <h3>{{$currentListTitle}} Games</h3>
+    </div>
+    <div class="game-category-section">
+        <div class="section-content" id="section-game">
+        @if ($games && count($games))
+            @foreach ($games as $key=>$game)
+            <div class="game-item">
+                <img data-original="{{asset('frontend/Default/ico/')}}/{{$game->name.'.jpg'}}" />
+                <div class="game-overlay">
+                    <a href="{{ route('frontend.game.go', $game->name) }}">Play For Real</a>
+                    <a href="{{ route('frontend.game.go.prego', ['game'=>$game->name, 'prego'=>'Pre_go']) }}">Play For Fun</a>
+                </div>
+            </div>
+            @endforeach
+        @endif
+        </div>
+    </div>
+    <div style="text-align: center; margin: 20px;">
+        <button id="btn_loadmore_game" onclick="fn_loadmore('GAME','{{$currentListTitle}}')" class="btn btn-outline-secondary btn-lg">Load More</button>
+    </div>
     @if($currentSliderNum != "hot")
     <div class="section-title">
         <h3>Hot Games</h3>
@@ -19,15 +40,15 @@
                 <img data-original="{{asset('frontend/Default/ico/')}}/{{$hotgame->name.'.jpg'}}" />
                 <div class="game-overlay">
                     <a href="{{ route('frontend.game.go', $hotgame->name) }}">Play For Real</a>
-                    <a href="#">Play For Fun</a>
+                    <a href="{{ route('frontend.game.go.prego', ['game'=>$hotgame->name, 'prego'=>'Pre_go']) }}">Play For Fun</a>
                 </div>
             </div>
             @endforeach
         @endif
         </div>
     </div>
-    <div>
-        <button id="btn_loadmore_hot" onclick="fn_loadmore('HOT')">Load More</button>
+    <div style="text-align: center; margin: 20px;">
+        <button id="btn_loadmore_hot" onclick="fn_loadmore('HOT')" class="btn btn-outline-secondary btn-lg">Load More</button>
     </div>
     @endif
     @if($currentSliderNum != "new")
@@ -42,54 +63,33 @@
                 <img data-original="{{asset('frontend/Default/ico/')}}/{{$newgame->name.'.jpg'}}" />
                 <div class="game-overlay">
                     <a href="{{ route('frontend.game.go', $newgame->name) }}">Play For Real</a>
-                    <a href="#">Play For Fun</a>
+                    <a href="{{ route('frontend.game.go.prego', ['game'=>$newgame->name, 'prego'=>'Pre_go']) }}">Play For Fun</a>
                 </div>
             </div>
             @endforeach
         @endif
         </div>
     </div>
-    <div>
-        <button id="btn_loadmore_new" onclick="fn_loadmore('NEW')">Load More</button>
+    <div style="text-align: center; margin: 20px;">
+        <button id="btn_loadmore_new" onclick="fn_loadmore('NEW')" class="btn btn-outline-secondary btn-lg">Load More</button>
     </div>
     @endif
-    <div class="section-title">
-        <h3>{{$currentListTitle}} Games</h3>
-    </div>
-    <div class="game-category-section">
-        <div class="section-content">
-        @if ($games && count($games))
-            @foreach ($games as $key=>$game)
-            <div class="game-item">
-                <img data-original="{{asset('frontend/Default/ico/')}}/{{$game->name.'.jpg'}}" />
-                <div class="game-overlay">
-                    <a href="{{ route('frontend.game.go', $game->name) }}">Play For Real</a>
-                    <a href="#">Play For Fun</a>
-                </div>
-            </div>
-            @endforeach
-        @endif
-        </div>
-    </div>
-    <div>
-        <button>Load More</button>
-    </div>
 </section>
 @endsection
 @section('page_bottom')
 <script>
     var page_hot = 0;
     var page_new = 0;
-    var page_all = 0;
-    fn_loadmore=(type)=>{
+    var page_game = 0;
+    fn_loadmore=(type, category)=>{
         if(type == "HOT"){
             page_hot++;
         }
         else if(type == "NEW"){
             page_new++;
         }
-        else if(type == "ALL"){
-            page_all++;
+        else if(type == "GAME"){
+            page_game++;
         }
         $.ajax({
             url:"{{ route('frontend.loadmore.game') }}",
@@ -97,13 +97,20 @@
             data:{
                 pagehot:page_hot,
                 pagenew:page_new,
-                pageall:page_all,
+                pagegame:page_game,
                 type:type,
+                category:category
             },
             dataType:"JSON",
             success:(data)=>{
                 var games = data.result;
                 var section_game = "";
+                
+                if(games.length == 0){
+                    alert("data empty");
+                    return;
+                }
+                
                 for(var i=0;i<games.length;i++) {
                     section_game+=  '<div class="game-item">\
                                             <img src="/frontend/Default/ico/'+games[i].name+'.jpg" data-original="/frontend/Default/ico/'+games[i].name+'.jpg" data-image-blur-on-load-update-occured="true" style="filter: opacity(1);"/>\
@@ -120,8 +127,8 @@
                     case "NEW":
                         $("#section-new").append(section_game);  
                         break;
-                    case "ALL":
-                        $("#section-all").append(section_game);  
+                    case "GAME":
+                        $("#section-game").append(section_game);  
                         break;
                     default:
                         break;

@@ -32,7 +32,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $body = '';
             $keywords = '';
             $description = '';
-            $shop_id = (\Illuminate\Support\Facades\Auth::check() ? \Illuminate\Support\Facades\Auth::user()->shop_id : 0);
+            $shop_id = (\Illuminate\Support\Facades\Auth::check() ? \Illuminate\Support\Facades\Auth::user()->shop_id : 2);
             $shop = \VanguardLTE\Shop::find($shop_id);
             $games = \VanguardLTE\Game::where([
                 'view' => 1, 
@@ -256,13 +256,29 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
         }
         public function loadmore(\Illuminate\Http\Request $request){
             $gametype = $request->type;
+            $category = $request->category;
+            // $detect = new \Detection\MobileDetect();
+            // if( $detect->isMobile() || $detect->isTablet() ) 
+            // {
+            //     $games = $games->whereIn('device', [
+            //         0, 
+            //         2
+            //     ]);
+            // }
+            // else
+            // {
+            //     $games = $games->whereIn('device', [
+            //         1, 
+            //         2
+            //     ]);
+            // }
             if($gametype == "HOT"){
                 $page = $request->pagehot;
                 $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
                                             ->leftJoin('categories','categories.id','=','game_categories.category_id')
                                             ->where('categories.Title','Hot')
                                             ->skip($page*20)
-                                            ->take(($page+1)*20)
+                                            ->take(20)
                                             ->get();
                 
             }
@@ -272,9 +288,19 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                                             ->leftJoin('categories','categories.id','=','game_categories.category_id')
                                             ->where('categories.Title','New')
                                             ->skip($page*20)
-                                            ->take(($page+1)*20)
+                                            ->take(20)
                                             ->get();
                 
+            }
+            else if($gametype == "GAME"){
+                $page = $request->pagegame;
+                $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                            ->leftJoin('categories','categories.id','=','game_categories.category_id');
+                if($category == "All"){
+                    $games = $games->skip($page*20)->take(20)->get();
+                }else{
+                    $games = $games->where('categories.Title',$category)->skip($page*20)->take(20)->get();
+                }
             }
             return response(json_encode([
                 'type' => $gametype,
@@ -332,23 +358,44 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $games = $games->get();
             return view('frontend.' . $frontend . '.games.search', compact('games'));
         }
-        public function go(\Illuminate\Http\Request $request, $game)
+        public function go(\Illuminate\Http\Request $request, $game, $prego='')
         {
-            if( \Illuminate\Support\Facades\Auth::check() && !\Illuminate\Support\Facades\Auth::user()->hasRole('user') ) 
-            {
-                return redirect()->route('backend.dashboard');
+            if($prego == ''){
+                if( \Illuminate\Support\Facades\Auth::check() && !\Illuminate\Support\Facades\Auth::user()->hasRole('user') ) 
+                {
+                    return redirect()->route('backend.dashboard');
+                }
+                if( !\Illuminate\Support\Facades\Auth::check() ) 
+                {
+                    return redirect()->route('frontend.auth.login');
+                }
+                $userId = \Illuminate\Support\Facades\Auth::id();
+                $shopId = \Illuminate\Support\Facades\Auth::user()->shop_id;
+                $request->session()->put('freeUserID', 0);
+            }else{
+                $freeShopID = 2;
+                $freeUser = \VanguardLTE\User::where('shop_id', $freeShopID)->orderBy('last_login', 'asc')->first();
+                if(!isset($freeUser)){
+                    $userId = 1;
+                }else{
+                    $freeUser->update([
+                        'balance' => 10000, 
+                        'count_balance' => 10000,
+                        'last_login' => new \DateTime("now", new \DateTimeZone("UTC")),
+                        'session' => ''
+                    ]);
+                    $userId = $freeUser->id;
+                }
+                $request->session()->put('freeUserID', $userId);
+                $shopId = $freeShopID;
             }
-            if( !\Illuminate\Support\Facades\Auth::check() ) 
-            {
-                return redirect()->route('frontend.auth.login');
-            }
+            
             $detect = new \Detection\MobileDetect();
-            $userId = \Illuminate\Support\Facades\Auth::id();
             $object = '\VanguardLTE\Games\\' . $game . '\SlotSettings';
             $slot = new $object($game, $userId);
             $game = \VanguardLTE\Game::where([
                 'name' => $game, 
-                'shop_id' => \Illuminate\Support\Facades\Auth::user()->shop_id
+                'shop_id' => $shopId
             ]);
             if( $detect->isMobile() || $detect->isTablet() ) 
             {
@@ -378,16 +425,21 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
         }
         public function server(\Illuminate\Http\Request $request, $game)
         {
-            if( \Illuminate\Support\Facades\Auth::check() && !\Illuminate\Support\Facades\Auth::user()->hasRole('user') ) 
-            {
-                echo '{"responseEvent":"error","responseType":"start","serverResponse":"Wrong User"}';
-                exit();
-            }
-            if( !\Illuminate\Support\Facades\Auth::check() ) 
-            {
-            }
             $GLOBALS['rgrc'] = config('app.salt');
-            $userId = \Illuminate\Support\Facades\Auth::id();
+            if($request->session()->get('freeUserID', 0) == 0){
+                if( \Illuminate\Support\Facades\Auth::check() && !\Illuminate\Support\Facades\Auth::user()->hasRole('user') ) 
+                {
+                    echo '{"responseEvent":"error","responseType":"start","serverResponse":"Wrong User"}';
+                    exit();
+                }
+                if( !\Illuminate\Support\Facades\Auth::check() ) 
+                {
+                }
+                $userId = \Illuminate\Support\Facades\Auth::id();
+            }else{
+                $userId = $request->session()->get('freeUserID', 0);
+            }
+            
             $object = '\VanguardLTE\Games\\' . $game . '\Server';
             $server = new $object();
             echo $server->get($request, $game, $userId);
