@@ -58,6 +58,7 @@ label {
 	color: #FFFFFF;
 	cursor: pointer;
 	transition: all 0.3s;
+    z-index: 1;
 }
 
 #menu-toggle span {
@@ -91,6 +92,7 @@ label {
 	display: block;
 	height: 29px;
 	cursor: pointer;
+    z-index: -1;
 }
 
 #menu_label:before, #menu_label:after, #menu_text_bar
