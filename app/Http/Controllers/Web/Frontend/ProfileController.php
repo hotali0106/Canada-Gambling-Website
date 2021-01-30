@@ -28,7 +28,13 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $edit = true;
             $roles = $rolesRepo->lists();
             $statuses = \VanguardLTE\Support\Enum\UserStatus::lists();
-            $country = \VanguardLTE\Country::find($user->country)->country;
+            $country = \VanguardLTE\Country::find($user->country);
+
+            if(isset($country) && !$country){
+                $country = $country->country;
+            }else{
+                $country = "";
+            }
 
             return view('frontend.Default.user.info', compact('user', 'edit', 'roles', 'statuses','tab','country'));
         }
