@@ -30,7 +30,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $statuses = \VanguardLTE\Support\Enum\UserStatus::lists();
             $country = \VanguardLTE\Country::find($user->country);
 
-            if(isset($country) && count($country)){
+            if(isset($country) && !$country){
                 $country = $country->country;
             }else{
                 $country = "";

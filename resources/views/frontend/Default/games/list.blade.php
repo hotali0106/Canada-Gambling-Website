@@ -110,12 +110,12 @@
                     alert("data empty");
                     return;
                 }
-                
+                    
                 for(var i=0;i<games.length;i++) {
                     section_game+=  '<div class="game-item">\
                                             <img src="/frontend/Default/ico/'+games[i].name+'.jpg" data-original="/frontend/Default/ico/'+games[i].name+'.jpg" data-image-blur-on-load-update-occured="true" style="filter: opacity(1);"/>\
                                             <div class="game-overlay">\
-                                                <a href="">Play For Real</a>\
+                                                <a href="/game/'+games[i].name+'">Play For Real</a>\
                                                 <a href="#">Play For Fun</a>\
                                             </div>\
                                         </div>';
