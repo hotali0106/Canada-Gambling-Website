@@ -25,6 +25,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                 return redirect()->route('frontend.auth.login');
             }
             */
+            $search_game = $request->search_game;
             $categories = [];
             $game_ids = [];
             $cat1 = false;
@@ -202,8 +203,11 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                 }
             }
 
-            $games = $games->take(20)->get();
-
+            if($search_game){
+                $games = $games->where('name','like','%'.$search_game.'%')->take(20)->get();
+            }else{
+                $games = $games->take(20)->get();
+            }
             $newgames = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
                                         ->leftJoin('categories','categories.id','=','game_categories.category_id')
                                         ->where('categories.Title','New')
@@ -288,6 +292,32 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                     $games = $games->where('categories.Title',$category)->skip($page*20)->take(20)->get();
                 }
             }
+
+            $detect = new \Detection\MobileDetect();
+            $devices = [];
+            if( $detect->isMobile() || $detect->isTablet() ) 
+            {
+                $games = $games->whereIn('device', [
+                    0, 
+                    2
+                ]);
+                $devices = [
+                    0, 
+                    2
+                ];
+            }
+            else
+            {
+                $games = $games->whereIn('device', [
+                    1, 
+                    2
+                ]);
+                $devices = [
+                    1, 
+                    2
+                ];
+            }
+            
             return response(json_encode([
                 'type' => $gametype,
                 'result' => $games 

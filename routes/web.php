@@ -73,7 +73,7 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
             'uses' => 'Auth\PasswordController@postReset'
         ]);
     }
-    */
+    
 	
     ## license config
 
@@ -97,6 +97,7 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
         'as' => 'frontend.jpstv_json',
         'uses' => 'PagesController@jpstv_json'
     ]);
+    */
 	
 	/**
      * Dashboard
@@ -830,8 +831,8 @@ Route::prefix('backend')->middleware(['auth'])->group(function () {
 
 
         /**
-     * Return routes
-     */
+         * Return routes
+         */
 
     	Route::get('returns', [
             'as' => 'backend.returns.list',
@@ -862,8 +863,6 @@ Route::prefix('backend')->middleware(['auth'])->group(function () {
             'middleware' => 'permission:returns.delete',
         ]);
 	
-	
-
         /**
          * Roles & Permissions
          */
@@ -895,9 +894,6 @@ Route::prefix('backend')->middleware(['auth'])->group(function () {
             'as' => 'backend.jpgame.balance',
             'uses' => 'JPGController@balance',
         ]);
-
-
-
 
         /**
         * Roles & Permissions

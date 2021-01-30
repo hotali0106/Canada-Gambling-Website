@@ -11,8 +11,9 @@
             @endforeach
         @endif
     </div>
+    <form method="GET">
     <div class="search-box">
-        <input type="text" id="search_game" placeholder="Find Your Game" />
+        <input type="text" name="search_game" placeholder="Find Your Game" />
         <svg
         xmlns='http://www.w3.org/2000/svg'
         width='14'
@@ -27,6 +28,7 @@
         />
     </svg>
     </div>
+    </form>
     <div class="category-toggle-button dropdown">
         <button class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">game provider</button>
         <div class="dropdown-menu dropdown-large">
