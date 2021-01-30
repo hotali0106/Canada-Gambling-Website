@@ -243,6 +243,12 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
         'uses' => 'GamesController@setpage'
     ]);
     
+    // changed by game developer
+    Route::get('game/{game}/{prego}', [
+        'as' => 'frontend.game.go.prego',
+        'uses' => 'GamesController@go'
+    ]);	
+    
 	Route::get('game/{game}', [
         'as' => 'frontend.game.go',
         'uses' => 'GamesController@go'

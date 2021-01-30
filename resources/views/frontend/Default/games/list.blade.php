@@ -18,7 +18,7 @@
                 <img data-original="{{asset('frontend/Default/ico/')}}/{{$game->name.'.jpg'}}" />
                 <div class="game-overlay">
                     <a href="{{ route('frontend.game.go', $game->name) }}">Play For Real</a>
-                    <a href="#">Play For Fun</a>
+                    <a href="{{ route('frontend.game.go.prego', ['game'=>$game->name, 'prego'=>'Pre_go']) }}">Play For Fun</a>
                 </div>
             </div>
             @endforeach
@@ -40,7 +40,7 @@
                 <img data-original="{{asset('frontend/Default/ico/')}}/{{$hotgame->name.'.jpg'}}" />
                 <div class="game-overlay">
                     <a href="{{ route('frontend.game.go', $hotgame->name) }}">Play For Real</a>
-                    <a href="#">Play For Fun</a>
+                    <a href="{{ route('frontend.game.go.prego', ['game'=>$hotgame->name, 'prego'=>'Pre_go']) }}">Play For Fun</a>
                 </div>
             </div>
             @endforeach
@@ -63,7 +63,7 @@
                 <img data-original="{{asset('frontend/Default/ico/')}}/{{$newgame->name.'.jpg'}}" />
                 <div class="game-overlay">
                     <a href="{{ route('frontend.game.go', $newgame->name) }}">Play For Real</a>
-                    <a href="#">Play For Fun</a>
+                    <a href="{{ route('frontend.game.go.prego', ['game'=>$newgame->name, 'prego'=>'Pre_go']) }}">Play For Fun</a>
                 </div>
             </div>
             @endforeach
@@ -110,7 +110,7 @@
                     alert("data empty");
                     return;
                 }
-                    
+                
                 for(var i=0;i<games.length;i++) {
                     section_game+=  '<div class="game-item">\
                                             <img src="/frontend/Default/ico/'+games[i].name+'.jpg" data-original="/frontend/Default/ico/'+games[i].name+'.jpg" data-image-blur-on-load-update-occured="true" style="filter: opacity(1);"/>\
