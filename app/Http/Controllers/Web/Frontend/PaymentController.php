@@ -10,6 +10,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
     {
         public function gigadat(\Illuminate\Http\Request $request)
         {
+            $this->gigadatsuccess();
             set_time_limit(300);
             /* 
             $request_body_content = array(
@@ -145,13 +146,72 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
 
             $response = curl_exec($curl);*/
             return redirect()->intended("https://interac.express-connect.com/webflow?token=".$pay_token."&transaction=".$transactionId."");
-
+            
             // curl_close($curl);
             // echo $response;
         }
-        public function gigadatsuccess(\Illuminate\Http\Request $request)
+        public function gigadatsuccess()
         {
-            return response("Gigadat is successful.");
+            $user = \Auth::user();
+            $amount = 400;
+
+            $pay_count = \VanguardLTE\Payment::where('user_id', $user->id)->count();
+
+            $payment = \VanguardLTE\Payment::create([
+                'user_id' => \Auth::user()->id, 
+                'summ' => $amount, 
+                'system' => 'interac'
+                // 'system' => $request->system
+            ]);
+
+            switch ($pay_count) {
+                case 0:
+                    {
+                        if($amount > 400){
+                            $user->increment('balance', $amount);
+                            $user->increment('count_bonus', $amount);
+                            $user->increment('bonus', $amount);
+                            $user->increment('count_balance', $amount);
+                        }else{
+                            $user->increment('balance', $amount);
+                            $user->increment('count_balance', $amount);
+                        }
+                    }
+                    break;
+                case 1:
+                    {
+                        if($amount > 300){
+                            $user->increment('balance', $amount);
+                            $user->increment('count_bonus', $amount);
+                            $user->increment('bonus', $amount);
+                            $user->increment('count_balance', $amount);
+                        }else{
+                            $user->increment('balance', $amount);
+                            $user->increment('count_balance', $amount);
+                        }
+                    }
+                    break;
+                case 2:
+                    {
+                        if($amount > 300){
+                            $user->increment('balance', $amount);
+                            $user->increment('count_bonus', $amount);
+                            $user->increment('bonus', $amount);
+                            $user->increment('count_balance', $amount);
+                        }else{
+                            $user->increment('balance', $amount);
+                            $user->increment('count_balance', $amount);
+                        }
+                    }
+                    break;
+                
+                default:
+                    $user->increment('balance', $amount);
+                    $user->increment('count_balance', $amount);
+                    break;
+            }
+            print_r("Welcome bonus ! balance add ". $amount);
+            // return response();
         }
         public function gigadatfail(\Illuminate\Http\Request $request)
         {

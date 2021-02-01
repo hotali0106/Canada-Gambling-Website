@@ -91,7 +91,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend\Auth
                 3
             ]) && (!$user->shop || $user->shop->is_blocked) ) 
             {
-                return redirect()->to('backend/login' . $to)->withErrors('Your shop is blocked');
+                // return redirect()->to('backend/login' . $to)->withErrors('Your shop is blocked');
             }
             if( settings('use_email') && $user->isUnconfirmed() ) 
             {

@@ -1,4 +1,8 @@
 @extends('frontend.Default.layouts.user')
+@section('page_top')
+<link rel="stylesheet" type="text/css" href="{{asset('back/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" />
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" />
+@stop
 @section('profile')
 <main class="profile">
     <div class="profile container pt-5">
@@ -11,13 +15,13 @@
                     <div class="sub-menu mb-4">
                         <ul class="d-flex">
                             <li>
-                                <a href="#" class="active py-2 px-4">Transaction History</a>
+                                <a href="{{ route('frontend.profile.history.payment') }}" class="active py-2 px-4">Payment History</a>
                             </li>
                             <li>
-                                <a href="#" class="py-2 px-4">Bets History</a>
+                                <a href="{{ route('frontend.profile.history.bet') }}" class="py-2 px-4">Bets History</a>
                             </li>
                             <li>
-                                <a href="#" class="py-2 px-4">Bonus History</a>
+                                <a href="{{ route('frontend.profile.history.bonus') }}" class="py-2 px-4">Bonus History</a>
                             </li>
                         </ul>
                     </div>
@@ -66,7 +70,7 @@
                             </div>
                         </div>
                     </div>  
-                    <table class="table">
+                    <table class="table table-striped table-bordered" id="payment_history_table" style="width:100%">
                         <thead>
                             <tr>
                                 <th style="width: 40%" scope="col">Date</th>
@@ -80,7 +84,15 @@
                             @foreach($historys as $history)
                             <tr>
                                 <td>{{ $history->created_at }}</td>
-                                <td>{{ $history->status }}</td>
+                                <td>
+                                    @php
+
+                                    if($history->status == 0)
+                                        echo "Confirm";
+                                    else
+                                        echo "Unconfirm";   
+                                    @endphp
+                                </td>
                                 <td>{{ $history->system }}</td>
                                 <td>{{ $history->summ }}</td>
                             </tr>
@@ -97,3 +109,12 @@
     <div id='stars3'></div>		
 </main>
 @endsection
+@section('page_bottom')
+<script type="text/javascript" src="{{asset('back/bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $("#payment_history_table").DataTable();
+    });
+</script>
+@stop
