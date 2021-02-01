@@ -21,6 +21,9 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                 return $next($request);
             });
         }
+
+        #################################### Created By Applewood
+
         public function index(\VanguardLTE\Repositories\Role\RoleRepository $rolesRepo)
         {
             $tab = 'info';
@@ -35,9 +38,47 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             }else{
                 $country = "";
             }
+            $currencys =  \VanguardLTE\Currency::get();
 
-            return view('frontend.Default.user.info', compact('user', 'edit', 'roles', 'statuses','tab','country'));
+            return view('frontend.Default.user.info', compact('user', 'edit', 'roles', 'statuses','tab','country','currencys'));
         }
+
+        public function payment_history(\Illuminate\Http\Request $request)
+        {
+            $tab = "history";
+            $historys = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')
+            // ->paginate(25);
+            ->get();
+            return view('frontend.Default.user.history', compact('historys','tab'));
+        }
+        public function bet_history(\Illuminate\Http\Request $request)
+        {
+            $tab = "history";
+            $bet_history = \VanguardLTE\StatGame::where('user_id', \Auth::user()->id)->orderBy('id','DESC')->get();
+            return view('frontend.Default.user.bet_history', compact('bet_history','tab'));
+        }
+        public function balance(\Illuminate\Http\Request $request)
+        {
+            $tab = "balance";
+
+            /*
+            $pay_count = \VanguardLTE\Payment::where('user_id', $user->id)->count();
+            switch ($pay_count) {
+                case 'value':
+                    # code...
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+            */
+            $currencys =  \VanguardLTE\Currency::get();
+            $balance = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')->paginate(25);
+            return view('frontend.Default.user.balance', compact('balance','tab','currencys'));
+        }
+        #######################################
+
         public function updateDetails(\VanguardLTE\Http\Requests\User\UpdateProfileDetailsRequest $request)
         {
             $this->users->update($this->theUser->id, $request->except('role_id', 'status'));
@@ -151,20 +192,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $sessionRepository->invalidateSession($session->id);
             return redirect()->route('frontend.profile.sessions')->withSuccess(trans('app.session_invalidated'));
         }
-        public function history(\Illuminate\Http\Request $request)
-        {
-            $tab = "history";
-            $historys = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')
-            // ->paginate(25);
-            ->get();
-            return view('frontend.Default.user.history', compact('historys','tab'));
-        }
-        public function balance(\Illuminate\Http\Request $request)
-        {
-            $tab = "balance";
-            $balance = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')->paginate(25);
-            return view('frontend.Default.user.balance', compact('balance','tab'));
-        }
+
         public function balanceAdd(\Illuminate\Http\Request $request)
         {
             $amount = str_replace(',', '.', trim($request->summ));

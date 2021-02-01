@@ -49,6 +49,7 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
     Route::prefix('payment')->group(function () { 
         Route::match(['get', 'post'], 'gigadat/success', 'PaymentController@gigadatsuccess');
         Route::match(['get', 'post'], 'gigadat/fail', 'PaymentController@gigadatfail');
+        
     });
     
     Route::match(['get', 'post'], '/bonus', 'BonusController@index');
@@ -122,8 +123,16 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
         'uses' => 'ProfileController@index'
     ]);
     Route::get('profile/history', [
-        'as' => 'frontend.profile.history',
-        'uses' => 'ProfileController@history'
+        'as' => 'frontend.profile.history.payment',
+        'uses' => 'ProfileController@payment_history'
+    ]);
+    Route::get('profile/history/bet', [
+        'as' => 'frontend.profile.history.bet',
+        'uses' => 'ProfileController@bet_history'
+    ]);
+    Route::get('profile/history/bonus', [
+        'as' => 'frontend.profile.history.bonus',
+        'uses' => 'ProfileController@payment_history'
     ]);
     Route::get('profile/activity', [
         'as' => 'frontend.profile.activity',
