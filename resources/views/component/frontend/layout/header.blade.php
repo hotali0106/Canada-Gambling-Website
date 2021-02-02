@@ -14,7 +14,7 @@
             <li><a href="#">About Us</a></li>
             <li class="d-md-block d-lg-none"><a href="javascript:fn_deposit('{{Auth::check()}}')">Deposit</a></li>
             @if(Auth::check())
-            <li class="d-md-block d-lg-none"><a href="{{route('frontend.profile.info')}}">MY Account</a></li>
+            <li class="d-md-block d-lg-none"><a href="{{route('frontend.profile.balance')}}">MY Account</a></li>
             <li><a href="{{route('frontend.auth.logout')}}">Sign Out</a></li>
             @else
             <li class="d-md-block d-lg-none"><a href="#signup-modal">Sign Up</a></li>
@@ -51,7 +51,7 @@
             </div>
             @else
             <div class="account-header-menu-item">
-                <a href="{{route('frontend.profile.info')}}" data-ol-has-click-handler>
+                <a href="{{route('frontend.profile.balance')}}" data-ol-has-click-handler>
                     <img src="{{asset('frontend/Page/image/signin-icon.png')}}" />
                     <span>my account</span>
                 </a>
