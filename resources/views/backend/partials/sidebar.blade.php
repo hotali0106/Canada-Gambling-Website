@@ -63,7 +63,7 @@
                 </a>
             </li>
             @endpermission
-            
+
 
             @permission('users.manage')
             <li class="{{ Request::is('backend/user*') ? 'active' : ''  }}">
@@ -82,30 +82,12 @@
                 </a>
             </li>
             @endpermission
-            
+
             @permission('currency.manage')
             <li class="{{ Request::is('backend/currency*') ? 'active' : ''  }}">
                 <a href="{{ route('backend.currency') }}">
                     <i class="fa fa-exchange"></i>
                     <span>@lang('app.currency')</span>
-                </a>
-            </li>
-            @endpermission
-
-            @permission('users.tree')
-            <li class="{{ Request::is('backend/tree*') ? 'active' : ''  }}">
-                <a href="{{ route('backend.user.tree') }}">
-                    <i class="fa fa-users"></i>
-                    <span>{{ \VanguardLTE\Role::where('id', auth()->user()->role_id - 1)->first()->name }} @lang('app.tree')</span>
-                </a>
-            </li>
-            @endpermission
-
-            @permission('shops.manage')
-            <li class="{{ Request::is('backend/shops*') ? 'active' : ''  }}">
-                <a href="{{ route('backend.shop.list') }}">
-                    <i class="fa fa-users"></i>
-                    <span>@lang('app.shops')</span>
                 </a>
             </li>
             @endpermission

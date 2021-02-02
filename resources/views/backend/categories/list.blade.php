@@ -27,7 +27,7 @@
 							<th>@lang('app.name')</th>
 							<th>@lang('app.position')</th>
 							<th>@lang('app.href')</th>
-							<th>@lang('app.count')</th>
+							<th>@lang('app.countofgames')</th>
 						</tr>
 						</thead>
 						<tbody>
