@@ -53,7 +53,7 @@
     </div>
     <div class="footer-content">
         <div class="footer-banner">
-            <img data-original="{{asset('frontend/Default/img/footer-banner.png')}}" alt="" />
+            <img src="{{asset('frontend/Default/img/footer-banner.png')}}" alt="" />
         </div>
         <div class="footer-support">
             <div class="payment">
