@@ -199,67 +199,9 @@
 
         <!-- /Latest Pay Stats / Latest Game Stats -->
 
-        <!-- Latest Shops / Latest Registrations -->
+        <!-- Latest Shops / Latest Bank Stats -->
 
         <div class="row">
-
-            @permission('shops.manage')
-            <div class="col-xs-6">
-                <div class="box box-success">
-
-                    <div class="box-header with-border">
-                        <h3 class="box-title">@lang('app.latest_shops')</h3>
-                    </div>
-
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>@lang('app.name')</th>
-                                    <th>@lang('app.id')</th>
-                                    <th>@lang('app.credit')</th>
-                                    <th>@lang('app.frontend')</th>
-                                    <th>@lang('app.currency')</th>
-                                    <th>@lang('app.status')</th>
-                                </tr>
-                                </thead>
-
-                                <tbody>
-
-                                @if (count($shops))
-                                    @foreach ($shops as $shop)
-                                        <tr>
-                                            <td>
-                                                <a href="{{ route('backend.shop.edit', $shop->id)  }}">
-                                                    {{ $shop->name }}
-                                                </a>
-                                            </td>
-                                            <td>{{ $shop->id }}</td>
-                                            <td>{{ $shop->balance }}</td>
-                                            <td>{{ $shop->frontend }}</td>
-
-                                            <td>{{ $shop->currency }}</td>
-                                            <td>
-                                                @if($shop->is_blocked)
-                                                    <small><i class="fa fa-circle text-red"></i></small>
-                                                @else
-                                                    <small><i class="fa fa-circle text-green"></i></small>
-                                                @endif
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                @else
-                                    <tr><td colspan="7">@lang('app.no_data')</td></tr>
-                                @endif
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @endpermission
 
             @permission('users.manage')
             <div class="col-xs-6">
@@ -314,12 +256,6 @@
             </div>
             @endpermission
 
-        </div>
-
-        <!-- /Latest Shops / Latest Registrations -->
-
-
-        <div class="row">
 
             @permission('stats.bank')
             <div class="col-xs-6">
@@ -373,62 +309,10 @@
                 </div>
             </div>
             @endpermission
-
-            @permission('stats.shop')
-            <div class="col-xs-6">
-                <div class="box box-warning">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">@lang('app.latest_shop_stats')</h3>
-                    </div>
-
-                    <div class="box-body">
-                        <div class="table-responsive">
-
-                            <table class="table table-striped">
-
-                                <thead>
-                                <tr>
-                                    <th>@lang('app.name')</th>
-                                    <th>@lang('app.user')</th>
-                                    <th>@lang('app.sum')</th>
-                                    <th>@lang('app.date')</th>
-                                </tr>
-                                </thead>
-
-                                <tbody>
-
-                                @if (count($shops_stat))
-                                    @foreach ($shops_stat as $stat)
-                                        <tr>
-                                            <td>{{ $stat->shop? $stat->shop->name: '' }}</td>
-                                            <td>{{ $stat->user ? $stat->user->username : '' }}</td>
-                                            <td>
-                                                @if ($stat->type == 'add')
-                                                    <span class="text-green">{{ abs($stat->sum) }}	</span>
-                                                @else
-                                                    <span class="text-red">{{ abs($stat->sum) }}</span>
-                                                @endif
-
-                                            </td>
-                                            <td>{{ date(config('app.time_format'), strtotime($stat->date_time)) }}</td>
-                                        </tr>
-                                    @endforeach
-                                @else
-                                    <tr><td colspan="4">@lang('app.no_data')</td></tr>
-                                @endif
-
-                                </tbody>
-
-                            </table>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            @endpermission
-
         </div>
+
+        <!-- /Latest Shops / Latest Registrations -->
+
 
         <!-- Latest Shift Stat -->
 
