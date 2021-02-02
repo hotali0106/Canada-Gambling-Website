@@ -14,9 +14,9 @@
 			<div class="box-header with-border">
 				<h3 class="box-title">@lang('app.jpg')</h3>
 			</div>
-                    <div class="box-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-striped">
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
 					<thead>
 					<tr>
 						<th>@lang('app.id')</th>
@@ -52,9 +52,9 @@
 						<th>@lang('app.pay_out')</th>
 					</tr>
 					</thead>
-                            </table>
-                        </div>
-                    </div>
+                    </table>
+                </div>
+            </div>
 		</div>
 	</section>
 

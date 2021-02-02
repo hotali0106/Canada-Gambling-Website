@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace VanguardLTE\Http\Controllers\Web\Backend
 {
     class JPGController extends \VanguardLTE\Http\Controllers\Controller
@@ -13,15 +13,15 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         {
 /*            $checked = new \VanguardLTE\Lib\LicenseDK();
             $license_notifications_array = $checked->aplVerifyLicenseDK(null, 0);
-            if( $license_notifications_array['notification_case'] != 'notification_license_ok' ) 
+            if( $license_notifications_array['notification_case'] != 'notification_license_ok' )
             {
                 return redirect()->route('frontend.page.error_license');
             }
-            if( !$this->security() ) 
+            if( !$this->security() )
             {
                 return redirect()->route('frontend.page.error_license');
             }*/
-            $jackpots = \VanguardLTE\JPG::where('shop_id', auth()->user()->shop_id)->get();
+            $jackpots = \VanguardLTE\JPG::get();
             return view('backend.jpg.list', compact('jackpots'));
         }
         public function create()
@@ -32,39 +32,30 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         {
             $request->validate(['percent' => 'required|in:' . implode(',', \VanguardLTE\JPG::$values['percent'])]);
             $data = $request->all();
-            foreach( $data as &$item ) 
+            foreach( $data as &$item )
             {
                 $item = str_replace(',', '.', $item);
             }
-            $data['shop_id'] = auth()->user()->shop_id;
             $jackpot = \VanguardLTE\JPG::create($data);
             return redirect()->route('backend.jpgame.list')->withSuccess(trans('app.jackpot_created'));
         }
         public function edit($jackpot)
         {
             $jackpot = \VanguardLTE\JPG::where('id', $jackpot)->first();
-            if( !in_array($jackpot->shop_id, auth()->user()->availableShops()) ) 
-            {
-                return redirect()->back()->withErrors([trans('app.wrong_shop')]);
-            }
             return view('backend.jpg.edit', compact('jackpot'));
         }
         public function update(\Illuminate\Http\Request $request, \VanguardLTE\JPG $jackpot)
         {
-            if( !in_array($jackpot->shop_id, auth()->user()->availableShops()) ) 
-            {
-                return redirect()->back()->withErrors([trans('app.wrong_shop')]);
-            }
             $request->validate(['percent' => 'required|in:' . implode(',', \VanguardLTE\JPG::$values['percent'])]);
             $data = $request->only([
-                'name', 
-                'balance', 
-                'pay_sum', 
-                'percent', 
-                'start_balance', 
+                'name',
+                'balance',
+                'pay_sum',
+                'percent',
+                'start_balance',
                 'view'
             ]);
-            foreach( $data as &$item ) 
+            foreach( $data as &$item )
             {
                 $item = str_replace(',', '.', $item);
             }
@@ -74,21 +65,17 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         public function balance(\Illuminate\Http\Request $request)
         {
             $data = $request->all();
-            if( !array_get($data, 'type') ) 
+            if( !array_get($data, 'type') )
             {
                 $data['type'] = 'add';
             }
             $jackpot = \VanguardLTE\JPG::find($request->jackpot_id);
-            if( !in_array($jackpot->shop_id, auth()->user()->availableShops()) ) 
-            {
-                return redirect()->back()->withErrors([trans('app.wrong_shop')]);
-            }
-            if( $request->all && $request->all == '1' ) 
+            if( $request->all && $request->all == '1' )
             {
                 $request->summ = $jackpot->balance;
             }
             $add_jsp = $jackpot->add_jps(auth()->user(), $request->summ, $request->type);
-            if( !$add_jsp['success'] ) 
+            if( !$add_jsp['success'] )
             {
                 return redirect()->back()->withErrors([$add_jsp['text']]);
             }
@@ -99,15 +86,15 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         }
 /*        public function security()
         {
-            if( config('LicenseDK.APL_INCLUDE_KEY_CONFIG') != 'wi9qydosuimsnls5zoe5q298evkhim0ughx1w16qybs2fhlcpn' ) 
+            if( config('LicenseDK.APL_INCLUDE_KEY_CONFIG') != 'wi9qydosuimsnls5zoe5q298evkhim0ughx1w16qybs2fhlcpn' )
             {
                 return false;
             }
-            if( md5_file(base_path() . '/app/Lib/LicenseDK.php') != '3c5aece202a4218a19ec8c209817a74e' ) 
+            if( md5_file(base_path() . '/app/Lib/LicenseDK.php') != '3c5aece202a4218a19ec8c209817a74e' )
             {
                 return false;
             }
-            if( md5_file(base_path() . '/config/LicenseDK.php') != '951a0e23768db0531ff539d246cb99cd' ) 
+            if( md5_file(base_path() . '/config/LicenseDK.php') != '951a0e23768db0531ff539d246cb99cd' )
             {
                 return false;
             }
@@ -116,7 +103,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
     }
 
 }
-namespace 
+namespace
 {
     function onkXppk3PRSZPackRnkDOJaZ9()
     {

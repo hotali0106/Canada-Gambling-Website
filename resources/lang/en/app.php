@@ -26,25 +26,26 @@ return [
     "actions_sm" => 'actions',
 	'start_balance_jackpot' => 'Start Balance JP',
 	'change' => 'Change',
-	'count' => 'Count users',
+    'count' => 'Count users',
+    'countofgames' => 'Count of games',
     'count2' => 'Count',
     'withdraw' => 'Withdraw',
 	'shop_stats' => 'Shop Stats',
 	'start_shift' => 'Start Shift',
 	'shift_stats' => 'Shift Stats',
-	
+
 	'min_add' => 'Min Add',
-	'min_amount' => 'Min amount is :amount',	
+	'min_amount' => 'Min amount is :amount',
 	'max_add' => 'Max Add',
 	'max_amount' => 'Max amount is :amount',
-	
+
 	'bots' => 'Bots',
 	'bots_settings' => 'Bots settings',
 	'bots_time' => 'Bots Time',
 	'bots_login' => 'Bots Login',
 	'bots_bet' => 'Bots Bet',
 	'bots_win' => 'Bots Win',
-	
+
 	'categories_not_selected' => 'Categories not selected',
 	'games_not_selected' => 'Games not selected',
 	'games_categories_updated' => 'Games categories updated',
@@ -90,7 +91,7 @@ return [
     'main_navigation' => 'MAIN NAVIGATION',
     'no_shop' => 'No Shop',
 
-	
+
 	//Payments
 	'sum' => 'Summ',
 	'add' => 'Add',
@@ -244,7 +245,7 @@ return [
 
     'allow_registration' => 'Allow Registration',
     'terms_and_conditions' => 'Terms & Conditions',
-    'the_user_has_to_confirm' => 'The user has to confirm that he agree with terms 
+    'the_user_has_to_confirm' => 'The user has to confirm that he agree with terms
     and conditions in order to create an account.',
     'email_confirmation' => 'Email Confirmation',
     'require_email_confirmation' => 'Require email confirmation from your newly registered users.',
@@ -255,7 +256,7 @@ return [
     'maximum_number_of_attempts' => 'Maximum Number of Attempts',
     'max_number_of_incorrect_login_attempts' => 'Maximum number of incorrect login attempts before lockout.',
     'lockout_time' => 'Lockout Time',
-    'num_of_minutes_to_lock_the_user' => 'Number of minutes to lock the user out for after 
+    'num_of_minutes_to_lock_the_user' => 'Number of minutes to lock the user out for after
     specified maximum number of incorrect login attempts.',
 
     'in_order_to_enable_2fa' => 'In order to enable Two-Factor Authentication you have to register and create',
@@ -284,13 +285,13 @@ return [
     'are_you_sure_delete_user' => 'Are you sure that you want to delete this user?',
     'yes_delete_him' => 'Yes, delete him!',
     'hard_delete' => 'Hard Delete',
-	
+
 	'balance' => 'Balance',
 	'pay_in' => 'Add',
 	'pay_out' => 'Out',
 	'sum' => 'Sum',
 	'balance_updated' => 'Balance Updated',
-	
+
 	'statistics' => 'Pay Stats',
 	'type' => 'Type',
 
@@ -419,7 +420,7 @@ return [
     'sum_bet' => 'Sum Bet',
 
 
-	
+
 	'categories' => 'Categories',
     'category' => 'Category',
 	'add_category' => 'Add Category',
@@ -500,7 +501,7 @@ return [
 
 	'points' => 'Points',
 	'add_point' => 'Add Point',
-	'edit_point' => 'Edit Point',	
+	'edit_point' => 'Edit Point',
 	'point_details' => 'Point Details',
 	'point_created' => 'Point Created',
 	'point_updated' => 'Point Updated',
@@ -515,7 +516,7 @@ return [
 	'pay' => 'Pay',
 	'available_points' => 'There are only :points points',
 	'zero_points' => 'Enter points count',
-	
+
 	'returns' => 'Returns',
 	'add_return' => 'Add Return',
 	'edit_return' => 'Edit Return',
@@ -528,7 +529,7 @@ return [
 	'are_you_sure_delete_return' => 'Are you sure delete return?',
 	'min_pay' => 'Min Pay',
 	'max_pay' => 'Max Pay',
-	
+
 	'pages' => 'Pages',
 	'add_page' => 'Add Page',
 	'edit_page' => 'Edit Page',
@@ -538,7 +539,7 @@ return [
 	'page_deleted' => 'Page Deleted',
 	'delete_page' => 'Delete Page',
 	'are_you_sure_delete_page' => 'Are you sure delete page?',
-	
+
 	'jackpots' => 'JP System',
     'start_balance' => 'Start Balance',
 	'add_jackpot' => 'Add JP System',
@@ -696,7 +697,7 @@ return [
     'request_for_password_reset_made' => 'You are receiving this email because we received a password reset request for your account.',
     'if_you_did_not_requested' => 'If you did not request a password reset, no further action is required.',
     'click_on_link_below' => 'Please click on this link below in order to reset your password:',
-    'if_you_cant_click' => 'If you’re having trouble clicking the ":button" button, copy and 
+    'if_you_cant_click' => 'If you’re having trouble clicking the ":button" button, copy and
     paste the URL below into your web browser:',
     'thank_you_for_registering' => 'Thank you for registering on :app website.',
     'confirm_email_on_link_below' => 'Please confirm your email by clicking on the link below:',
