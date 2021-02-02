@@ -110,6 +110,15 @@
             </li>
             @endpermission
 
+            @permission('withdraw.manage')
+            <li class="{{ Request::is('backend/withdraw*') ? 'active' : ''  }}">
+                <a href="{{ route('backend.withdraw.list') }}">
+                    <i class="fa fa-gg"></i>
+                    <span>@lang('app.withdraw')</span>
+                </a>
+            </li>
+            @endpermission
+
             @permission('categories.manage')
             @if( !(auth()->check() && auth()->user()->shop_id == 0 && auth()->user()->role_id < 6) )
             <li class="{{ Request::is('backend/category*') ? 'active' : ''  }}">

@@ -77,6 +77,37 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $balance = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')->paginate(25);
             return view('frontend.Default.user.balance', compact('balance','tab','currencys'));
         }
+        public function cashout(\Illuminate\Http\Request $request)
+        {
+            $user = \Auth::user();
+            $shop = \VanguardLTE\Shop::find($user->shop_id);
+            $amount = $request->amount;
+            $system = $request->system;
+            $type = $request->type;
+
+            if($type == 'out'){
+                $amount = $amount * -1;
+            }
+
+            /*
+            $exchange_rate = $user->point()->exchange_rate(true);
+            $add = $request->sumpoints * $exchange_rate;
+            $wager = $add * $user->point()->exchange_wager();
+            */
+            if( !$shop ) 
+            {
+                return response()->json(['error' => trans('app.wrong_shop')], 422);
+            }
+            \VanguardLTE\Transaction::create([
+                'user_id' => $user->id, 
+                'summ' => $amount, 
+                'type' => $type, 
+                'system' => $system, 
+                'shop_id' => $user->shop_id,
+                'status' => 1
+            ]);
+            return response()->json(['success' => true], 200);
+        }
         #######################################
 
         public function updateDetails(\VanguardLTE\Http\Requests\User\UpdateProfileDetailsRequest $request)

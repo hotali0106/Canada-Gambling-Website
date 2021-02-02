@@ -5,6 +5,7 @@
 	<meta name="author" content="JamesJ & Applewood">
 	<meta name="description" content="HTML template">
 	<meta name="viewport" content="width=device-width">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 	<meta name="keywords" content="Canada777+online+casino">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">

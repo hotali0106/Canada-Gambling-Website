@@ -28,6 +28,7 @@ return [
 	'change' => 'Change',
 	'count' => 'Count users',
     'count2' => 'Count',
+    'withdraw' => 'Withdraw',
 	'shop_stats' => 'Shop Stats',
 	'start_shift' => 'Start Shift',
 	'shift_stats' => 'Shift Stats',
