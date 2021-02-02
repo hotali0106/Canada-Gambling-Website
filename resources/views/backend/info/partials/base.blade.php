@@ -36,20 +36,4 @@
             <textarea name="text" class="form-control" name="text" required value="{{ $edit ? $info->text : '' }}">{{ $edit ? $info->text : '' }}</textarea>
         </div>
     </div>
-
-    <div class="col-md-6">
-        <label>@lang('app.shops')</label>
-        @php
-            $allShops = auth()->user()->shops();
-        @endphp
-        <select name="shops[]" id="shops" class="form-control" >
-            <option value="" >---</option>
-            @if( count($allShops) )
-                @foreach ($allShops as $key=>$name)
-                    <option value="{{ $key }}"
-                            {{ ($edit && $info->shops && in_array($key, $info->shops->pluck('shop_id')->toArray()))? 'selected="selected"' : '' }}>{{ $name }}</option>
-                @endforeach
-             @endif
-        </select>
-    </div>
 </div>

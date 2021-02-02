@@ -7,9 +7,6 @@ namespace VanguardLTE\Http\Middleware
         {
             if( auth()->check() ) 
             {
-            }
-            if( auth()->user()->shop_id == 0 ) 
-            {
                 if( auth()->user()->role_id == 6 ) 
                 {
                     return $next($request);

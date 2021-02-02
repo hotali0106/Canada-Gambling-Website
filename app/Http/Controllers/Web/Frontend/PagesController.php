@@ -51,7 +51,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                 'content' => [], 
                 'i' => 1
             ];
-            $data = \VanguardLTE\JPG::where('shop_id', $request->id)->get();
+            $data = \VanguardLTE\JPG::get();
             foreach( $data as $jackpot ) 
             {
                 $res['content'][] = [

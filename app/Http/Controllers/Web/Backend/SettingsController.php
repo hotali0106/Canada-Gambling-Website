@@ -11,14 +11,13 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         }
         public function general()
         {
-            $shops = \VanguardLTE\Shop::get();
             $directories = [];
             foreach( glob(public_path() . '/frontend/*', GLOB_ONLYDIR) as $fileinfo ) 
             {
                 $dirname = basename($fileinfo);
                 $directories[$dirname] = $dirname;
             }
-            return view('backend.settings.general', compact('shops', 'directories'));
+            return view('backend.settings.general', compact('directories'));
         }
         public function auth()
         {

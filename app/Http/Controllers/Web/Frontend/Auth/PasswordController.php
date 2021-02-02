@@ -12,11 +12,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend\Auth
             $frontend = 'Default';
             if( \Auth::check() ) 
             {
-                $shop = Shop::find(\Auth::user()->shop_id);
-                if( $shop ) 
-                {
-                    $frontend = $shop->frontend;
-                }
+                
             }
             return $frontend;
         }

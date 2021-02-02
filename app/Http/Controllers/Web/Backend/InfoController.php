@@ -47,19 +47,6 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
             }
             $data['roles'] = implode('|', $data['roles']);
             $info = \VanguardLTE\Info::create($data + ['user_id' => \Auth::id()]);
-            if( $request->shops && count($request->shops) ) 
-            {
-                foreach( $request->shops as $shop ) 
-                {
-                    if( !empty($shop) ) 
-                    {
-                        \VanguardLTE\InfoShop::create([
-                            'shop_id' => $shop, 
-                            'info_id' => $info->id
-                        ]);
-                    }
-                }
-            }
             return redirect()->route('backend.info.list')->withSuccess(trans('app.info_created'));
         }
         public function edit(\VanguardLTE\Info $info)
@@ -89,20 +76,6 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 unset($data['link']);
             }
             \VanguardLTE\Info::where('id', $info->id)->update($data);
-            \VanguardLTE\InfoShop::where(['info_id' => $info->id])->delete();
-            if( $request->shops && count($request->shops) ) 
-            {
-                foreach( $request->shops as $shop ) 
-                {
-                    if( !empty($shop) ) 
-                    {
-                        \VanguardLTE\InfoShop::create([
-                            'shop_id' => $shop, 
-                            'info_id' => $info->id
-                        ]);
-                    }
-                }
-            }
             return redirect()->route('backend.info.list')->withSuccess(trans('app.info_updated'));
         }
         public function delete(\VanguardLTE\Info $info)

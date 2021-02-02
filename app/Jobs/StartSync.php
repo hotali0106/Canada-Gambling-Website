@@ -134,10 +134,7 @@ class StartSync implements ShouldQueue
                 if( count($oldIds)){
                     Game::whereIn('id', $oldIds)->delete();
                 }
-
-
             }
         }
-
     }
 }

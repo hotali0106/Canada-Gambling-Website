@@ -27,7 +27,6 @@
 							<th>@lang('app.href')</th>
 							<th>@lang('app.title')</th>
 							<th>@lang('app.roles')</th>
-							<th>@lang('app.shops')</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -44,7 +43,6 @@
 							<th>@lang('app.href')</th>
 							<th>@lang('app.title')</th>
 							<th>@lang('app.roles')</th>
-							<th>@lang('app.shops')</th>
 						</tr>
 						</thead>
 					</table>
