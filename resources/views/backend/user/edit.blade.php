@@ -13,10 +13,6 @@
         <div class="row">
             @include('backend.user.partials.info')
             <div class="col-md-9">
-
-
-
-
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li @if(!Request::get('date')) class="active" @endif>
@@ -48,7 +44,6 @@
                             @include('backend.user.partials.edit')
                             {!! Form::close() !!}
                         </div>
-
 
                         <div class="tab-pane" id="login-details">
                             @if (count($userActivities))
@@ -145,10 +140,6 @@
                     </div>
 
                 </div>
-
-
-
-
             </div>
         </div>
     </section>
