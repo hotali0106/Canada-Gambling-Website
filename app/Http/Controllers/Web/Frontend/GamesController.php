@@ -256,7 +256,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $countrys =  \VanguardLTE\Country::get();
             $currencys =  \VanguardLTE\Currency::get();
 
-            return view('frontend.' . $frontend . '.games.list', compact('games', 'hotgames', 'newgames','category1', 'cat1', 'categories', 'currentSliderNum', 'currentListTitle','title', 'body', 'keywords', 'description', 'jpgs', 'shop', 'devices', 'countrys', 'currencys'));
+            return view('frontend.' . $frontend . '.games.list', compact('games', 'hotgames', 'newgames','category1', 'cat1', 'categories', 'currentSliderNum', 'currentListTitle','title', 'body', 'keywords', 'description', 'jpgs', 'shop', 'devices', 'countrys', 'currencys','search_game'));
         }
         public function loadmore(\Illuminate\Http\Request $request){
             $gametype = $request->type;

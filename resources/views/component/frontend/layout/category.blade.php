@@ -13,7 +13,7 @@
     </div>
     <form method="GET">
     <div class="search-box">
-        <input type="text" name="search_game" placeholder="Find Your Game" />
+        <input type="text" name="search_game" placeholder="Find Your Game" value="{{$search_game}}" />
         <svg
         xmlns='http://www.w3.org/2000/svg'
         width='14'

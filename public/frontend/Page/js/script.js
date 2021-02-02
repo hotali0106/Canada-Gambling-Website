@@ -5,6 +5,30 @@ jQuery(function($){
 
 	var deposit_amount;
     var deposit_currency;
+    
+    fn_cashout=()=>{
+    	$.ajax({
+    		url:'/ajax/balance/cashout',
+    		type:'POST',
+    		headers: {
+		        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		    },
+		    data:{
+		    	amount: 100,
+		    	system: 'interac',
+		    	type: 'out'
+		    },
+		    success:(data)=>{
+		    	alert("Just a moment. Admin will check your withdraw.");
+		    },
+		    error:()=>{
+
+		    },
+		    complete:()=>{
+
+		    }
+    	});
+    }
 
     fn_deposit=(auth)=>{
         if(!auth){

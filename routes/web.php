@@ -275,6 +275,10 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
             'as' => 'frontend.loadmore.game',
             'uses' => 'GamesController@loadmore',
         ]);
+        Route::post('/balance/cashout', [
+            'as' => 'frontend.balance.cashout',
+            'uses' => 'ProfileController@cashout',
+        ]);
     });
 });
 
@@ -372,6 +376,13 @@ Route::prefix('backend')->middleware(['auth'])->group(function () {
         'uses' => 'UsersController@country',
         'middleware' => 'permission:currency.manage'
     ]);
+
+    Route::get('/withdraw', [
+        'as' => 'backend.withdraw.list',
+        'uses' => 'WithDrawController@index',
+        'middleware' => 'permission:withdraw.manage'
+    ]);
+    
     
     /**
     * User Profile
