@@ -1,51 +1,51 @@
-<?php 
+<?php
 namespace VanguardLTE
 {
     class User extends \Illuminate\Foundation\Auth\User implements \Tymon\JWTAuth\Contracts\JWTSubject
     {
-        use \Laracasts\Presenter\PresentableTrait, 
-            \Illuminate\Notifications\Notifiable, 
+        use \Laracasts\Presenter\PresentableTrait,
+            \Illuminate\Notifications\Notifiable,
             \jeremykenedy\LaravelRoles\Traits\HasRoleAndPermission;
         protected $presenter = 'VanguardLTE\Presenters\UserPresenter';
         protected $table = 'users';
         protected $dates = [
-            'last_login', 
+            'last_login',
             'birthday'
         ];
         protected $fillable = [
-            'password', 
-            'email', 
-            'username', 
-            'avatar', 
-            'balance', 
-            'last_login', 
-            'confirmation_token', 
-            'status', 
-            'wager', 
-            'rating', 
-            'points', 
-            'total_balance', 
-            'bonus', 
-            'count_bonus', 
-            'total_in', 
-            'total_out', 
-            'language', 
-            'remember_token', 
-            'role_id', 
-            'count_balance', 
-            'count_return', 
-            'parent_id', 
-            'shop_id', 
-            'currency', 
-            'phone', 
-            'country', 
-            'address', 
-            'city', 
-            'postalCode', 
+            'password',
+            'email',
+            'username',
+            'avatar',
+            'balance',
+            'last_login',
+            'confirmation_token',
+            'status',
+            'wager',
+            'rating',
+            'points',
+            'total_balance',
+            'bonus',
+            'count_bonus',
+            'total_in',
+            'total_out',
+            'language',
+            'remember_token',
+            'role_id',
+            'count_balance',
+            'count_return',
+            'parent_id',
+            'shop_id',
+            'currency',
+            'phone',
+            'country',
+            'address',
+            'city',
+            'postalCode',
             'session'
         ];
         protected $hidden = [
-            'password', 
+            'password',
             'remember_token'
         ];
         public static function boot()
@@ -88,37 +88,37 @@ namespace VanguardLTE
         public function availableUsers()
         {
             $users = User::where(['id' => $this->id])->get();
-            if( $this->hasRole(['admin']) ) 
+            if( $this->hasRole(['admin']) )
             {
                 $users = User::get();
             }
-            if( $this->hasRole(['agent']) ) 
+            if( $this->hasRole(['agent']) )
             {
                 $distributors = User::where([
-                    'role_id' => 4, 
+                    'role_id' => 4,
                     'parent_id' => $this->id
                 ])->get();
                 $other = User::where('role_id', '<=', 3)->whereIn('shop_id', $this->availableShops())->get();
                 $users = $users->merge($distributors);
                 $users = $users->merge($other);
             }
-            if( $this->hasRole(['distributor']) ) 
+            if( $this->hasRole(['distributor']) )
             {
                 $other = User::where('role_id', '<=', 3)->whereIn('shop_id', $this->shops_array(true))->get();
                 $users = $users->merge($other);
             }
-            if( $this->hasRole(['manager']) ) 
+            if( $this->hasRole(['manager']) )
             {
                 $other = User::where('role_id', '<=', 2)->where('shop_id', $this->shop_id)->get();
                 $users = $users->merge($other);
             }
-            if( $this->hasRole(['cashier']) ) 
+            if( $this->hasRole(['cashier']) )
             {
                 $other = User::where('role_id', 1)->where('shop_id', $this->shop_id)->get();
                 $users = $users->merge($other);
             }
             $users = $users->pluck('id');
-            if( !count($users) ) 
+            if( !count($users) )
             {
                 $users = [0];
             }
@@ -132,23 +132,13 @@ namespace VanguardLTE
         {
             $level = $this->level();
             $users = User::where('id', $this->id)->get();
-            for( $i = $level; $i >= 1; $i-- ) 
+            for( $i = $level; $i >= 1; $i-- )
             {
-                foreach( $users as $user ) 
+                foreach( $users as $user )
                 {
-                    if( $user->level() == $i ) 
+                    if( $user->level() == $i )
                     {
-                        if( auth()->user()->shop_id > 0 ) 
-                        {
-                            $users = $users->merge(User::where('parent_id', $user->id)->whereHas('rel_shops', function($query)
-                            {
-                                $query->where('shop_id', $this->shop_id);
-                            })->get());
-                        }
-                        else
-                        {
-                            $users = $users->merge(User::where('parent_id', $user->id)->get());
-                        }
+                        $users = $users->merge(User::where('parent_id', $user->id)->get());
                     }
                 }
             }
@@ -156,11 +146,11 @@ namespace VanguardLTE
         }
         public function isAvailable($user)
         {
-            if( !$user ) 
+            if( !$user )
             {
                 return false;
             }
-            if( in_array($user->id, $this->availableUsers()) ) 
+            if( in_array($user->id, $this->availableUsers()) )
             {
                 return true;
             }
@@ -169,11 +159,11 @@ namespace VanguardLTE
         public function emptyShops()
         {
             $count = 0;
-            if( $shops = $this->rel_shops ) 
+            if( $shops = $this->rel_shops )
             {
-                foreach( $shops as $shop ) 
+                foreach( $shops as $shop )
                 {
-                    if( $shop->shop && count($shop->shop->getUsersByRole('user')) == 0 ) 
+                    if( $shop->shop && count($shop->shop->getUsersByRole('user')) == 0 )
                     {
                         $count++;
                     }
@@ -184,7 +174,7 @@ namespace VanguardLTE
         public function availableUsersByRole($roleName)
         {
             $users = $this->availableUsers();
-            if( !count($users) ) 
+            if( !count($users) )
             {
                 return [];
             }
@@ -195,12 +185,12 @@ namespace VanguardLTE
         {
             $shops = [$this->shop_id];
             if( $this->hasRole([
-                'admin', 
-                'agent', 
+                'admin',
+                'agent',
                 'distributor'
-            ]) ) 
+            ]) )
             {
-                if( !$this->shop_id ) 
+                if( !$this->shop_id )
                 {
                     $shops = array_merge([0], $this->shops_array(true));
                 }
@@ -215,7 +205,7 @@ namespace VanguardLTE
         {
             $role = \jeremykenedy\LaravelRoles\Models\Role::where('id', $this->role_id - 1)->first();
             $ids = $this->availableUsersByRole($role->slug);
-            if( count($ids) ) 
+            if( count($ids) )
             {
                 return User::whereIn('id', $ids)->get();
             }
@@ -224,27 +214,27 @@ namespace VanguardLTE
         public function getRowspan()
         {
             $rowspan = 0;
-            if( $this->hasRole('agent') ) 
+            if( $this->hasRole('agent') )
             {
                 $rowspan = 0;
                 $distributors = User::where('parent_id', $this->id)->get();
-                if( $distributors ) 
+                if( $distributors )
                 {
-                    foreach( $distributors as $distributor ) 
+                    foreach( $distributors as $distributor )
                     {
                         $shops = $distributor->shops_array();
                         $rowspan += (count($shops) ?: 1);
                     }
                 }
             }
-            if( $this->hasRole('distributor') ) 
+            if( $this->hasRole('distributor') )
             {
                 $rowspan = 0;
-                if( $shops = $this->rel_shops ) 
+                if( $shops = $this->rel_shops )
                 {
-                    foreach( $shops as $shop ) 
+                    foreach( $shops as $shop )
                     {
-                        if( $shop = $shop->shop ) 
+                        if( $shop = $shop->shop )
                         {
                             $managers = $shop->getUsersByRole('manager');
                             $rowspan += (count($managers) ?: 1);
@@ -276,9 +266,9 @@ namespace VanguardLTE
         }
         public function shops($onlyId = false)
         {
-            if( $this->hasRole('admin') ) 
+            if( $this->hasRole('admin') )
             {
-                if( $onlyId ) 
+                if( $onlyId )
                 {
                     return Shop::pluck('id');
                 }
@@ -288,9 +278,9 @@ namespace VanguardLTE
                 }
             }
             $shops = ShopUser::where('user_id', $this->id)->pluck('shop_id');
-            if( count($shops) ) 
+            if( count($shops) )
             {
-                if( $onlyId ) 
+                if( $onlyId )
                 {
                     return Shop::whereIn('id', $shops)->pluck('id');
                 }
@@ -307,7 +297,7 @@ namespace VanguardLTE
         public function shops_array($onlyId = false)
         {
             $data = $this->shops($onlyId);
-            if( !is_array($data) ) 
+            if( !is_array($data) )
             {
                 return $data->toArray();
             }
@@ -316,50 +306,50 @@ namespace VanguardLTE
         public function available_roles($withMe = false)
         {
             $roles = [
-                '1' => [], 
-                '2' => [1], 
-                '3' => [2], 
-                '4' => [3], 
-                '5' => [4], 
+                '1' => [],
+                '2' => [1],
+                '3' => [2],
+                '4' => [3],
+                '5' => [4],
                 '6' => [5]
             ];
-            if( $withMe ) 
+            if( $withMe )
             {
                 $roles = [
-                    '1' => [], 
+                    '1' => [],
                     '2' => [
-                        1, 
+                        1,
                         2
-                    ], 
+                    ],
                     '3' => [
-                        1, 
-                        2, 
+                        1,
+                        2,
                         3
-                    ], 
+                    ],
                     '4' => [
-                        1, 
-                        2, 
-                        3, 
+                        1,
+                        2,
+                        3,
                         4
-                    ], 
+                    ],
                     '5' => [
-                        1, 
-                        2, 
-                        3, 
-                        4, 
+                        1,
+                        2,
+                        3,
+                        4,
                         5
-                    ], 
+                    ],
                     '6' => [
-                        1, 
-                        2, 
-                        3, 
-                        4, 
-                        5, 
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
                         6
                     ]
                 ];
             }
-            if( count($roles[$this->level()]) ) 
+            if( count($roles[$this->level()]) )
             {
                 return \jeremykenedy\LaravelRoles\Models\Role::whereIn('id', $roles[$this->level()])->pluck('name', 'id');
             }
@@ -381,122 +371,122 @@ namespace VanguardLTE
         public function addBalance($type, $summ, $payeer = false, $return = 0)
         {
             if( !in_array($type, [
-                'add', 
+                'add',
                 'out'
-            ]) ) 
+            ]) )
             {
                 $type = 'add';
             }
             $shop = $this->shop;
-            if( !$payeer ) 
+            if( !$payeer )
             {
                 $payeer = User::where('id', auth()->user()->id)->first();
             }
-            if( $payeer->hasRole('admin') && !$this->hasRole('agent') ) 
+            if( $payeer->hasRole('admin') && !$this->hasRole('agent') )
             {
                 return response()->json([
-                    'status' => 'error', 
+                    'status' => 'error',
                     'message' => trans('app.wrong_user')
                 ]);
             }
-            if( $payeer->hasRole('agent') && !$this->hasRole('distributor') ) 
+            if( $payeer->hasRole('agent') && !$this->hasRole('distributor') )
             {
                 return response()->json([
-                    'status' => 'error', 
+                    'status' => 'error',
                     'message' => trans('app.wrong_user')
                 ]);
             }
-            if( $payeer->hasRole('distributor') && !$this->hasRole('manager') ) 
+            if( $payeer->hasRole('distributor') && !$this->hasRole('manager') )
             {
                 return response()->json([
-                    'status' => 'error', 
+                    'status' => 'error',
                     'message' => trans('app.wrong_user')
                 ]);
             }
-            if( $payeer->hasRole('cashier') && !$this->hasRole('user') ) 
+            if( $payeer->hasRole('cashier') && !$this->hasRole('user') )
             {
                 return response()->json([
-                    'status' => 'error', 
+                    'status' => 'error',
                     'message' => trans('app.wrong_user')
                 ]);
             }
-            if( !$summ ) 
+            if( !$summ )
             {
                 return response()->json([
-                    'status' => 'error', 
+                    'status' => 'error',
                     'message' => trans('app.wrong_sum')
                 ]);
             }
-            if( $payeer->hasRole('cashier') && $this->hasRole('user') ) 
+            if( $payeer->hasRole('cashier') && $this->hasRole('user') )
             {
-                if( !$shop ) 
+                if( !$shop )
                 {
                     return response()->json([
-                        'status' => 'error', 
+                        'status' => 'error',
                         'message' => trans('app.wrong_shop')
                     ]);
                 }
-                if( $type == 'add' && $shop->balance < $summ ) 
+                if( $type == 'add' && $shop->balance < $summ )
                 {
                     return response()->json([
-                        'status' => 'error', 
+                        'status' => 'error',
                         'message' => trans('app.not_enough_money_in_the_shop', [
-                            'name' => $shop->name, 
+                            'name' => $shop->name,
                             'balance' => $shop->balance
                         ])
                     ]);
                 }
             }
-            if( ($payeer->hasRole('agent') && $this->hasRole('distributor') || $payeer->hasRole('distributor') && $this->hasRole('manager')) && $type == 'add' && $payeer->balance < $summ ) 
+            if( ($payeer->hasRole('agent') && $this->hasRole('distributor') || $payeer->hasRole('distributor') && $this->hasRole('manager')) && $type == 'add' && $payeer->balance < $summ )
             {
                 return response()->json([
-                    'status' => 'error', 
+                    'status' => 'error',
                     'message' => trans('app.not_enough_money_in_the_user_balance', [
-                        'name' => $payeer->name, 
+                        'name' => $payeer->name,
                         'balance' => $payeer->balance
                     ])
                 ]);
             }
-            if( $type == 'out' && $this->balance < $summ ) 
+            if( $type == 'out' && $this->balance < $summ )
             {
                 return response()->json([
-                    'status' => 'error', 
+                    'status' => 'error',
                     'message' => trans('app.not_enough_money_in_the_user_balance', [
-                        'name' => $this->username, 
+                        'name' => $this->username,
                         'balance' => $this->balance
                     ])
                 ]);
             }
-            if( $payeer->hasRole('cashier') && $this->hasRole('user') ) 
+            if( $payeer->hasRole('cashier') && $this->hasRole('user') )
             {
                 $open_shift = OpenShift::where([
-                    'shop_id' => $payeer->shop_id, 
+                    'shop_id' => $payeer->shop_id,
                     'end_date' => null
                 ])->first();
-                if( !$open_shift ) 
+                if( !$open_shift )
                 {
                     return response()->json([
-                        'status' => 'error', 
+                        'status' => 'error',
                         'message' => trans('app.shift_not_opened')
                     ]);
                 }
             }
             $happyhour = HappyHour::where([
-                'shop_id' => $payeer->shop_id, 
+                'shop_id' => $payeer->shop_id,
                 'time' => date('G')
             ])->first();
             $summ = ($type == 'out' ? -1 * $summ : $summ);
             $balance = $summ;
-            if( $payeer->hasRole('cashier') && $this->hasRole('user') && $type == 'add' && $happyhour ) 
+            if( $payeer->hasRole('cashier') && $this->hasRole('user') && $type == 'add' && $happyhour )
             {
                 $transactionSum = $summ * intval(str_replace('x', '', $happyhour->multiplier));
                 $bonus = $transactionSum - $summ;
                 $wager = $bonus * intval(str_replace('x', '', $happyhour->wager));
                 Transaction::create([
-                    'user_id' => $this->id, 
-                    'system' => 'HH ' . $happyhour->multiplier, 
-                    'type' => $type, 
-                    'summ' => $transactionSum, 
+                    'user_id' => $this->id,
+                    'system' => 'HH ' . $happyhour->multiplier,
+                    'type' => $type,
+                    'summ' => $transactionSum,
                     'shop_id' => ($this->hasRole('user') ? $this->shop_id : 0)
                 ]);
                 $this->increment('wager', $wager);
@@ -507,19 +497,19 @@ namespace VanguardLTE
             else
             {
                 Transaction::create([
-                    'user_id' => $this->id, 
-                    'payeer_id' => $payeer->id, 
-                    'type' => $type, 
-                    'summ' => abs($summ), 
+                    'user_id' => $this->id,
+                    'payeer_id' => $payeer->id,
+                    'type' => $type,
+                    'summ' => abs($summ),
                     'shop_id' => ($this->hasRole('user') ? $this->shop_id : 0)
                 ]);
             }
-            if( !$this->hasRole('admin') ) 
+            if( !$this->hasRole('admin') )
             {
                 $this->increment('balance', $balance);
                 $this->increment('count_balance', $summ);
             }
-            if( $type == 'out' ) 
+            if( $type == 'out' )
             {
                 $this->increment('total_out', abs($summ));
             }
@@ -527,13 +517,13 @@ namespace VanguardLTE
             {
                 $this->increment('total_in', abs($summ));
             }
-            if( $this->hasRole('user') ) 
+            if( $this->hasRole('user') )
             {
-                if( $type == 'out' ) 
+                if( $type == 'out' )
                 {
                     $this->update(['count_return' => 0]);
                 }
-                else if( $return > 0 ) 
+                else if( $return > 0 )
                 {
                     $this->update(['count_return' => $this->count_return + (($summ * $return) / 100)]);
                 }
@@ -542,14 +532,14 @@ namespace VanguardLTE
                     $this->update(['count_return' => $this->count_return + Lib\Functions::count_return($summ, $this->shop_id)]);
                 }
             }
-            if( $payeer->hasRole('agent') && $this->hasRole('distributor') || $payeer->hasRole('distributor') && $this->hasRole('manager') ) 
+            if( $payeer->hasRole('agent') && $this->hasRole('distributor') || $payeer->hasRole('distributor') && $this->hasRole('manager') )
             {
                 $payeer->update(['balance' => $payeer->balance - $summ]);
             }
-            if( $payeer->hasRole('cashier') && $this->hasRole('user') ) 
+            if( $payeer->hasRole('cashier') && $this->hasRole('user') )
             {
                 $shop->update(['balance' => $shop->balance - $summ]);
-                if( $type == 'out' ) 
+                if( $type == 'out' )
                 {
                     $open_shift->increment('balance_in', abs($summ));
                 }
@@ -557,7 +547,7 @@ namespace VanguardLTE
                 {
                     $open_shift->increment('balance_out', abs($summ));
                 }
-                if( $type == 'out' ) 
+                if( $type == 'out' )
                 {
                     $open_shift->increment('money_out', abs($summ));
                 }
@@ -566,31 +556,31 @@ namespace VanguardLTE
                     $open_shift->increment('money_in', abs($summ));
                 }
             }
-            if( $this->balance == 0 ) 
+            if( $this->balance == 0 )
             {
                 $this->update([
-                    'wager' => 0, 
+                    'wager' => 0,
                     'bonus' => 0
                 ]);
             }
-            if( $this->wager <= 0 ) 
+            if( $this->wager <= 0 )
             {
                 $this->update([
-                    'wager' => 0, 
-                    'bonus' => 0, 
+                    'wager' => 0,
+                    'bonus' => 0,
                     'count_bonus' => 0
                 ]);
             }
-            if( $this->count_return <= 0 ) 
+            if( $this->count_return <= 0 )
             {
                 $this->update(['count_return' => 0]);
             }
-            if( $this->count_balance < 0 ) 
+            if( $this->count_balance < 0 )
             {
                 $this->update(['count_balance' => 0]);
             }
             return response()->json([
-                'status' => 'success', 
+                'status' => 'success',
                 'message' => trans('app.balance_updated')
             ]);
         }
