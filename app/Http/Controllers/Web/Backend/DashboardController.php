@@ -192,7 +192,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 return $element2['Date'] - $element1['Date'];
             });
             $statistics = array_slice($statistics, 0, 50);
-            return view('backend.stat.live_stat', compact('stat', 'statistics', 'filter'));
+            return view('backend.stat.live_stat', compact('statistics', 'filter'));
         }
         public function start_shift(\Illuminate\Http\Request $request)
         {

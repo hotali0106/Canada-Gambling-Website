@@ -7,19 +7,6 @@
             ['class' => 'form-control', 'id' => 'role_id', 'disabled' => true]) !!}
     </div>
 
-        <div class="form-group">
-            <label>@lang('app.shops')</label>
-            {!! Form::select('shops[]', $shops, ($edit && $user->hasRole(['admin', 'agent', 'distributor'])) ? $user->shops(true) : Auth::user()->shop_id,
-                ['class' => 'form-control', 'id' => 'shops', ($edit) ? 'disabled' : '', ($edit && $user->hasRole(['agent','distributor'])) ? 'multiple' : '']) !!}
-        </div>
-        @if($user->hasRole(['agent','distributor']))
-            <div class="form-group">
-                <label>@lang('app.free_shops')</label>
-                {!! Form::select('free_shops[]', $free_shops, [],
-                    ['class' => 'form-control', 'id' => 'free_shops', 'multiple' => 'multiple']) !!}
-            </div>
-        @endif
-
     <div class="form-group">
         <label>@lang('app.status')</label>
         {!! Form::select('status', $statuses, $edit ? $user->status : '' ,

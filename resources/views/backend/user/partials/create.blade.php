@@ -15,7 +15,7 @@
 <div class="col-md-6">
     <div class="form-group">
         <label>@lang('app.role')</label>
-        {!! Form::select('role_id', Auth::user()->available_roles(), '',
+        {!! Form::select('role_id', $roles, '',
             ['class' => 'form-control', 'id' => 'role_id', '']) !!}
     </div>
 </div>
