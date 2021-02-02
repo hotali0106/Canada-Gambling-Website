@@ -9,32 +9,12 @@ namespace VanguardLTE\Http\Middleware
             {
                 return $next($request);
             }
-            if( !$request->shop_id ) 
-            {
-                $response = Response::json(['error' => 'Shop is empty or not exist'], 401, []);
-                $response->header('Content-Type', 'application/json');
-                return $response;
-            }
+            
             if( auth()->check() ) 
             {
                 if( auth()->user()->role_id == 4 ) 
                 {
-                    $shops = auth()->user()->shops(true);
-                    if( !(count($shops) && in_array($request->shop_id, $shops->toArray())) ) 
-                    {
-                        $response = Response::json(['error' => 'No access to shop'], 401, []);
-                        $response->header('Content-Type', 'application/json');
-                        return $response;
-                    }
-                }
-                if( in_array(auth()->user()->role_id, [
-                    1, 
-                    2
-                ]) && $request->shop_id != auth()->user()->shop_id ) 
-                {
-                    $response = Response::json(['error' => 'No access to shop'], 401, []);
-                    $response->header('Content-Type', 'application/json');
-                    return $response;
+                    
                 }
             }
             if( auth()->check() && auth()->user()->role_id == 4 ) 
@@ -49,12 +29,11 @@ namespace VanguardLTE\Http\Middleware
             }
             $key = \VanguardLTE\Api::where([
                 'keygen' => $request->key, 
-                'shop_id' => $request->shop_id, 
                 'status' => 1
             ])->first();
             if( !$key ) 
             {
-                $response = Response::json(['error' => 'Key/Shop not exist'], 401, []);
+                $response = Response::json(['error' => 'Key not exist'], 401, []);
                 $response->header('Content-Type', 'application/json');
                 return $response;
             }

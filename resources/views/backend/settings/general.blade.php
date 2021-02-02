@@ -41,7 +41,7 @@
                     @lang('app.edit_settings')
                 </button>
 
-                @if( Auth::user()->hasRole('admin') && Auth::user()->shop_id == 0 )
+                @if( Auth::user()->hasRole('admin'))
 
                     <a href="{{ route('backend.settings.sync') }}"
                        class="btn btn-danger "
