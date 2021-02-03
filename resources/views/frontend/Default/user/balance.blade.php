@@ -29,7 +29,7 @@
                                 <td>USD</td>
                                 <td>
                                     <button type="button" class="btn btn-success" onclick="fn_deposit('1')">Deposit</button>
-                                    <button type="button" class="btn btn-info" onclick="fn_cashout()">Cash Out</button>
+                                    <button type="button" class="btn btn-info" onclick="fn_cashout_modal()">Cash Out</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -43,6 +43,6 @@
     </div>
     <div id='stars'></div>
     <div id='stars2'></div>
-    <div id='stars3'></div>		
+    <div id='stars3'></div>
 </main>
 @endsection

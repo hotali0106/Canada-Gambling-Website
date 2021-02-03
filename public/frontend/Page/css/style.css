@@ -545,6 +545,14 @@ main.active {
 	padding: 50px 30px;
     background: #26384c;
 }
+
+.withdraw-modal-content {
+    overflow: hidden;
+    max-width: 480px;
+    padding: 50px 30px;
+    background: #26384c;
+}
+
 .payment-button-group button {
     width: 100%;
     height: 50px;
@@ -561,9 +569,9 @@ main.active {
     object-fit: contain;
 }
 .sign-in-modal-content {
-	overflow: hidden;
-	max-width: 480px;
-	padding: 50px 30px;
+    overflow: hidden;
+    max-width: 480px;
+    padding: 50px 30px;
 }
 
 .sign-up-modal-content {
@@ -710,14 +718,14 @@ main.active {
 }
 /*inputs*/
 .modal-form input, .modal-form select {
-	padding: 15px;
+	padding: 10px;
 	border: 1px solid #ccc;
 	margin-bottom: 20px;
 	width: 100%;
 	box-sizing: border-box;
 	font-family: montserrat;
 	color: #2C3E50;
-	font-size: 13px;
+    font-size: 1rem;
 	transition: all 0.3s;
 }
 .modal-form input:focus, .modal-form textarea:focus, .modal-form select:focus {
@@ -746,7 +754,8 @@ main.active {
 	border-radius: 0;
 }
 
-.deposit-modal-content input, .deposit-modal-content select {
+.deposit-modal-content input, .deposit-modal-content select,
+.withdraw-modal-content input, .withdraw-modal-content select{
     background: #1a242f;
     color: white;
 }
