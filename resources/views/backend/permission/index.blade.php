@@ -34,85 +34,27 @@
                         <tbody>
                         @if (count($permissions))
                             @foreach ($permissions as $permission)
-                                @if( !in_array($permission->id, [1,3,6,7,11,12,13,14,37]))
-
                                 <tr>
                                     <td><a href="{{ route('backend.permission.edit', $permission->id) }}">{{ $permission->name ?: $permission->name }}</a></td>
 
                                     @foreach ($roles as $role)
                                         <td>
-
-                                                @if(
-                                                    in_array($role->id, [1,6]) ||
-                                                    ($permission->id == 54 && $role->id != 2)
-                                                    //||
-                                                    //($permission->id == 42 && $role->id == 3)
-
-                                                    )
-                                                    <label class="checkbox-container" for="cb-{{ $role->id }}-{{ $permission->id }}">
-                                                    {!!
-                                                    Form::checkbox(
-                                                        "roles_temp[{$role->id}][]",
-                                                        $permission->id,
-                                                        $role->hasOnePermission($permission->id),
-                                                        [
-                                                            'id' => "cb-{$role->id}-{$permission->id}",
-                                                            'disabled' => 'disabled'
-                                                        ]
-                                                    )
-                                                    !!}
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                    {!!
-                                                    Form::checkbox(
-                                                        "roles[{$role->id}][]",
-                                                        $permission->id,
-                                                        $role->hasOnePermission($permission->id),
-                                                        [
-                                                            'id' => "cb-{$role->id}-{$permission->id}",
-                                                            'style' => 'display: none;'
-                                                        ]
-                                                    )
-                                                    !!}
-                                                @else
-                                                    <label class="checkbox-container" for="cb-{{ $role->id }}-{{ $permission->id }}">
-                                                    {!!
-                                                    Form::checkbox(
-                                                        "roles[{$role->id}][]",
-                                                        $permission->id,
-                                                        $role->hasOnePermission($permission->id),
-                                                        [
-                                                            'id' => "cb-{$role->id}-{$permission->id}"
-                                                        ]
-                                                    )
-                                                    !!}
-                                                        <span class="checkmark"></span>
-                                                    </label>
-                                                @endif
+                                            <label class="checkbox-container" for="cb-{{ $role->id }}-{{ $permission->id }}">
+                                            {!!
+                                            Form::checkbox(
+                                                "roles[{$role->id}][]",
+                                                $permission->id,
+                                                $role->hasOnePermission($permission->id),
+                                                [
+                                                    'id' => "cb-{$role->id}-{$permission->id}"
+                                                ]
+                                            )
+                                            !!}
+                                                <span class="checkmark"></span>
+                                            </label>
                                         </td>
                                     @endforeach
                                 </tr>
-
-                                @else
-
-                                    <!-- disabled -->
-                                    @foreach ($roles as $role)
-                                        {!!
-                                                    Form::checkbox(
-                                                        "roles[{$role->id}][]",
-                                                        $permission->id,
-                                                        $role->hasOnePermission($permission->id),
-                                                        [
-                                                            'class' => 'custom-control-input',
-                                                            'id' => "cb-{$role->id}-{$permission->id}",
-                                                            'style' => 'display: none;'
-                                                        ]
-                                                    )
-                                                    !!}
-                                    @endforeach
-                                    <!-- end disabled -->
-
-                                @endif
                             @endforeach
                         @endif
                         </tbody>
