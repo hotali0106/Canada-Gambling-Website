@@ -42,3 +42,19 @@
 		</form>
 	</div>
 </div>
+
+<div id="withdraw-modal" class="withdraw-modal modal">
+    <div class="withdraw-modal-content">
+        <form id="withdraw-form" class="modal-form container" action="#">
+            <h2 class="text-center mb-5 text-light">Cash Out</h2>
+            <label for="amount" class="mb-2 text-light">Amount</label>
+            <input type="text" name="amount" id="amount" />
+            <label for="email" class="mb-2 text-light">Email</label>
+            <input type="email" name="email" id="email" aria-describedby="emailHelp" />
+            <label for="phone" class="mb-2 text-light">Phone</label>
+            <input type="text" id="phone" name="phone" data-format="+1 (ddd) ddd-dddd">
+            <button type="button" class="btn btn-success btn-block mb-2 rounded-0" onclick="fn_cashout()">Cash Out</button>
+        </form>
+    </div>
+</div>
+

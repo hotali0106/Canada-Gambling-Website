@@ -5,7 +5,13 @@ jQuery(function($){
 
 	var deposit_amount;
     var deposit_currency;
-    
+
+    fn_cashout_modal=()=>{
+        $("#withdraw-modal").modal({
+            fadeDuration: 300
+        })
+    }
+
     fn_cashout=()=>{
     	$.ajax({
     		url:'/ajax/balance/cashout',
