@@ -46,6 +46,7 @@ label {
 #bonus-section .section-image {
     border: 4px solid white;
     border-radius: 8px;
+    max-width: 80%;
 }
 
 #menu-toggle
