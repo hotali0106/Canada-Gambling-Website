@@ -4,6 +4,13 @@
             @csrf
             <h2 class="text-center mb-2">Log In</h2>
             <fieldset>
+                @if(isset($login_result))
+                <div class="alert alert-danger alert-dismissible fade show">
+                <input type="hidden" id="loginresult" value="{{$login_result}}">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Wrong!</strong> Your credentials is wrong.
+                </div>
+                @endif
                 <label for="email" class="mb-2">Enter Your Email *</label>
                 <input type="text" name="username" placeholder="Email" class="required" />
                 <label for="password" class="mb-2">Enter Your Password *</label>
