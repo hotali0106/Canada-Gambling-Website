@@ -26,6 +26,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             }
             */
             $search_game = $request->search_game;
+            $login_result = $request->login;
             $categories = [];
             $game_ids = [];
             $cat1 = false;
@@ -214,10 +215,10 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                 $currentListTitle = 'All';
             }
             
-            $countrys =  \VanguardLTE\Country::get();
-            $currencys =  \VanguardLTE\Currency::get();
+            $countrys =  \VanguardLTE\Country::orderBy('ranking','ASC')->get();
+            $currencys =  \VanguardLTE\Currency::orderBy('ranking','ASC')->get();
 
-            return view('frontend.' . $frontend . '.games.list', compact('games', 'hotgames', 'newgames','category1', 'cat1', 'categories', 'currentSliderNum', 'currentListTitle','title', 'body', 'keywords', 'description', 'jpgs', 'devices', 'countrys', 'currencys','search_game'));
+            return view('frontend.' . $frontend . '.games.list', compact('games', 'hotgames', 'newgames','category1', 'cat1', 'categories', 'currentSliderNum', 'currentListTitle','title', 'body', 'keywords', 'description', 'jpgs', 'devices', 'countrys', 'currencys','search_game','login_result'));
         }
         public function loadmore(\Illuminate\Http\Request $request){
             $gametype = $request->type;

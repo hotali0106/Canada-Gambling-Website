@@ -33,12 +33,12 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $statuses = \VanguardLTE\Support\Enum\UserStatus::lists();
             $country = \VanguardLTE\Country::find($user->country);
 
-            if(isset($country) && !$country){
+            if(isset($country)){
                 $country = $country->country;
             }else{
                 $country = "";
             }
-            $currencys =  \VanguardLTE\Currency::get();
+            $currencys =  \VanguardLTE\Currency::orderBy('ranking', 'ASC')->get();
 
             return view('frontend.Default.user.info', compact('user', 'edit', 'roles', 'statuses','tab','country','currencys'));
         }
@@ -46,16 +46,17 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
         public function payment_history(\Illuminate\Http\Request $request)
         {
             $tab = "history";
+            $currencys =  \VanguardLTE\Currency::orderBy('ranking', 'ASC')->get();
             $historys = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')
-            // ->paginate(25);
             ->get();
-            return view('frontend.Default.user.history', compact('historys','tab'));
+            return view('frontend.Default.user.history', compact('historys','tab','currencys'));
         }
         public function bet_history(\Illuminate\Http\Request $request)
         {
             $tab = "history";
+            $currencys =  \VanguardLTE\Currency::orderBy('ranking', 'ASC')->get();
             $bet_history = \VanguardLTE\StatGame::where('user_id', \Auth::user()->id)->orderBy('id','DESC')->get();
-            return view('frontend.Default.user.bet_history', compact('bet_history','tab'));
+            return view('frontend.Default.user.bet_history', compact('bet_history','tab','currencys'));
         }
         public function balance(\Illuminate\Http\Request $request)
         {
@@ -73,7 +74,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                     break;
             }
             */
-            $currencys =  \VanguardLTE\Currency::get();
+            $currencys =  \VanguardLTE\Currency::orderBy('ranking', 'ASC')->get();
             $balance = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')->paginate(25);
             return view('frontend.Default.user.balance', compact('balance','tab','currencys'));
         }

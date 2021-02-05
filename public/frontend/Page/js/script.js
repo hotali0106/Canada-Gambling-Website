@@ -6,6 +6,12 @@ jQuery(function($){
 	var deposit_amount;
     var deposit_currency;
 
+	if($("#loginresult").val()){
+		$("#signin-modal").modal({
+            fadeDuration: 300
+        });
+	}
+
     fn_cashout_modal=()=>{
         $("#withdraw-modal").modal({
             fadeDuration: 300
