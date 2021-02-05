@@ -26,7 +26,6 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
             }*/
             $perPage = 20;
             $adminView = true;
-            $shops = auth()->user()->availableShops();
             $ids = auth()->user()->availableUsers();
             $activities = \VanguardLTE\UserActivity::select('user_activity.*')->orderBy('created_at', 'DESC');
             if( $request->search != '' ) 
@@ -41,7 +40,6 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
             {
                 $activities = $activities->whereIn('user_id', $ids);
             }
-            $activities = $activities->whereIn('shop_id', $shops);
             if( $request->username != '' ) 
             {
                 $activities = $activities->join('users', 'users.id', '=', 'user_activity.user_id');

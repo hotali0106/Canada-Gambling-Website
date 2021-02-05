@@ -52,7 +52,7 @@
 						   class="btn btn-danger"
 						   data-method="DELETE"
 						   data-confirm-title="@lang('app.please_confirm')"
-						   data-confirm-text="@lang('app.are_you_sure_delete_shop')"
+						   data-confirm-text="Are you delete that?"
 						   data-confirm-delete="@lang('app.yes_i_do')">
 							Delete Logs
 						</a>

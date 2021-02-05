@@ -254,7 +254,7 @@
 "viewGame":{
 
 "spriteSheet":{"config":"/games/Tasty/source/RES/GAME.json","file":"/games/Tasty/source/RES/GAME.png"}, 
-"bonusFooter":{"type":"bitmap","res":["FOOTER"],"x":55,"y":36},
+"bonusFooter":{"type":"bitmap","res":["FOOTER"],"x":55,"y":36},
 	
 "gameScreen":{"type":"bitmap","res":["GAME"],"x":55,"y":36}
 	

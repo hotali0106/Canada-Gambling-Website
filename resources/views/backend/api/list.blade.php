@@ -47,7 +47,6 @@
 					<tr>
 						<th>@lang('app.api_key')</th>
 						<th>@lang('app.api_ip')</th>
-						<th>@lang('app.shop')</th>
 						<th>@lang('app.status')</th>
 					</tr>
 					</thead>
@@ -64,7 +63,6 @@
 					<tr>
 						<th>@lang('app.api_key')</th>
 						<th>@lang('app.api_ip')</th>
-						<th>@lang('app.shop')</th>
 						<th>@lang('app.status')</th>
 					</tr>
 					</thead>

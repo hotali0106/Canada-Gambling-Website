@@ -46,11 +46,4 @@
 	@if(auth()->user()->hasRole('admin'))
 	<td>{{ number_format ($stat->profit(), 4, ".", "") }}</td>
 	@endif
-
-
-	@if(isset($show_shop) && $show_shop)
-		@if($stat->shop)
-			<td><a href="{{ route('backend.shop.edit', $stat->shop->id) }}">{{ $stat->shop->name }}</a></td>
-		@endif
-	@endif
 </tr>

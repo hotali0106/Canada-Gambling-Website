@@ -56,29 +56,17 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 'Desktop', 
                 'Mobile + Desktop'
             ];
-            $shops = auth()->user()->shops();
-            $games = \VanguardLTE\Game::where('shop_id', \Auth::user()->shop_id)->get()->pluck('name');
-            $jackpots = \VanguardLTE\JPG::where('shop_id', \Auth::user()->shop_id)->get()->pluck('name', 'id');
+            $games = \VanguardLTE\Game::get()->pluck('name');
+            $jackpots = \VanguardLTE\JPG::get()->pluck('name', 'id');
             $categories = \VanguardLTE\Category::where([
                 'parent' => 0, 
-                'shop_id' => \Auth::user()->shop_id
             ])->get();
             $api = [];
-            if( count($shops) ) 
-            {
-                $rarr = array_keys($shops->toArray());
-                $apis = \VanguardLTE\Api::where('shop_id', $rarr[0])->get();
-                foreach( $apis as $key ) 
-                {
-                    $api[$key->keygen] = $key->keygen . ' / ' . $key->ip;
-                }
-            }
             $text = '';
-            if( $request->isMethod('post') && $request->shop_id ) 
+            if( $request->isMethod('post')) 
             {
                 $text .= ('$apiServer="' . $request->root() . '";' . "\n");
                 $text .= ('$apiKey="key=' . $request->key . '";' . "\n");
-                $text .= ('$apiShop="shop_id=' . $request->shop_id . '";' . "\n");
                 $text .= '$apiGames="';
                 $apiGames = '';
                 if( $request->categories_ids ) 
@@ -109,7 +97,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 $text .= '";';
                 $text .= "\n";
             }
-            return view('backend.settings.generator', compact('shops', 'jackpots', 'games', 'categories', 'text', 'view', 'device', 'api'));
+            return view('backend.settings.generator', compact('jackpots', 'games', 'categories', 'text', 'view', 'device', 'api'));
         }
         public function sync()
         {
@@ -122,8 +110,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         }
         public function shop_block(\Illuminate\Http\Request $request, \VanguardLTE\Repositories\Session\SessionRepository $sessionRepository)
         {
-            $shop = \VanguardLTE\Shop::find(\Auth::user()->shop_id);
-            $users = \VanguardLTE\User::where('shop_id', $shop->id)->whereIn('role_id', [
+            $users = \VanguardLTE\User::whereIn('role_id', [
                 1, 
                 2, 
                 3
@@ -142,13 +129,10 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                     }
                 }
             }
-            $shop->update(['is_blocked' => 1]);
             return back()->withSuccess(trans('app.settings_updated'));
         }
         public function shop_unblock(\Illuminate\Http\Request $request)
         {
-            $shop = \VanguardLTE\Shop::find(\Auth::user()->shop_id);
-            $shop->update(['is_blocked' => 0]);
             return back()->withSuccess(trans('app.settings_updated'));
         }
     }

@@ -70,7 +70,7 @@
 							<div class="form-group">
 								@php
 									 $filter = ['' => '---'];
-                                    $shifts = \VanguardLTE\OpenShift::where('shop_id', Auth::user()->shop_id)->orderBy('start_date', 'DESC')->get();
+                                    $shifts = \VanguardLTE\OpenShift::orderBy('start_date', 'DESC')->get();
                                     if( count($shifts) ){
                                         foreach($shifts AS $shift){
                                             $filter[$shift->id] = $shift->id . ' - ' . $shift->start_date;
@@ -110,11 +110,7 @@
 					<tbody>
 					@if (count($statistics))
 						@foreach ($statistics as $stat)
-							@if($stat instanceof \VanguardLTE\ShopStat)
-								@include('backend.stat.partials.row_shop_stat')
-							@else
-								@include('backend.stat.partials.row_stat')
-							@endif
+							@include('backend.stat.partials.row_stat')
 						@endforeach
 					@else
 						<tr><td colspan="4">@lang('app.no_data')</td></tr>

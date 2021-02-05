@@ -28,7 +28,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label>@lang('app.type')</label>
-                                {!! Form::select('type', ['' => 'All', 'PayStat' => 'Pay Stats', 'StatGame' => 'Game Stats', 'BankStat' => 'Bank Stats', 'ShopStat' => 'Shop Stats'], $filter, ['id' => 'type', 'class' => 'form-control']) !!}
+                                {!! Form::select('type', ['' => 'All', 'PayStat' => 'Pay Stats', 'StatGame' => 'Game Stats', 'BankStat' => 'Bank Stats'], $filter, ['id' => 'type', 'class' => 'form-control']) !!}
                             </div>
                         </div>
                     </div>
@@ -153,11 +153,10 @@
             @endphp
 
             var socket = io.connect("{{  Request::server('SERVER_ADDR') }}:3000", {reconnect: true});
-            var prior = ['ShopStat', 'BankStat'];
+            var prior = ['BankStat'];
 
             var availible = {
                 'StatGame': {{ intval(Auth::user()->hasPermission('stats.live')) }},
-                'ShopStat': {{ intval(Auth::user()->hasPermission('stats.shop')) }},
                 'BankStat': {{ intval(Auth::user()->hasPermission('stats.bank')) }},
                 'PayStat': {{ intval(Auth::user()->hasPermission('stats.pay')) }},
             };
