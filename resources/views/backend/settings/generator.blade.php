@@ -18,12 +18,7 @@
     <div class="box-body">
     <div class="row">
 
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>@lang('app.shops')</label>
-                {{ Form::select('shop_id', $shops, Request::old('shop_id'), ['class' => 'form-control', 'id' => 'shops']) }}
-			  </div>
-            </div>
+            
 
             <div class="col-md-6">
               <div class="form-group">
@@ -121,7 +116,6 @@
 						games += '<option value="' + item + '">' + item + '</option>';
 					});
 
-
 					$('#games')
 						.find('option')
 						.remove()
@@ -130,31 +124,5 @@
 				}
 			});
         });
-
-        $('#shops').change(function(event){
-
-			var shop_id = $(event.target).val();
-
-			$.ajax({
-				dataType: "json",
-				url: "{{ route('backend.api.json') }}",
-				data: {shop_id: shop_id},
-				success: function(data){
-
-					var keys = '';
-
-					$.each(data, function(index, item) {
-						keys += '<option value="' + index + '">' + item + '</option>';
-					});
-
-
-					$('#keys')
-							.find('option')
-							.remove()
-							.end()
-							.append(keys);
-				}
-			});
-		});
     </script>
 @stop

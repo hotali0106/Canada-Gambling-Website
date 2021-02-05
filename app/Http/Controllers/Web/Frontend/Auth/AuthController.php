@@ -78,7 +78,8 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend\Auth
                 {
                     $this->incrementLoginAttempts($request);
                 }
-                return redirect()->to('login' . $to)->withErrors(trans('auth.failed'));
+                // return redirect()->to('login' . $to)->withErrors(trans('auth.failed'));
+                return redirect('categories/all')->with(trans('auth.failed'));
             }
             $user = \Auth::getProvider()->retrieveByCredentials($credentials);
             if( $user->hasRole([

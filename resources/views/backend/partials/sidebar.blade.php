@@ -171,7 +171,6 @@
                 Auth::user()->hasPermission('stats.pay') ||
                 Auth::user()->hasPermission('stats.game') ||
                 Auth::user()->hasPermission('stats.bank') ||
-                Auth::user()->hasPermission('stats.shop') ||
                 Auth::user()->hasPermission('stats.shift')
             )
 
@@ -217,15 +216,6 @@
                         <a  href="{{ route('backend.bank_stat') }}">
                             <i class="fa fa-circle-o"></i>
                             @lang('app.bank_stats')
-                        </a>
-                    </li>
-                    @endpermission
-
-                    @permission('stats.shop')
-                    <li class="{{ Request::is('backend/shop_stat') ? 'active' : ''  }}">
-                        <a href="{{ route('backend.shop_stat') }}">
-                            <i class="fa fa-circle-o"></i>
-                            @lang('app.shop_stats')
                         </a>
                     </li>
                     @endpermission

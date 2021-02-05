@@ -7,16 +7,11 @@ namespace VanguardLTE
         protected $fillable = [
             'keygen', 
             'ip', 
-            'shop_id', 
             'status'
         ];
         public static function boot()
         {
             parent::boot();
-        }
-        public function shop()
-        {
-            return $this->belongsTo('VanguardLTE\Shop', 'shop_id');
         }
     }
 

@@ -58,7 +58,6 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 $request->session()->put('type', $request->type);
             }
             $statistics = [];
-            $availableShops = auth()->user()->availableShops();
             $users = auth()->user()->hierarchyUsers();
             $transactions = \VanguardLTE\Transaction::select('transactions.*')->orderBy('transactions.created_at', 'DESC');
             $transactions = $transactions->whereIn('transactions.user_id', $users)->get();
@@ -103,7 +102,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                     ];
                 }
             }
-            $statgames = \VanguardLTE\StatGame::select('stat_game.*')->whereIn('stat_game.shop_id', $availableShops)->take(100)->orderBy('id', 'DESC');
+            $statgames = \VanguardLTE\StatGame::select('stat_game.*')->take(100)->orderBy('id', 'DESC');
             $statgames = $statgames->whereIn('stat_game.user_id', $users)->get();
             if( \Auth::user()->hasPermission('stats.game') && (!$request->type || $request->type && $request->type == 'StatGame') )
             {
@@ -131,7 +130,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                     ];
                 }
             }
-            $bankstat = \VanguardLTE\BankStat::select('bank_stat.*')->whereIn('bank_stat.shop_id', $availableShops)->take(100)->orderBy('id', 'DESC');
+            $bankstat = \VanguardLTE\BankStat::select('bank_stat.*')->take(100)->orderBy('id', 'DESC');
             $bankstat = $bankstat->whereIn('bank_stat.user_id', $users)->get();
             if( \Auth::user()->hasPermission('stats.bank') && (!$request->type || $request->type && $request->type == 'BankStat') )
             {
@@ -159,34 +158,6 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                     ];
                 }
             }
-            $ShopStat = \VanguardLTE\ShopStat::select('shops_stat.*')->whereIn('shops_stat.shop_id', $availableShops)->take(100)->orderBy('id', 'DESC');
-            $ShopStat = $ShopStat->get();
-            if( \Auth::user()->hasPermission('stats.shop') && (!$request->type || $request->type && $request->type == 'ShopStat') )
-            {
-                foreach( $ShopStat as $stat )
-                {
-                    $statistics[] = [
-                        'type' => 'ShopStat',
-                        'Name' => $stat->shop->name,
-                        'Old' => '',
-                        'New' => '',
-                        'Game' => '',
-                        'User' => $stat->user->username,
-                        'System' => '',
-                        'Sum' => number_format($stat->sum, 4, '.', ''),
-                        'In' => ($stat->type == 'add' ? $stat->sum : ''),
-                        'Out' => ($stat->type == 'add' ? '' : $stat->sum),
-                        'Balance' => '',
-                        'Bet' => '',
-                        'Win' => '',
-                        'IN_GAME' => '',
-                        'IN_JPS' => '',
-                        'IN_JPG' => '',
-                        'Profit' => '',
-                        'Date' => strtotime($stat->date_time)
-                    ];
-                }
-            }
             usort($statistics, function($element1, $element2)
             {
                 return $element2['Date'] - $element1['Date'];
@@ -197,7 +168,6 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         public function start_shift(\Illuminate\Http\Request $request)
         {
             $users = \VanguardLTE\User::where([
-                'shop_id' => \Auth::user()->shop_id,
                 'role_id' => 1
             ])->where('balance', '>', 0)->count();
             if( $users )
@@ -205,13 +175,11 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 return redirect()->route('backend.shift_stat')->withErrors([trans('users_with_balance', ['count' => $users])]);
             }
             $count = \VanguardLTE\OpenShift::where([
-                'shop_id' => \Auth::user()->shop_id,
                 'end_date' => null
             ])->first();
             if( $count )
             {
                 $summ = \VanguardLTE\User::where([
-                    'shop_id' => \Auth::user()->shop_id,
                     'role_id' => 1
                 ])->sum('balance');
                 $count->update([
@@ -221,28 +189,20 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                     'users' => $summ
                 ]);
             }
-            $shop = \VanguardLTE\Shop::find(\Auth::user()->shop_id);
-            if( !$shop )
-            {
-                return redirect()->route('backend.shift_stat')->withErrors([trans('app.wrong_shop')]);
-            }
+            
             if( $count )
             {
                 \VanguardLTE\OpenShift::create([
                     'start_date' => \Carbon\Carbon::now(),
-                    'balance' => $shop->balance,
                     'old_banks' => $count->banks(),
                     'user_id' => \Auth::id(),
-                    'shop_id' => \Auth::user()->shop_id
                 ]);
             }
             else
             {
                 \VanguardLTE\OpenShift::create([
                     'start_date' => \Carbon\Carbon::now(),
-                    'balance' => $shop->balance,
                     'user_id' => \Auth::id(),
-                    'shop_id' => \Auth::user()->shop_id
                 ]);
             }
             return redirect()->route('backend.shift_stat')->withSuccess(trans('app.open_shift_started'));
@@ -304,55 +264,13 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 }
             }
             $stats = $statistics->get();
-            $statistics = \VanguardLTE\ShopStat::select('shops_stat.*', 'shops_stat.date_time AS created_at')->whereIn('shops_stat.shop_id', auth()->user()->availableShops());
-            if( $request->system_str != '' )
-            {
-                $statistics = $statistics->join('shops', 'shops.id', '=', 'shops_stat.shop_id');
-                $statistics = $statistics->where('shops.name', 'LIKE', '%' . $request->system_str . '%');
-            }
-            if( $request->sum_from != '' )
-            {
-                $statistics = $statistics->where('shops_stat.sum', '>=', $request->sum_from);
-            }
-            if( $request->sum_to != '' )
-            {
-                $statistics = $statistics->where('shops_stat.sum', '<=', $request->sum_to);
-            }
-            if( $request->type != '' )
-            {
-                $statistics = $statistics->where('shops_stat.type', $request->type);
-            }
-            if( $request->user != '' )
-            {
-                $statistics = $statistics->join('users', 'users.id', '=', 'shops_stat.user_id');
-                $statistics = $statistics->where('users.username', 'like', '%' . $request->user . '%');
-            }
-            if( $request->dates != '' )
-            {
-                $dates = explode(' - ', $request->dates);
-                $statistics = $statistics->where('shops_stat.date_time', '>=', $dates[0]);
-                $statistics = $statistics->where('shops_stat.date_time', '<=', $dates[1]);
-            }
-            if( $request->shifts != '' )
-            {
-                $shift = \VanguardLTE\OpenShift::find($request->shifts);
-                if( $shift )
-                {
-                    $statistics = $statistics->where('shops_stat.date_time', '>=', $shift->start_date);
-                    if( $shift->end_date )
-                    {
-                        $statistics = $statistics->where('shops_stat.date_time', '<=', $shift->end_date);
-                    }
-                }
-            }
-            $shop_stats = $statistics->get();
-            $statistics = $stats->concat($shop_stats)->sortByDesc('created_at')->paginate(20);
-            return view('backend.stat.pay_stat', compact('stat', 'statistics'));
+            $statistics = $stats->sortByDesc('created_at')->paginate(20);
+            return view('backend.stat.pay_stat', compact('statistics'));
         }
         public function game_stat(\Illuminate\Http\Request $request)
         {
             $users = auth()->user()->hierarchyUsers();
-            $statistics = \VanguardLTE\StatGame::select('stat_game.*')->whereIn('stat_game.shop_id', auth()->user()->availableShops())->orderBy('stat_game.date_time', 'DESC');
+            $statistics = \VanguardLTE\StatGame::select('stat_game.*')->orderBy('stat_game.date_time', 'DESC');
             $statistics = $statistics->whereIn('stat_game.user_id', $users);
             if( $request->game != '' )
             {
@@ -410,9 +328,9 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         }
         public function game_stat_clear()
         {
-            \VanguardLTE\StatGame::where('shop_id', \Auth::user()->shop_id)->delete();
-            \VanguardLTE\GameLog::where('shop_id', \Auth::user()->shop_id)->delete();
-            \VanguardLTE\Game::where('shop_id', \Auth::user()->shop_id)->update([
+            \VanguardLTE\StatGame::delete();
+            \VanguardLTE\GameLog::delete();
+            \VanguardLTE\Game::update([
                 'stat_in' => 0,
                 'stat_out' => 0
             ]);
@@ -421,7 +339,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
         public function bank_stat(\Illuminate\Http\Request $request)
         {
             $users = auth()->user()->hierarchyUsers();
-            $statistics = \VanguardLTE\BankStat::select('bank_stat.*')->whereIn('bank_stat.shop_id', auth()->user()->availableShops())->orderBy('bank_stat.created_at', 'DESC');
+            $statistics = \VanguardLTE\BankStat::select('bank_stat.*')->orderBy('bank_stat.created_at', 'DESC');
             $statistics = $statistics->whereIn('bank_stat.user_id', $users);
             if( $request->name != '' )
             {
@@ -465,62 +383,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
             $bank_stat = $statistics->paginate(20);
             return view('backend.stat.bank_stat', compact('bank_stat'));
         }
-        public function shop_stat(\Illuminate\Http\Request $request)
-        {
-            $users = auth()->user()->hierarchyUsers();
-            $shops = auth()->user()->shops();
-            if( \Auth::user()->hasRole('distributor') )
-            {
-                $ids = \VanguardLTE\ShopUser::where('user_id', \Auth::id())->pluck('shop_id');
-                if( count($ids) )
-                {
-                    $shops = \VanguardLTE\Shop::whereIn('id', $ids)->pluck('name', 'id');
-                }
-            }
-            $statistics = \VanguardLTE\ShopStat::select('shops_stat.*')->whereIn('shops_stat.shop_id', auth()->user()->availableShops())->orderBy('shops_stat.date_time', 'DESC');
-            if( $request->name != '' )
-            {
-                $statistics = $statistics->join('shops', 'shops.id', '=', 'shops_stat.shop_id');
-                $statistics = $statistics->where('shops.id', $request->name);
-            }
-            if( $request->sum_from != '' )
-            {
-                $statistics = $statistics->where('shops_stat.sum', '>=', $request->sum_from);
-            }
-            if( $request->sum_to != '' )
-            {
-                $statistics = $statistics->where('shops_stat.sum', '<=', $request->sum_to);
-            }
-            if( $request->type != '' )
-            {
-                $statistics = $statistics->where('shops_stat.type', $request->type);
-            }
-            if( $request->user != '' )
-            {
-                $statistics = $statistics->join('users', 'users.id', '=', 'shops_stat.user_id');
-                $statistics = $statistics->where('users.username', 'like', '%' . $request->user . '%');
-            }
-            if( $request->dates != '' )
-            {
-                $dates = explode(' - ', $request->dates);
-                $statistics = $statistics->where('shops_stat.date_time', '>=', $dates[0]);
-                $statistics = $statistics->where('shops_stat.date_time', '<=', $dates[1]);
-            }
-            if( $request->shifts != '' )
-            {
-                $shift = \VanguardLTE\OpenShift::find($request->shifts);
-                if( $shift )
-                {
-                    $statistics = $statistics->where('shops_stat.date_time', '>=', $shift->start_date);
-                    if( $shift->end_date )
-                    {
-                        $statistics = $statistics->where('shops_stat.date_time', '<=', $shift->end_date);
-                    }
-                }
-            }
-            $shops_stat = $statistics->paginate(20);
-            return view('backend.stat.shop_stat', compact('shops_stat', 'shops'));
-        }
+        
         public function search(\Illuminate\Http\Request $request)
         {
             if( !$request->q )
@@ -529,16 +392,14 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
             }
             $query = $request->q;
             $hierarchyUsers = auth()->user()->hierarchyUsers();
-            $availableShops = auth()->user()->availableShops();
             $happyhour = \VanguardLTE\HappyHour::where([
-                'shop_id' => auth()->user()->shop_id,
                 'time' => date('G')
             ])->first();
             $users = \VanguardLTE\User::whereIn('id', $hierarchyUsers)->where(function($q) use ($query)
             {
                 $q->where('email', 'like', '%' . $query . '%')->orWhere('username', 'like', '%' . $query . '%');
             })->orderBy('created_at', 'DESC')->take(25)->get();
-            $pay_stats = \VanguardLTE\Transaction::select('*')->whereIn('shop_id', $availableShops)->orderBy('created_at', 'DESC')->whereIn('user_id', $hierarchyUsers)->where(function($q) use ($query)
+            $pay_stats = \VanguardLTE\Transaction::select('*')->orderBy('created_at', 'DESC')->whereIn('user_id', $hierarchyUsers)->where(function($q) use ($query)
             {
                 $q->where('system', 'like', '%' . $query . '%')->orWhereHas('user', function($q2) use ($query)
                 {
@@ -548,54 +409,39 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                     $q2->where('username', 'like', '%' . $query . '%')->orWhere('email', 'like', '%' . $query . '%');
                 });
             })->take(25)->get();
-            $game_stats = \VanguardLTE\StatGame::select('stat_game.*')->whereIn('stat_game.shop_id', $availableShops)->orderBy('stat_game.date_time', 'DESC')->whereIn('stat_game.user_id', $hierarchyUsers)->where(function($q) use ($query)
+            $game_stats = \VanguardLTE\StatGame::select('stat_game.*')->orderBy('stat_game.date_time', 'DESC')->whereIn('stat_game.user_id', $hierarchyUsers)->where(function($q) use ($query)
             {
                 $q->where('stat_game.game', 'like', '%' . $query . '%')->orWhereHas('user', function($q2) use ($query)
                 {
                     $q2->where('username', 'like', '%' . $query . '%')->orWhere('email', 'like', '%' . $query . '%');
                 });
             })->take(25)->get();
-            $bank_stats = \VanguardLTE\BankStat::select('*')->whereIn('shop_id', $availableShops)->orderBy('created_at', 'DESC')->whereIn('user_id', $hierarchyUsers)->where(function($q) use ($query)
+            $bank_stats = \VanguardLTE\BankStat::select('*')->orderBy('created_at', 'DESC')->whereIn('user_id', $hierarchyUsers)->where(function($q) use ($query)
             {
                 $q->where('name', 'like', '%' . $query . '%')->orWhereHas('user', function($q2) use ($query)
                 {
                     $q2->where('username', 'like', '%' . $query . '%')->orWhere('email', 'like', '%' . $query . '%');
                 });
             })->take(25)->get();
-            $shop_stats = \VanguardLTE\ShopStat::select('*')->whereIn('shop_id', $availableShops)->orderBy('date_time', 'DESC')->whereIn('user_id', $hierarchyUsers)->where(function($q) use ($query)
-            {
-                $q->whereHas('user', function($q2) use ($query)
-                {
-                    $q2->where('username', 'like', '%' . $query . '%')->orWhere('email', 'like', '%' . $query . '%');
-                })->orWhereHas('shop', function($q2) use ($query)
-                {
-                    $q2->where('name', 'like', '%' . $query . '%');
-                });
-            })->take(25)->get();
             $summ = \VanguardLTE\User::where([
-                'shop_id' => \Auth::user()->shop_id,
                 'role_id' => 1
             ])->sum('balance');
-            $shift_stats = \VanguardLTE\OpenShift::select('*')->whereIn('shop_id', $availableShops)->orderBy('start_date', 'DESC')->whereIn('user_id', $hierarchyUsers)->where(function($q) use ($query)
+            $shift_stats = \VanguardLTE\OpenShift::select('*')->orderBy('start_date', 'DESC')->whereIn('user_id', $hierarchyUsers)->where(function($q) use ($query)
             {
                 $q->whereHas('user', function($q2) use ($query)
                 {
                     $q2->where('username', 'like', '%' . $query . '%')->orWhere('email', 'like', '%' . $query . '%');
-                })->orWhereHas('shop', function($q2) use ($query)
-                {
-                    $q2->where('name', 'like', '%' . $query . '%');
                 });
             })->take(25)->get();
-            return view('backend.dashboard.search', compact('query', 'happyhour', 'summ', 'users', 'pay_stats', 'game_stats', 'bank_stats', 'shop_stats', 'shift_stats'));
+            return view('backend.dashboard.search', compact('query', 'happyhour', 'summ', 'users', 'pay_stats', 'game_stats', 'bank_stats', 'shift_stats'));
         }
         public function shift_stat(\Illuminate\Http\Request $request)
         {
             $users = auth()->user()->hierarchyUsers();
             $summ = \VanguardLTE\User::where([
-                'shop_id' => \Auth::user()->shop_id,
                 'role_id' => 1
             ])->sum('balance');
-            $statistics = \VanguardLTE\OpenShift::select('open_shift.*')->whereIn('open_shift.shop_id', auth()->user()->availableShops())->orderBy('open_shift.start_date', 'DESC');
+            $statistics = \VanguardLTE\OpenShift::select('open_shift.*')->orderBy('open_shift.start_date', 'DESC');
             if( $request->shifts != '' )
             {
                 $statistics = $statistics->where('open_shift.id', $request->shifts);

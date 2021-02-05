@@ -12,12 +12,7 @@
 			  </div>
 			</div>
 			
-            <div class="col-md-6">
-              <div class="form-group">
-                <label>@lang('app.shops')</label>
-            {!! Form::select('shop_id', $shops, $edit ? $api->shop_id : '', ['class' => 'form-control']) !!}
-			  </div>
-			</div>
+  
 			
             <div class="col-md-6">
               <div class="form-group">
