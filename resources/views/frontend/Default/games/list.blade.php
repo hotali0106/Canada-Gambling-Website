@@ -17,7 +17,11 @@
             <div class="game-item">
                 <img data-original="{{asset('frontend/Default/ico/')}}/{{$game->name.'.jpg'}}" />
                 <div class="game-overlay">
+                    @if(Auth::check())
                     <a href="{{ route('frontend.game.go', $game->name) }}">Play For Real</a>
+                    @else
+                    <a href="javascript:fn_playreal_auth()">Play For Real</a>
+                    @endif
                     <a href="{{ route('frontend.game.go.prego', ['game'=>$game->name, 'prego'=>'Pre_go']) }}">Play For Fun</a>
                 </div>
             </div>
@@ -153,6 +157,11 @@
                 alert("error");
             }
         });   
+    }
+    fn_playreal_auth=()=>{
+        $("#signin-modal").modal({
+            fadeDuration: 300
+        });
     }
 </script>
 @endsection
