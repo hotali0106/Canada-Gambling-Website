@@ -13,27 +13,29 @@
                             <h3>Balance</h3>
                         </div>
                     </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th style="width: 20%" scope="col">Amount</th>
-                                <th style="width: 20%" scope="col">Available to cash out</th>
-                                <th style="width: 20%" scope="col">Currency</th>
-                                <th style="width: 40%" scope="col">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>{{Auth::user()->balance}}</td>
-                                <td>{{Auth::user()->total_balance}}</td>
-                                <td>USD</td>
-                                <td>
-                                    <button type="button" class="btn btn-success" onclick="fn_deposit('1')">Deposit</button>
-                                    <button type="button" class="btn btn-info" onclick="fn_cashout_modal()">Cash Out</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Available to cash out</th>
+                                    <th scope="col">Currency</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{Auth::user()->balance}}</td>
+                                    <td>{{Auth::user()->total_balance}}</td>
+                                    <td>USD</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success" onclick="fn_deposit('1')">Deposit</button>
+                                        <button type="button" class="btn btn-info" onclick="fn_cashout_modal()">Cash Out</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                     <div class="row my-2">
                         <div class="col-md-4">Total Bonus: {{Auth::user()->count_bonus}}</div>
                     </div>

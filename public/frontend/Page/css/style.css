@@ -908,6 +908,7 @@ footer .footer-content {
 }
 
 .footer-content .footer-banner {
+    position: relative;
     display: flex;
     max-width: 1350px;
     margin: 0 auto;
@@ -921,6 +922,20 @@ footer .footer-content {
 
 .footer-content .footer-banner img {
     width: 100%;
+}
+
+.footer-content .footer-banner .footer-sign-up-button {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    padding: 4px 40px;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    border: 4px solid #0497f3;
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px #0497f3;
+
 }
 
 .footer-content .footer-support {
@@ -1177,6 +1192,7 @@ main.profile {
 	overflow: hidden;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
     min-height: 100vh;
+    padding: 15px;
 }
 .profile .side-menu ul li {
 	background-color: rgba(0, 0, 0, 0.1);
@@ -1268,4 +1284,8 @@ main.profile {
 
 .sub-menu ul li a:hover, .sub-menu ul li a.active {
 	color: #248b1b;
+}
+
+.table-responsive table th, .table-responsive table td {
+    white-space: nowrap;
 }
