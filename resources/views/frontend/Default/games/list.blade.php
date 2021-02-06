@@ -25,9 +25,11 @@
         @endif
         </div>
     </div>
+    @if(!$search_game)
     <div style="text-align: center; margin: 20px;">
         <button id="btn_loadmore_game" onclick="fn_loadmore('GAME','{{$currentListTitle}}')" class="btn btn-outline-secondary btn-lg">Load More</button>
     </div>
+    @endif
     @if($currentSliderNum != "hot")
     <div class="section-title">
         <h3>Hot Games</h3>
@@ -107,7 +109,19 @@
                 var section_game = "";
                 
                 if(games.length == 0){
-                    alert("data empty");
+                    switch (data.type) {
+                        case "HOT":
+                            $("#btn_loadmore_hot").hide();  
+                            break;
+                        case "NEW":
+                            $("#btn_loadmore_new").hide();  
+                            break;
+                        case "GAME":
+                            $("#btn_loadmore_game").hide();  
+                            break;
+                        default:
+                            break;
+                    }
                     return;
                 }
                 
