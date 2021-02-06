@@ -141,11 +141,31 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                     $games = $games->where('id', 0);
                 }
             }
+
+            $newgames = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                        ->leftJoin('categories','categories.id','=','game_categories.category_id')
+                                        ->where('categories.Title','New')
+                                        ->take(20);
+                                        
+
+            $hotgames = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                        ->leftJoin('categories','categories.id','=','game_categories.category_id')
+                                        ->where('categories.Title','Hot')
+                                        ->take(20);
+
             $detect = new \Detection\MobileDetect();
             $devices = [];
             if( $detect->isMobile() || $detect->isTablet() ) 
             {
                 $games = $games->whereIn('device', [
+                    0, 
+                    2
+                ]);
+                $newgames = $newgames->whereIn('device', [
+                    0, 
+                    2
+                ]);
+                $hotgames = $hotgames->whereIn('device', [
                     0, 
                     2
                 ]);
@@ -160,6 +180,14 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                     1, 
                     2
                 ]);
+                $newgames = $newgames->whereIn('device', [
+                    1, 
+                    2
+                ]);
+                $hotgames = $hotgames->whereIn('device', [
+                    1, 
+                    2
+                ]);
                 $devices = [
                     1, 
                     2
@@ -167,22 +195,13 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             }
             
             if($search_game){
-                $games = $games->where('name','like','%'.$search_game.'%')->take(20)->get();
+                $games = $games->where('name','like','%'.$search_game.'%')->get();
             }else{
                 $games = $games->take(20)->get();
             }
-            $newgames = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
-                                        ->leftJoin('categories','categories.id','=','game_categories.category_id')
-                                        ->where('categories.Title','New')
-                                        ->take(20)
-                                        ->get();
+            $hotgames = $hotgames->get();
+            $newgames = $newgames->get();
 
-            $hotgames = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
-                                        ->leftJoin('categories','categories.id','=','game_categories.category_id')
-                                        ->where('categories.Title','Hot')
-                                        ->take(20)
-                                        ->get();
-            
             $jpgs = \VanguardLTE\JPG::get();
             $categories = false;
             $currentSliderNum = -1;
@@ -223,35 +242,24 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
         public function loadmore(\Illuminate\Http\Request $request){
             $gametype = $request->type;
             $category = $request->category;
-          
+            
+            $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
+                                      ->leftJoin('categories','categories.id','=','game_categories.category_id');
             if($gametype == "HOT"){
                 $page = $request->pagehot;
-                $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
-                                            ->leftJoin('categories','categories.id','=','game_categories.category_id')
-                                            ->where('categories.Title','Hot')
-                                            ->skip($page*20)
-                                            ->take(20)
-                                            ->get();
-                
+                $games = $games->where('categories.Title','Hot')->skip($page*20)->take(20);
             }
             else if($gametype == "NEW"){
                 $page = $request->pagenew;
-                $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
-                                            ->leftJoin('categories','categories.id','=','game_categories.category_id')
-                                            ->where('categories.Title','New')
-                                            ->skip($page*20)
-                                            ->take(20)
-                                            ->get();
-                
+                $games = $games->where('categories.Title','New')->skip($page*20)->take(20);
             }
             else if($gametype == "GAME"){
                 $page = $request->pagegame;
-                $games = \VanguardLTE\Game::leftJoin('game_categories','game_categories.game_id','=','games.id')
-                                            ->leftJoin('categories','categories.id','=','game_categories.category_id');
+
                 if($category == "All"){
-                    $games = $games->skip($page*20)->take(20)->get();
+                    $games = $games->skip($page*20)->take(20);
                 }else{
-                    $games = $games->where('categories.Title',$category)->skip($page*20)->take(20)->get();
+                    $games = $games->where('categories.Title', $category)->skip($page*20)->take(20);
                 }
             }
           
@@ -279,6 +287,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
                     2
                 ];
             }
+            $games = $games->get();
           
             return response(json_encode([
                 'type' => $gametype,
