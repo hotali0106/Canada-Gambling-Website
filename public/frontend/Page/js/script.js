@@ -161,8 +161,9 @@ jQuery(function($){
 		container: container,
 		todayHighlight: true,
 		autoclose: true,
+        startDate: '1910-01-01',
+        endDate: new Date(new Date().setFullYear(new Date().getFullYear() - 18))
 	});
-
 	$(".dropdown-toggle").on("click", function (e) {
 		$(".category-toggle-button").toggleClass("show");
 		$(".dropdown-menu").toggleClass("show");

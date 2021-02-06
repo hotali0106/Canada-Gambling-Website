@@ -54,6 +54,9 @@
     <div class="footer-content">
         <div class="footer-banner">
             <img src="{{asset('frontend/Default/img/footer-banner.png')}}" alt="" />
+            @if(!Auth::check())
+                <a href="#signup-modal" class="footer-sign-up-button d-md-block d-none">Sign Up Now</a>
+            @endif
         </div>
         <div class="footer-support">
             <div class="payment">
