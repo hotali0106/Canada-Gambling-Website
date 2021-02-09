@@ -21,16 +21,19 @@
             <li class="d-md-block d-lg-none"><a href="#signin-modal">Sign In</a></li>
             @endif
         </ul>
-        <span>Menu</span>
+        <span class="d-md-flex d-none">Menu</span>
     </div>
     <div class="header-content">
         <div class="logo">
-            <a href="/" class="d-flex">
+            <a href="/" class="d-md-flex d-none">
                 <img src="{{asset('frontend/Page/image/logo.png')}}" />
             </a>
+            <a href="/" class="d-md-none d-flex">
+                <img src="{{asset('frontend/Page/image/mobile-logo.png')}}" />
+            </a>
         </div>
-        <div class="account-header-menu d-none d-sm-none d-md-none d-lg-flex">
-            <div class="account-header-menu-item">
+        <div class="account-header-menu d-flex">
+            <div class="account-header-menu-item d-none d-sm-none d-md-none d-lg-block">
                 <a href="javascript:fn_deposit('{{Auth::check()}}')">
                     <img src="{{asset('frontend/Page/image/deposit-icon.png')}}" />
                     <span>deposit</span>
@@ -40,13 +43,13 @@
             <div class="account-header-menu-item">
                 <a href="#signup-modal">
                     <img src="{{asset('frontend/Page/image/signup-icon.png')}}" />
-                    <span>sign up</span>
+                    <span class="d-md-flex d-none">sign up</span>
                 </a>
             </div>
             <div class="account-header-menu-item">
-                <a href="#signin-modal" data-ol-has-click-handler>
+                <a href="#signin-modal">
                     <img src="{{asset('frontend/Page/image/signin-icon.png')}}" />
-                    <span>sign in</span>
+                    <span class="d-md-flex d-none">sign in</span>
                 </a>
             </div>
             @else
@@ -57,7 +60,7 @@
                 </a>
             </div>
             @endif
-            <div class="account-header-menu-item">
+            <div class="account-header-menu-item d-none d-sm-none d-md-none d-lg-block">
                 <a href="#">
                     <span>games</span>
                 </a>

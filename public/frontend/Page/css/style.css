@@ -25,6 +25,7 @@ header {
 	height: 60px;
 	background-color: white;
 	display: flex;
+    justify-content: space-between;
 }
 
 label {
@@ -33,6 +34,24 @@ label {
 
 #hero-section {
 	display: flex;
+    position: relative;
+    justify-content: center;
+}
+#hero-section a {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px 35px;
+    border: 2px solid var(--primary-background-color);
+    border-radius: 30px;
+    box-shadow: 0px ​0px 30px var(--primary-background-color);
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    transition: all 0.3s;
+    background: #40005d;
+}
+#hero-section a:hover {
+    background: #260047;
 }
 .hero-image, .section-image {
 	width: 100%;
@@ -59,6 +78,7 @@ label {
 	color: #FFFFFF;
 	cursor: pointer;
 	transition: all 0.3s;
+    z-index: 1;
 }
 
 #menu-toggle span {
@@ -79,6 +99,7 @@ label {
 {
 	width: 39px;
 	overflow: hidden;
+    z-index: -1;
 }
 
 #menu_checkbox
@@ -215,7 +236,7 @@ label {
 
 .header-content {
 	display: inline-flex;
-	width: calc(100% - 200px);
+	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -279,31 +300,54 @@ main.active {
 	justify-content: space-between;
 	align-items: center;
 	background-color: #000000;
-	padding: 10px;
+	padding: 10px 0;
 }
-
+#category-section .mobile-top-category {
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background: #260047;
+    border-top: 1px solid var(--primary-background-color);
+    border-bottom: 1px solid var(--primary-background-color);
+}
+#category-section .mobile-top-category-list {
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto;
+}
 #category-section .top-category-list {
 	display: flex;
 	overflow: hidden;
 	margin-right: 20px;
 }
-#category-section .top-category-list a {
+#category-section .top-category-list a,
+#category-section .mobile-top-category-list a {
 	display: block;
-	padding: 35px 50px;
 	font-size: 1rem;
 	color: white;
+    text-align: center;
 	text-transform: uppercase;
 	text-decoration: none;
 	border-radius: 8px;
 	white-space: nowrap;
 	transition: background-color 0.3s;
 }
-#category-section .top-category-list a:hover {
+#category-section .top-category-list a {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+#category-section .mobile-top-category-list a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#category-section .top-category-list a:hover,
+#category-section .top-category-list .active  {
 	background-color: #282727;
 }
 
-#category-section .top-category-list .active {
-	background-color: #282727;
+#category-section .mobile-top-category-list a:hover,
+#category-section .mobile-top-category-list .active  {
+	background-color: var(--primary-background-color);
 }
 
 .search-box {
@@ -1079,6 +1123,7 @@ footer .footer-menu .footer-menu-content {
 		position: relative;
 		width: 100%;
 		top: 0;
+        display: none;
 	}
 	.wizard > .steps > ul {
 		flex-flow: row;
@@ -1127,10 +1172,6 @@ footer .footer-menu .footer-menu-content {
 		flex-flow: column;
 	}
 
-	#category-section .top-category-list {
-		display: none;
-	}
-
 	#category-section .search-box {
 		width: 100%;
 	}
@@ -1171,9 +1212,12 @@ footer .footer-menu .footer-menu-content {
     html {
         font-size: 12px;
     }
-	.section-content {
-		grid-template-columns: 100%;
-	}
+
+    .game-item .game-overlay a {
+        font-size: 12px;
+        padding: 5px 15px !important;
+    }
+
 	.category-toggle-button .dropdown-menu ul {
 		grid-template-columns: 100%;
 	}

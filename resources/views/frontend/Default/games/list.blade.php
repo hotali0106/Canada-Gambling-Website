@@ -1,7 +1,9 @@
 @extends('frontend.Default.layouts.app')
 @section('slider')
 <section id="hero-section">
-    <iframe style="overflow:hidden !important; height:370px; padding:0px !important; margin:0px !important; border: none !important;" width="100%" src="http://canada777.com/slides/slide.php" allowfullscreen scrolling="no"></iframe>
+    <iframe class="d-none d-sm-block" style="overflow:hidden !important; height:370px; padding:0px !important; margin:0px !important; border: none !important;" width="100%" src="http://canada777.com/slides/slide.php" allowfullscreen scrolling="no"></iframe>
+    <img src="{{asset('frontend/Page/image/mobile-hero-image.jpg')}}" alt="" class="w-100 d-block d-sm-none" />
+    <a href="#signup-modal" class="d-block d-sm-none hero-sign-up-button">sign up</a>
 </section>
 @endsection
 @section('content')
@@ -111,24 +113,24 @@
             success:(data)=>{
                 var games = data.result;
                 var section_game = "";
-                
+
                 if(games.length == 0){
                     switch (data.type) {
                         case "HOT":
-                            $("#btn_loadmore_hot").hide();  
+                            $("#btn_loadmore_hot").hide();
                             break;
                         case "NEW":
-                            $("#btn_loadmore_new").hide();  
+                            $("#btn_loadmore_new").hide();
                             break;
                         case "GAME":
-                            $("#btn_loadmore_game").hide();  
+                            $("#btn_loadmore_game").hide();
                             break;
                         default:
                             break;
                     }
                     return;
                 }
-                
+
                 for(var i=0;i<games.length;i++) {
                     section_game+=  '<div class="game-item">\
                                             <img src="/frontend/Default/ico/'+games[i].name+'.jpg" data-original="/frontend/Default/ico/'+games[i].name+'.jpg" data-image-blur-on-load-update-occured="true" style="filter: opacity(1);"/>\
@@ -140,23 +142,23 @@
                 }
                 switch (data.type) {
                     case "HOT":
-                        $("#section-hot").append(section_game);  
+                        $("#section-hot").append(section_game);
                         break;
                     case "NEW":
-                        $("#section-new").append(section_game);  
+                        $("#section-new").append(section_game);
                         break;
                     case "GAME":
-                        $("#section-game").append(section_game);  
+                        $("#section-game").append(section_game);
                         break;
                     default:
                         break;
                 }
-                                      
+
             },
             error:()=>{
                 alert("error");
             }
-        });   
+        });
     }
     fn_playreal_auth=()=>{
         $("#signin-modal").modal({
