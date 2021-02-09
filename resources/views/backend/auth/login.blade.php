@@ -6,7 +6,7 @@
 
   <div class="login-box">
     <div class="login-logo">
-      <a href="{{ route('backend.dashboard') }}"><span class="logo-lg"><b>GOLDSVET</b> <small>/ mrs</small></span></a>
+      <a href="{{ route('backend.dashboard') }}"><span class="logo-lg"><b>CANADA 777</b> <small>/ mrs</small></span></a>
     </div>
 
     @include('backend.partials.messages')

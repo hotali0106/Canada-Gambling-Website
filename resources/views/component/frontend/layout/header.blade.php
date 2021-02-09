@@ -10,7 +10,7 @@
         <ul id="header-menu">
             <li class="d-md-block d-lg-none"><a href="#">Games</a></li>
             <li><a href="{{url('bonus')}}">Bonus</a></li>
-            <li><a href="#">Promotions</a></li>
+            <li><a href="{{url('promotions')}}">Promotions</a></li>
             <li><a href="#">About Us</a></li>
             <li class="d-md-block d-lg-none"><a href="javascript:fn_deposit('{{Auth::check()}}')">Deposit</a></li>
             @if(Auth::check())
