@@ -56,10 +56,15 @@ jQuery(function($){
     fn_price=(value)=>{
         deposit_amount = value;
         deposit_currency = $("#deposit_currency option:selected").text();
+		$("#deposit_amount").val(deposit_amount);
+		$("#cur_deposit_currency").val(deposit_currency);
         $("input[name='amount']").val(value+" "+$("#deposit_currency option:selected").text());
     };
     fn_deposit_request = () => {
-        window.open("/deposit/payment", "_blank");
+		if($("#deposit_amount").val()){
+			$("#deposit-form").submit();
+		}
+        // window.open("/deposit/payment", "_blank");
     };
 	$("img").lazyload({
 		effect : "fadeIn"

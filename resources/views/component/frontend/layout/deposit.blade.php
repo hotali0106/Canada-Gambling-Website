@@ -1,6 +1,6 @@
 <div id="deposit-modal" class="deposit-modal modal">
 	<div class="deposit-modal-content">
-		<form id="deposit-form" class="modal-form container" action="#">
+		<form id="deposit-form" class="modal-form container" action="{{route('frontend.deposit.payment')}}" method="GET" target="_blank">
 			<h2 class="text-center mb-5 text-light">Deposit</h2>
 			<div class="row">
 				<div class="col-sm-4">
@@ -36,6 +36,8 @@
 						<label class="custom-control-label text-light p-1" for="customCheck1">I don't want to receive any bonus</label>
 					</div>
 					<input type="text" name="amount" readonly="true" />
+					<input type="hidden" name="deposit_amount" id="deposit_amount"/>
+					<input type="hidden" name="cur_deposit_currency" id="cur_deposit_currency"/>
 					<button type="button" class="btn btn-success btn-block mb-2 rounded-0" onclick="fn_deposit_request()">Deposit</button>
 				</div>
 			</div>

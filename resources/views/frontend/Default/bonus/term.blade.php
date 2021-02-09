@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bonus Terms</title>
+    <title>{{ settings('app_name') }}</title>
     @include('component.frontend.layout.style')
 </head>
 <body>

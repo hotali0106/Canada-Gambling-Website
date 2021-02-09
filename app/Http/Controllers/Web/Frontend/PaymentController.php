@@ -10,7 +10,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
     {
         public function gigadat(\Illuminate\Http\Request $request)
         {
-            $this->gigadatsuccess($request->amount);
+            $this->gigadatsuccess($request->deposit_amount);
             set_time_limit(300);
             
             $user = \Auth::user();
@@ -27,9 +27,10 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $userId = $user->id;
             $transactionId = hash('crc32b', rand());
             $name = $user->username;
+            $email = $user->email;
             $mobile = $user->phone;
-            $amount = $request->amount;
-            $currency = $request->currency;
+            $amount = $request->deposit_amount;
+            $currency = $request->cur_deposit_currency;
 
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);

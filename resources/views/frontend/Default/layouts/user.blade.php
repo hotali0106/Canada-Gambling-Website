@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Canada777 online casino makes gambling simpler. Easy and fast payouts and account verification, promotions and VIP loyalty program.">
 
-    <title>@yield('page-title') - {{ settings('app_name') }}</title>
+    <title>{{ settings('app_name') }}</title>
 
     @include('component.frontend.layout.style')
 
