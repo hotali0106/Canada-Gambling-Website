@@ -21,7 +21,7 @@
                 @endif
                 <a href="{{ url('/bonus/term') }}" class="position-absolute d-block text-light" style="bottom: 10px; right: 100px;">Terms Apply</a>
             </div>
-            <p class="text-center text-light py-2 px-2 border-top border-default mb-0">1st Deposit - Match Bonus up to C$ 400 • 2nd / 3rd Deposit - Match Bonus up to C$ 300 • New customers only • Min deposit C$ 10 • 70x wagering</p>
+            <p class="text-center text-light py-2 px-2 border-top border-default mb-0">*1st Deposit - Match Bonus up to C$ 400 • 2nd / 3rd Deposit - Match Bonus up to C$ 300 • New customers only • Min deposit C$ 10 • 70x wagering</p>
         </section>
     </main>
     @include('component.frontend.layout.auth')
