@@ -95,6 +95,13 @@ jQuery(function($){
 
 	var form = $("#sign-up-form").show();
 
+    form.validate({
+        rules: {
+            password: {
+                minlength: 8
+            },
+        }
+    });
 	form.steps({
 		headerTag: "h3",
 		bodyTag: "fieldset",
@@ -164,7 +171,14 @@ jQuery(function($){
         startDate: '1910-01-01',
         endDate: new Date(new Date().setFullYear(new Date().getFullYear() - 18))
 	});
-	$(".dropdown-toggle").on("click", function (e) {
+
+    var phones = [{ "mask": "(###) ###-####" }];
+    $('#phoneNumber').inputmask({
+        mask: phones,
+        greedy: false,
+        definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
+
+    $(".dropdown-toggle").on("click", function (e) {
 		$(".category-toggle-button").toggleClass("show");
 		$(".dropdown-menu").toggleClass("show");
 	});

@@ -30,7 +30,7 @@
                 <h2>Sign Up</h2>
                 <p>Already have an account? <a href="#signin-modal">Sign In</a></p>
             </div>
-            <div class="sign-up-banner">                    
+            <div class="sign-up-banner">
                 <img src="{{asset('frontend/Page/image/sign-up-banner.jpg')}}" />
             </div>
         </div>
@@ -42,7 +42,7 @@
                     <label for="username">Username *</label>
                     <input type="text" id="username" name="username" placeholder="Username" class="required" />
                     <label for="email">Email *</label>
-                    <input type="text" id="email" name="email" placeholder="Email" class="required" />
+                    <input type="email" id="email" name="email" placeholder="Email" class="required" />
                     <label for="password">Password *</label>
                     <input type="password" id="password" name="password" placeholder="Password" class="required" />
                     <label for="currency">Currency</label>
@@ -64,7 +64,7 @@
                     <label for="birthday">Date of Birth *</label>
                     <input type="text" id="birthday" name="birthday" placeholder="Date of Birth" class="required" />
                     <label for="phoneNumber">Mobile Phone *</label>
-                    <input type="tel" id="phoneNumber" name="phone" placeholder="Mobile Phone" class="required">
+                    <input type="text" id="phoneNumber" name="phone" placeholder="Mobile Phone" class="required" />
                 </fieldset>
 
                 <h3 class="fs-subtitle">Confirm Your Detail</h3>
@@ -79,7 +79,7 @@
                     </select>
 
                     <label for="city">City *</label>
-                    <input type="text" id="city" name="city" placeholder="City" class="required" />                 
+                    <input type="text" id="city" name="city" placeholder="City" class="required" />
                     <div class="form-group row">
                         <div class="col-sm-6">
                             <label for="address">Address *</label>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="col-sm-6">
                             <label for="postalCode">Postal Code *</label>
-                            <input type="text" id="postalCode" name="postalCode" placeholder="Postal Code" class="required" />  
+                            <input type="text" id="postalCode" name="postalCode" placeholder="Postal Code" class="required" />
                         </div>
                     </div>
                     <label class="checkbox-container">Receive Email Promos
