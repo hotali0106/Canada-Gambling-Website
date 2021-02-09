@@ -1,7 +1,7 @@
 <section id="category-section">
-    <div class="top-category-list">
+    <div class="top-category-list d-none d-md-block">
         @if( settings('use_all_categories') )
-        <a href="{{ route('frontend.game.list.category', 'all') }}" class="@if($currentSliderNum != -1 && $currentSliderNum == 'all') active @endif">@lang('app.all')</a>
+            <a href="{{ route('frontend.game.list.category', 'all') }}" class="@if($currentSliderNum != -1 && $currentSliderNum == 'all') active @endif">@lang('app.all')</a>
         @endif
         @if ($categories)
             @foreach($categories as $category)
@@ -10,6 +10,20 @@
                 @endif
             @endforeach
         @endif
+    </div>
+    <div class="mobile-top-category d-block d-md-none">
+        <div class="mobile-top-category-list">
+            @if( settings('use_all_categories') )
+                <a href="{{ route('frontend.game.list.category', 'all') }}" class="@if($currentSliderNum != -1 && $currentSliderNum == 'all') active @endif">@lang('app.all')</a>
+            @endif
+            @if ($categories)
+                @foreach($categories as $category)
+                    @if($category->position < 7)
+                        <a href="{{ route('frontend.game.list.category', $category->href) }}" class="@if($currentSliderNum != -1 && $category->href == $currentSliderNum) active @endif">{{ $category->title }}</a>
+                    @endif
+                @endforeach
+            @endif
+        </div>
     </div>
     <form method="GET">
     <div class="search-box">

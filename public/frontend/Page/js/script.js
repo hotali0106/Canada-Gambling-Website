@@ -72,9 +72,17 @@ jQuery(function($){
 
 	$("#menu-toggle").on("click", function(){
 		if ( $("#menu_checkbox").prop("checked") )
-			$("#menu_checkbox").prop("checked", false);
+        {
+            console.log("true");
+            $("#menu_checkbox").attr("checked", false);
+            $("#menu_checkbox").prop("checked", false);
+        }
 		else
-			$("#menu_checkbox").prop("checked", true);
+        {
+            console.log("false");
+            $("#menu_checkbox").attr("checked", true);
+            $("#menu_checkbox").prop("checked", true);
+        }
 
 		$("header").toggleClass("active");
 		$("main").toggleClass("active");
@@ -182,6 +190,41 @@ jQuery(function($){
         mask: phones,
         greedy: false,
         definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
+
+    $('.top-category-list').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 967,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+    $('.mobile-top-category-list').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+    });
 
     $(".dropdown-toggle").on("click", function (e) {
 		$(".category-toggle-button").toggleClass("show");
