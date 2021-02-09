@@ -103,7 +103,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend\Auth
         {
             event(new \VanguardLTE\Events\User\LoggedOut());
             \Auth::logout();
-            return redirect('/backend/login');
+            return redirect('/');
         }
         public function loginUsername()
         {
