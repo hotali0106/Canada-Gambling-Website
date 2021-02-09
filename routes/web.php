@@ -53,6 +53,7 @@ Route::namespace('Frontend')->middleware(['siteisclosed'])->group(function () {
     });
     
     Route::match(['get', 'post'], '/bonus', 'BonusController@index');
+    Route::match(['get', 'post'], '/bonus/term', 'BonusController@term');
 
     /*
     if (settings('forgot_password')) {

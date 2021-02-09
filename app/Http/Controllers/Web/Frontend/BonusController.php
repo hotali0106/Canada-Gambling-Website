@@ -14,6 +14,12 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
             $currencys =  \VanguardLTE\Currency::get();
             return view('frontend.Default.bonus.bonus', compact('countrys', 'currencys'));
         }
+        public function term(\Illuminate\Http\Request $request)
+        {
+            $countrys =  \VanguardLTE\Country::get();
+            $currencys =  \VanguardLTE\Currency::get();
+            return view('frontend.Default.bonus.term', compact('countrys', 'currencys'));
+        }
     }
 }
 namespace 
