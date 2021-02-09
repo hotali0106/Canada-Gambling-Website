@@ -77,6 +77,7 @@
                                 <th style="width: 40%" scope="col">Date</th>
                                 <th style="width: 20%" scope="col">Status</th>
                                 <th style="width: 20%" scope="col">Payment System</th>
+                                <th style="width: 20%" scope="col">Type</th>
                                 <th style="width: 20%" scope="col">Amount</th>
                             </tr>
                         </thead>
@@ -88,14 +89,15 @@
                                 <td>
                                     @php
 
-                                    if($history->status == 0)
+                                    if($history->status == 1)
                                         echo "Confirm";
                                     else
                                         echo "Unconfirm";
                                     @endphp
                                 </td>
                                 <td>{{ $history->system }}</td>
-                                <td>{{ $history->summ }}</td>
+                                <td>{{ $history->type }}</td>
+                                <td>{{ abs($history->summ) }}</td>
                             </tr>
                             @endforeach
                             @endif

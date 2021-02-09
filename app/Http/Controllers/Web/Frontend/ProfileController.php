@@ -47,7 +47,7 @@ namespace VanguardLTE\Http\Controllers\Web\Frontend
         {
             $tab = "history";
             $currencys =  \VanguardLTE\Currency::orderBy('ranking', 'ASC')->get();
-            $historys = \VanguardLTE\Payment::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')
+            $historys = \VanguardLTE\Transaction::where('user_id', \Auth::user()->id)->orderBy('created_at', 'DESC')
             ->get();
             return view('frontend.Default.user.history', compact('historys','tab','currencys'));
         }
