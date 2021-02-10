@@ -22,3 +22,9 @@
         <input type="text" class="form-control" name="href" placeholder="@lang('app.href')" required value="{{ $edit ? $category->href : '' }}">
     </div>
 </div>
+<div class="col-md-6">
+    <div class="form-group">
+        <label>@lang('app.icon')</label>
+        <input type="text" class="form-control" name="icon" placeholder="@lang('app.icon')" value="{{ $edit ? $category->icon : '' }}">
+    </div>
+</div>

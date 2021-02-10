@@ -5,7 +5,7 @@
         @endif
         @if ($categories)
             @foreach($categories as $category)
-                @if($category->position < 7)
+                @if($category->position < 6 &&  $category->icon)
                     <a href="{{ route('frontend.game.list.category', $category->href) }}" class="@if($currentSliderNum != -1 && $category->href == $currentSliderNum) active @endif">{{ $category->title }}</a>
                 @endif
             @endforeach
@@ -35,7 +35,7 @@
             <ul>
                 @if($categories)
                     @foreach($categories as $category)
-                        @if($category->position >6)
+                        @if($category->position >5)
                         <li><a href="{{ route('frontend.game.list.category', $category->href) }}" class="@if($currentSliderNum != -1 && $category->href == $currentSliderNum) active @endif">{{ $category->title }}</a></li>
                         @endif
                     @endforeach

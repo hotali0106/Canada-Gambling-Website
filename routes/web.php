@@ -386,6 +386,12 @@ Route::prefix('backend')->middleware(['auth'])->group(function () {
         'middleware' => 'permission:withdraw.manage'
     ]);
     
+    Route::get('/withdraw/reject/{id}', [
+        'as' => 'backend.reject.edit',
+        'uses' => 'WithDrawController@reject',
+        'middleware' => 'permission:withdraw.manage'
+    ]);
+    
     
     /**
     * User Profile
