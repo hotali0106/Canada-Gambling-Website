@@ -762,7 +762,7 @@ main.active {
 	display: none;
 }
 /*inputs*/
-.modal-form input, .modal-form select {
+.modal-form input, .modal-form select, .modal-form .deposit-amount-wrap {
 	padding: 10px;
 	border: 1px solid #ccc;
 	margin-bottom: 20px;
@@ -799,7 +799,7 @@ main.active {
 	border-radius: 0;
 }
 
-.deposit-modal-content input, .deposit-modal-content select,
+.deposit-modal-content input, .deposit-modal-content select, .deposit-modal-content .deposit-amount-wrap,
 .withdraw-modal-content input, .withdraw-modal-content select{
     background: #1a242f;
     color: white;
@@ -1211,6 +1211,9 @@ footer .footer-menu .footer-menu-content {
 @media only screen and (max-width: 480px) {
     html {
         font-size: 12px;
+    }
+    .section-content {
+        grid-template-columns: 100%;
     }
 
     .game-item .game-overlay a {
