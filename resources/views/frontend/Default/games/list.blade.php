@@ -1,7 +1,7 @@
 @extends('frontend.Default.layouts.app')
 @section('slider')
 <section id="hero-section">
-    <iframe class="d-none d-sm-block" style="overflow:hidden !important; height:370px; padding:0px !important; margin:0px !important; border: none !important;" width="100%" src="http://canada777.com/slides/slide.php" allowfullscreen scrolling="no"></iframe>
+    <iframe class="d-none d-sm-block" style="overflow:hidden !important; height:450px; padding:0px !important; margin:0px !important; border: none !important;" width="100%" src="https://canada777.com/slides/slide.php" allowfullscreen scrolling="no"></iframe>
     <img src="{{asset('frontend/Page/image/mobile-hero-image.jpg')}}" alt="" class="w-100 d-block d-sm-none" />
     <a href="#signup-modal" class="d-block d-sm-none hero-sign-up-button">sign up</a>
 </section>

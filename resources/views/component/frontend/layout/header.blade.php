@@ -42,14 +42,14 @@
             @if(!Auth::check())
             <div class="account-header-menu-item">
                 <a href="#signup-modal">
-                    <img src="{{asset('frontend/Page/image/signup-icon.png')}}" />
-                    <span class="d-md-flex d-none">sign up</span>
+                    <img class="d-md-flex d-none" src="{{asset('frontend/Page/image/signup-icon.png')}}" />
+                    <span>sign up</span>
                 </a>
             </div>
             <div class="account-header-menu-item">
                 <a href="#signin-modal">
-                    <img src="{{asset('frontend/Page/image/signin-icon.png')}}" />
-                    <span class="d-md-flex d-none">sign in</span>
+                    <img class="d-md-flex d-none" src="{{asset('frontend/Page/image/signin-icon.png')}}" />
+                    <span>sign in</span>
                 </a>
             </div>
             @else
