@@ -427,6 +427,7 @@ return [
 	'edit_category' => 'Edit Category',
 	'position' => 'Position',
 	'href' => 'Href',
+    'icon' => 'Icon',
 	'keywords' => 'Keywords',
 	'text' => 'Text',
 	'category_details' => 'Category Details',
@@ -516,6 +517,10 @@ return [
 	'pay' => 'Pay',
 	'available_points' => 'There are only :points points',
 	'zero_points' => 'Enter points count',
+
+    'reject' => 'reject',
+	'edit_reject' => 'Edit reject',
+    'delete_reject' => 'Delete reject',
 
 	'returns' => 'Returns',
 	'add_return' => 'Add Return',

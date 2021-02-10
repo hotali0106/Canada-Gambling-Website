@@ -26,6 +26,14 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
             }
             return view('backend.withdraw.list', compact('transactions'));
         }
+        public function reject($id)
+        {
+            $reject =  \VanguardLTE\Transaction::leftJoin('users','users.id','=','transactions.user_id')
+                                                    ->where('transactions.type','out')
+                                                    ->where('transactions.id', $id)
+                                                    ->get();
+            return view('backend.withdraw.reject', compact('reject'));                                        
+        }
     }
 
 }

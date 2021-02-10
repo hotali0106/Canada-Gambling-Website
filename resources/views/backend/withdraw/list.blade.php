@@ -52,7 +52,7 @@
 									@else
 									<button type="button" class="btn btn-block btn-success btn-xs" disabled="true">Approve</button>
 									@endif
-									<button type="button" class="btn btn-block btn-danger btn-xs">Reject</button>
+									<a href="{{ route('backend.reject.edit', $transaction->id) }}" type="button" class="btn btn-block btn-danger btn-xs">Reject</a>
 								</td>
 							</tr>
 						@endforeach

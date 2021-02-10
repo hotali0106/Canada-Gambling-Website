@@ -59,6 +59,7 @@ namespace VanguardLTE\Http\Controllers\Web\Backend
                 'title',
                 'parent',
                 'position',
+                'ico',
                 'href'
             ]);
             \VanguardLTE\Category::where('id', $category->id)->update($data);
