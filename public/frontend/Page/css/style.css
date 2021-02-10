@@ -319,6 +319,7 @@ main.active {
 	display: flex;
 	overflow: hidden;
 	margin-right: 20px;
+    width: 100%;
 }
 #category-section .top-category-list a,
 #category-section .mobile-top-category-list a {
@@ -333,8 +334,15 @@ main.active {
 	transition: background-color 0.3s;
 }
 #category-section .top-category-list a {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#category-section .top-category-list a img {
+    width: 50px;
 }
 #category-section .mobile-top-category-list a {
     padding-top: 5px;

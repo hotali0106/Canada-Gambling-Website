@@ -1,12 +1,18 @@
 <section id="category-section">
     <div class="top-category-list d-none d-md-block">
         @if( settings('use_all_categories') )
-            <a href="{{ route('frontend.game.list.category', 'all') }}" class="@if($currentSliderNum != -1 && $currentSliderNum == 'all') active @endif">@lang('app.all')</a>
+            <a href="{{ route('frontend.game.list.category', 'all') }}" class="@if($currentSliderNum != -1 && $currentSliderNum == 'all') active @endif">
+                <img src="{{asset('frontend/Page/image/icon')}}/Game lobby.png" alt="">
+                <span class="mt-1">@lang('app.all')</span>
+            </a>
         @endif
         @if ($categories)
             @foreach($categories as $category)
                 @if($category->position < 6 &&  $category->icon)
-                    <a href="{{ route('frontend.game.list.category', $category->href) }}" class="@if($currentSliderNum != -1 && $category->href == $currentSliderNum) active @endif">{{ $category->title }}</a>
+                    <a href="{{ route('frontend.game.list.category', $category->href) }}" class="@if($currentSliderNum != -1 && $category->href == $currentSliderNum) active @endif">
+                        <img src="{{asset('frontend/Page/image/icon')}}/{{$category->icon}}" alt="">
+                        <span class="mt-1">{{ $category->title }}</span>
+                    </a>
                 @endif
             @endforeach
         @endif
