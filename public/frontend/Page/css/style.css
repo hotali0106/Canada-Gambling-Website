@@ -770,7 +770,7 @@ main.active {
 	display: none;
 }
 /*inputs*/
-.modal-form input, .modal-form select, .modal-form .deposit-amount-wrap {
+.modal-form input, .modal-form select {
 	padding: 10px;
 	border: 1px solid #ccc;
 	margin-bottom: 20px;
@@ -807,10 +807,17 @@ main.active {
 	border-radius: 0;
 }
 
-.deposit-modal-content input, .deposit-modal-content select, .deposit-modal-content .deposit-amount-wrap,
+.deposit-modal-content input, .deposit-modal-content select,
 .withdraw-modal-content input, .withdraw-modal-content select{
     background: #1a242f;
     color: white;
+}
+.deposit-modal-content #deposit_currency {
+    top: 2.5rem;
+    right: 1rem;
+}
+label.error {
+    color: #ff360e;
 }
 /*headings*/
 .fs-title {

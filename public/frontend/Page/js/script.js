@@ -19,6 +19,10 @@ jQuery(function($){
     }
 
     fn_cashout=()=>{
+
+        if (!$("#withdraw-form").valid())
+            return false;
+
     	$.ajax({
     		url:'/ajax/balance/cashout',
     		type:'POST',
@@ -68,10 +72,11 @@ jQuery(function($){
         $("span#deposit_currency").text($("#deposit_currency option:selected").text());
     };
     fn_deposit_request = () => {
-		if($("#deposit_amount").val()){
-			$("#deposit-form").submit();
-		}
-        // window.open("/deposit/payment", "_blank");
+
+        if ($("#deposit-form").valid())
+        {
+            $("#deposit-form").submit();
+        }
     };
 	$("img").lazyload({
 		effect : "fadeIn"
@@ -194,6 +199,11 @@ jQuery(function($){
 
     var phones = [{ "mask": "(###) ###-####" }];
     $('#phoneNumber').inputmask({
+        mask: phones,
+        greedy: false,
+        definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
+
+    $('#deposit_phone').inputmask({
         mask: phones,
         greedy: false,
         definitions: { '#': { validator: "[0-9]", cardinality: 1}} });

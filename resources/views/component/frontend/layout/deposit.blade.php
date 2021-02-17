@@ -35,20 +35,18 @@
 						<input type="checkbox" class="custom-control-input" id="customCheck1">
 						<label class="custom-control-label text-light p-1" for="customCheck1">I don't want to receive any bonus</label>
 					</div>
-                    <div class="form-group m-0">
-                        <label class="mb-2 text-light" for="deposit_amount">Amount</label>
-                        <div class="d-flex align-items-center mb-3 deposit-amount-wrap">
-                            <input type="text" id="deposit_amount" name="deposit_amount" class="border-0 m-0 p-0" oninput="fn_amount_input()" />
-                            <span id="deposit_currency"></span>
-                        </div>
+                    <div class="form-group m-0 position-relative">
+                        <label class="form-group text-light p-1 m-0" for="deposit_amount">Amount</label>
+                        <input type="number" id="deposit_amount" name="deposit_amount" class="required" oninput="fn_amount_input()" />
+                        <span id="deposit_currency" class="position-absolute text-light"></span>
                     </div>
                     <div class="form-group m-0">
                         <label class="form-group text-light p-1 m-0" for="deposit_email">Email</label>
-                        <input type="text" id="deposit_email" name="deposit_email" />
+                        <input type="email" id="deposit_email" name="deposit_email" class="required" />
                     </div>
                     <div class="form-group">
                         <label class="form-group text-light p-1 m-0" for="deposit_phone">Phone</label>
-                        <input type="text" id="deposit_phone" name="deposit_phone" />
+                        <input type="text" id="deposit_phone" name="deposit_phone" class="required" />
                     </div>
 					<input type="hidden" name="cur_deposit_currency" id="cur_deposit_currency"/>
 					<button type="button" class="btn btn-success btn-block mb-2 rounded-0" onclick="fn_deposit_request()">Deposit</button>
@@ -63,11 +61,11 @@
         <form id="withdraw-form" class="modal-form container" action="#">
             <h2 class="text-center mb-5 text-light">Cash Out</h2>
             <label for="amount" class="mb-2 text-light">Amount</label>
-            <input type="text" name="amount" id="amount" />
+            <input type="number" name="amount" id="amount" class="required" />
             <label for="email" class="mb-2 text-light">Email</label>
-            <input type="email" name="email" id="email" aria-describedby="emailHelp" />
+            <input type="email" name="email" id="email" class="required" aria-describedby="emailHelp" />
             <label for="phone" class="mb-2 text-light">Phone</label>
-            <input type="text" id="phone" name="phone" data-format="+1 (ddd) ddd-dddd">
+            <input type="text" id="phoneNumber" name="phone" class="required">
             <button type="button" class="btn btn-success btn-block mb-2 rounded-0" onclick="fn_cashout()">Cash Out</button>
         </form>
     </div>
